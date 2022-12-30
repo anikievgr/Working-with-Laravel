@@ -11,17 +11,27 @@
 </head>
 <body>
 <header >
-    <div class="navbar">
+    <div class="navbar" id="navbar">
     <div class="logo">
         <a href="/">
             <img src="https://brankorus.ru/static/brankorus/images/logo.svg?id=68fc27734aedd4d61633">
         </a>
     </div>
-    <ul class="menu">
+    <ul class="menu-long">
         <li class="items-menu"><a href="/">о нас</a></li>
         <li class="items-menu"><a href="#">инкубирование</a></li>
         <li class="items-menu"><a href="#">контакты</a> </li>
     </ul>
+        <div class="menu-smoll">
+            <div class="menu-burger" id="menu">
+                <div class="burger-icon">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+                <div class="menu-list"></div>
+            </div>
+        </div>
     </div>
 </header>
 

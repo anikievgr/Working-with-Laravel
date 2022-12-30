@@ -17,10 +17,9 @@ body{
     height: 50px;
 }
 
-.menu {
+.menu-long {
     display: flex;
 }
-
 .items-menu a{
     position: relative;
   text-transform: uppercase;
@@ -41,4 +40,26 @@ body{
 }
 .items-menu:nth-child(2){
  margin: 0px 60px;
+}
+
+.menu-smoll{
+    display: none;
+    cursor: pointer;
+}
+.burger-icon .line{
+    width: 22px;
+    height: 3px;
+    background-color: white;
+    border-radius: 3px;
+}
+.burger-icon .line:nth-child(2){
+   margin: 3px 0;
+}
+@media (max-width: 1000px){
+  .menu-long{
+      display: none;
+  }
+    .menu-smoll{
+        display: block;
+    }
 }
