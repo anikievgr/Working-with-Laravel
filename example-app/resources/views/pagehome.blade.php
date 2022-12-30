@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -5,12 +6,11 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="{{asset('css/bootsrap.mini.css')}}" rel="stylesheet" >
     <link href="{{asset('css/app.css')}}" rel="stylesheet" >
     <title>Document</title>
 </head>
 <body>
-<header >
+<header id="header">
     <div class="navbar" id="navbar">
     <div class="logo">
         <a href="/">
@@ -18,9 +18,9 @@
         </a>
     </div>
     <ul class="menu-long">
-        <li class="items-menu"><a href="/">о нас</a></li>
-        <li class="items-menu"><a href="#">инкубирование</a></li>
-        <li class="items-menu"><a href="#">контакты</a> </li>
+        <li class="items-menu " id="o_nas"><a href="/">о нас</a></li>
+        <li class="items-menu " id="incubatori"><a href="#">инкубирование</a></li>
+        <li class="items-menu " id="contakti"><a href="#">контакты</a> </li>
     </ul>
         <div class="menu-smoll">
             <div class="menu-burger" id="menu">
@@ -31,9 +31,11 @@
                 </div>
             </div>
             <ul class="menu-list">
-                <li class="items_menu_smoll"><a href="/">о нас</a></li>
-                <li class="items_menu_smoll"><a href="#">инкубирование</a></li>
-                <li class="items_menu_smoll"><a href="#">контакты</a> </li>
+                 <div>
+                <li class="items_menu_smoll " id="o_nas"><a href="/">о нас</a></li>
+                <li class="items_menu_smoll " id="incubatori"><a href="#">инкубирование</a></li>
+                <li class="items_menu_smoll " id="contakti"><a href="#">контакты</a> </li>
+                 </div>
             </ul>
         </div>
     </div>
@@ -42,3 +44,4 @@
 <script src=" {{ asset("scripts/pageHome.js") }}"></script>
 </body>
 </html>
+
