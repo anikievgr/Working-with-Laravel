@@ -29,8 +29,12 @@
                     <div class="line"></div>
                     <div class="line"></div>
                 </div>
-                <div class="menu-list"></div>
             </div>
+            <ul class="menu-list">
+                <li class="items_menu_smoll"><a href="/">о нас</a></li>
+                <li class="items_menu_smoll"><a href="#">инкубирование</a></li>
+                <li class="items_menu_smoll"><a href="#">контакты</a> </li>
+            </ul>
         </div>
     </div>
 </header>
