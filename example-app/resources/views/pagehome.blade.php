@@ -2,26 +2,31 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
-    <link href="{{asset('style/css/plugins.css')}}" rel="stylesheet" >
-    <link href="{{asset('style.css')}}" rel="stylesheet" >
-    <link href="{{asset('style/css/color/green.css')}}" rel="stylesheet" >
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="style/images/favicon.png">
+    <title>Hygge</title>
+    <!-- Bootstrap core CSS -->
+    <link href="{{asset('style/css/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{asset('style/css/plugins.css')}}" rel="stylesheet">
+    <link href="{{asset('style.css')}}" rel="stylesheet">
+    <link href="{{asset('style/css/color/green.css')}}" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
-    <link href="asset('style/type/icons.css')}}" rel="stylesheet" >
-
-
-    <title>Document</title>
+    <link href="{{asset('style/type/icons.css')}}" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
 </head>
 <body>
-
+<div id="preloader"><div id="status"><div class="spinner"></div></div></div>
 <div class="body-wrapper">
-    <nav class="navbar navbar-default default solid">
+    <nav class="navbar navbar-default default">
         <div class="container">
             <div class="navbar-header">
                 <div class="basic-wrapper"> <a class="btn responsive-menu" data-toggle="collapse" data-target=".navbar-collapse"><i></i></a>
@@ -46,7 +51,7 @@
                             <li><a href="onepage.html">Onepage Layout</a></li>
                         </ul>
                     </li>
-                    <li class="dropdown"><a href="#" class="dropdown-toggle js-activated" data-toggle="dropdown">Sliders <span class="caret"></span></a>
+                    <li class="current dropdown"><a href="#" class="dropdown-toggle js-activated" data-toggle="dropdown">Sliders <span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li><a href="slider.html">Fullscreen Slider</a></li>
                             <li><a href="slider2.html">Fullwidth Slider</a></li>
@@ -85,7 +90,7 @@
                             <li><a href="blog-post2.html">Blog Post 2</a></li>
                         </ul>
                     </li>
-                    <li class="current dropdown"><a href="#" class="dropdown-toggle js-activated" data-toggle="dropdown">Pages <span class="caret"></span></a>
+                    <li class="dropdown"><a href="#" class="dropdown-toggle js-activated" data-toggle="dropdown">Pages <span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li><a href="about.html">About 1</a></li>
                             <li><a href="about2.html">About 2</a></li>
@@ -117,11 +122,422 @@
     </nav>
     <!-- /.navbar -->
 
-    <div class="offset"></div>
+    <div class="tp-fullwidth-container revolution">
+        <div class="tp-fullwidth">
+            <ul>
+
+                <li data-transition="fade"> <img src="style/images/art/slider2-bg3.jpg"  alt="" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat" />
+                    <div class="tp-caption large sfr" data-x="30" data-y="233" data-speed="900" data-start="800" data-easing="Sine.easeOut">Free updates & <br />
+                        premium support</div>
+                    <div class="tp-caption medium sfr" data-x="30" data-y="373" data-speed="900" data-start="1500" data-easing="Sine.easeOut">You will have access to all updates and free support</div>
+                    <div class="tp-caption sfr" data-x="30" data-y="440" data-speed="900" data-start="2200" data-easing="Sine.easeOut"  data-endspeed="100"><a href="#" class="btn btn-large">Purchase Now</a></div>
+                </li>
+                <li data-transition="fade"> <img src="style/images/art/slider2-bg3.jpg"  alt="" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat" />
+                    <div class="tp-caption large sfr" data-x="30" data-y="233" data-speed="900" data-start="800" data-easing="Sine.easeOut">Free updates & <br />
+                        premium support</div>
+                    <div class="tp-caption medium sfr" data-x="30" data-y="373" data-speed="900" data-start="1500" data-easing="Sine.easeOut">You will have access to all updates and free support</div>
+                    <div class="tp-caption sfr" data-x="30" data-y="440" data-speed="900" data-start="2200" data-easing="Sine.easeOut"  data-endspeed="100"><a href="#" class="btn btn-large">Purchase Now</a></div>
+                </li>
+                <li data-transition="fade"> <img src="style/images/art/slider2-bg3.jpg"  alt="" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat" />
+                    <div class="tp-caption large sfr" data-x="30" data-y="233" data-speed="900" data-start="800" data-easing="Sine.easeOut">Free updates & <br />
+                        premium support</div>
+                    <div class="tp-caption medium sfr" data-x="30" data-y="373" data-speed="900" data-start="1500" data-easing="Sine.easeOut">You will have access to all updates and free support</div>
+                    <div class="tp-caption sfr" data-x="30" data-y="440" data-speed="900" data-start="2200" data-easing="Sine.easeOut"  data-endspeed="100"><a href="#" class="btn btn-large">Purchase Now</a></div>
+                </li>
+            </ul>
+            <div class="tp-bannertimer tp-bottom"></div>
+        </div>
+        <!-- /.tp-fullwidth-container -->
+    </div>
+    <!-- /.revolution -->
+    <div class="container inner">
+        <div class="headline text-center">
+            <h2>Первоклассные индюшки и индюшачьи яйца!</h2>
+            <p class="lead animated-text letters type">
+                <span>Мы занимаемся распространением</span>
+                <span class="animated-text-wrapper">
+                                                                        <b class="is-hidden" style="opacity: 1;"><i class="out">с</i><i class="out">у</i><i class="out">т</i><i class="out">о</i><i class="out">ч</i><i class="out">н</i><i class="out">ы</i><i class="out">х</i><i class="out"> </i><i class="out">и</i><i class="out">н</i><i class="out">д</i><i class="out">ю</i><i class="out">ш</i><i class="out">а</i><i class="out">т</i></b>
+                                                                                                <b style="opacity: 1;" class="is-hidden"><i class="out">и</i><i class="out">н</i><i class="out">к</i><i class="out">у</i><i class="out">б</i><i class="out">а</i><i class="out">ц</i><i class="out">и</i><i class="out">о</i><i class="out">н</i><i class="out">н</i><i class="out">ы</i><i class="out">х</i><i class="out"> </i><i class="out">я</i><i class="out">и</i><i class="out">ц</i></b>
+                                                            </span>
+            </p>
+        </div>
+        <div class="divide30"></div>
+        <div class="row services">
+            <div class="col-sm-6">
+                <div class="service">
+                    <h4 style="text-align: center;">СУТОЧНЫЕ ИНДЮШАТА</h4>
+                    <p style="text-align: center;">Разведение индеек аналогично разведению другой домашней птицы. Однако суточные индюшата более требовательны к температуре окружающей среды (после вылупления температура окружающей среды должна быть 36 °C) и к общему уходу. Они особенно чувствительны к переохлаждению и повышенной влажности.</p>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="service">
+                    <h4 style="text-align: center;">ИНКУБАЦИОННЫЕ ЯЙЦА ИНДЕЙКИ</h4>
+                    <p style="text-align: center;">Яйца индейки похожи по составу на куриные яйца, а также имеют схожий вкус. Яйца обычно кремово-коричневого цвета с темно-коричневыми пятнами весом около 70-90 г.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- /.light-wrapper -->
+
+    <div class="inverse-wrapper inner bp0">
+        <div class="container">
+            <div class="thin text-center">
+                <div class="headline text-center">
+                    <h2>ЛУЧШЕ ОДИН РАЗ УВИДЕТЬ, ЧЕМ СТО РАЗ УСЛЫШАТЬ</h2>
+                    <p class="lead">Приходите к нам на экскурсию</p>
+                </div>
+                <!-- /.headline -->
+                <div class="divide30"></div>
+                <figure>
+                    <img src="style/images/art/hygge.png" alt="" />
+                </figure>
+            </div>
+            <!-- /.thin -->
+
+        </div>
+        <!-- /.container -->
+    </div>
+    <!-- /.inverse-wrapper -->
+
     <div class="light-wrapper">
         <div class="container inner">
             <div class="section-title text-center">
-                <h3>Meet Out Team</h3>
+                <h3>Галлерея</h3>
+            </div>
+            <div class="cbp-panel">
+                <div id="filters-container" class="cbp-filter-container text-center">
+                    <div data-filter="*" class="cbp-filter-item-active cbp-filter-item"> Все </div>
+                    <div data-filter=".print" class="cbp-filter-item"> Обеспеченье </div>
+                    <div data-filter=".web" class="cbp-filter-item"> Продукция</div>
+                </div>
+                <div id="grid-container" class="cbp">
+                    <div class="cbp-item print motion"> <a href="ajax/project1.html" class="cbp-caption cbp-singlePageInline">
+                            <div class="cbp-caption-defaultWrap"> <img src="style/images/art/p1.jpg" alt="" /> </div>
+                            <div class="cbp-caption-activeWrap">
+                                <div class="cbp-l-caption-alignCenter">
+                                    <div class="cbp-l-caption-body">
+                                        <div class="cbp-l-caption-title">Malesuada Parturient</div>
+                                        <div class="cbp-l-caption-desc">Print, Motion</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a> </div>
+                    <!--/.cbp-item -->
+                    <div class="cbp-item web logo"> <a href="ajax/project2.html" class="cbp-caption cbp-singlePageInline">
+                            <div class="cbp-caption-defaultWrap"> <img src="style/images/art/p2.jpg" alt="" /> </div>
+                            <div class="cbp-caption-activeWrap">
+                                <div class="cbp-l-caption-alignCenter">
+                                    <div class="cbp-l-caption-body">
+                                        <div class="cbp-l-caption-title">Tellus Nibh</div>
+                                        <div class="cbp-l-caption-desc">Web Design</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a> </div>
+                    <!--/.cbp-item -->
+                    <div class="cbp-item print motion"> <a href="ajax/project3.html" class="cbp-caption cbp-singlePageInline">
+                            <div class="cbp-caption-defaultWrap"> <img src="style/images/art/p3.jpg" alt="" /> </div>
+                            <div class="cbp-caption-activeWrap">
+                                <div class="cbp-l-caption-alignCenter">
+                                    <div class="cbp-l-caption-body">
+                                        <div class="cbp-l-caption-title">Pellentesque Mattis</div>
+                                        <div class="cbp-l-caption-desc">Print, Motion</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a> </div>
+                    <!--/.cbp-item -->
+                    <div class="cbp-item web print"> <a href="ajax/project4.html" class="cbp-caption cbp-singlePageInline">
+                            <div class="cbp-caption-defaultWrap"> <img src="style/images/art/p4.jpg" alt="" /> </div>
+                            <div class="cbp-caption-activeWrap">
+                                <div class="cbp-l-caption-alignCenter">
+                                    <div class="cbp-l-caption-body">
+                                        <div class="cbp-l-caption-title">Euismod Pharetra</div>
+                                        <div class="cbp-l-caption-desc">Web Design, Print</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a> </div>
+                    <!--/.cbp-item -->
+                    <div class="cbp-item motion logo"> <a href="ajax/project5.html" class="cbp-caption cbp-singlePageInline">
+                            <div class="cbp-caption-defaultWrap"> <img src="style/images/art/p5.jpg" alt="" /> </div>
+                            <div class="cbp-caption-activeWrap">
+                                <div class="cbp-l-caption-alignCenter">
+                                    <div class="cbp-l-caption-body">
+                                        <div class="cbp-l-caption-title">Fringilla Nullam</div>
+                                        <div class="cbp-l-caption-desc">Motion</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a> </div>
+                    <!--/.cbp-item -->
+                    <div class="cbp-item print motion"> <a href="ajax/project6.html" class="cbp-caption cbp-singlePageInline">
+                            <div class="cbp-caption-defaultWrap"> <img src="style/images/art/p6.jpg" alt="" /> </div>
+                            <div class="cbp-caption-activeWrap">
+                                <div class="cbp-l-caption-alignCenter">
+                                    <div class="cbp-l-caption-body">
+                                        <div class="cbp-l-caption-title">Pharetra Sem</div>
+                                        <div class="cbp-l-caption-desc">Print, Motion</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a> </div>
+                    <!--/.cbp-item -->
+                </div>
+                <!--/.cbp -->
+                <div class="divide30"></div>
+                <div class="text-center">
+                    <div id="loadMore-container" class=""> <a href="ajax/loadmore.html" class="cbp-l-loadMore-link btn btn-border dark"> <span class="cbp-l-loadMore-defaultText">LOAD MORE</span> <span class="cbp-l-loadMore-loadingText">LOADING...</span> <span class="cbp-l-loadMore-noMoreLoading">NO MORE WORKS</span> </a> </div>
+                </div>
+                <!--/.text-center -->
+            </div>
+            <!--/.cbp-panel -->
+        </div>
+        <!-- /.container -->
+    </div>
+    <!-- /.light-wrapper -->
+
+
+
+    <div class="outer-wrap inverse-wrapper">
+        <div id="video-wrap" class="video-wrap">
+            <video preload="metadata" playsinline autoplay muted loop id="video-office">
+                <source src="style/video/office.mp4" type="video/mp4">
+                <source src="style/video/office.webm" type="video/webm">
+            </video>
+            <div class="content-overlay container">
+                <div class="headline text-center">
+                    <h2>ШИРОКОГРУДАЯ БРОНЗОВАЯ ИНДЕЙКА
+                        </h2>
+                    <p class="lead"> Индейки острова Пихты </p>
+                </div>
+            </div>
+            <!-- /.container -->
+        </div>
+        <!-- /.video-wrap -->
+    </div>
+    <!-- /.inverse-wrapper -->
+
+    <div class="light-wrapper">
+        <div class="container inner">
+            <div class="section-title text-center">
+                <h3>Timeline Blog</h3>
+                <p class="lead">display your journal entries in a timeline fashion</p>
+            </div>
+            <div class="timeline">
+                <div class="date-title"> <span>March 2015</span> </div>
+                <div class="row">
+                    <div class="col-sm-6 timeline-item">
+                        <div class="arrow"></div>
+                        <div class="post-content">
+                            <div class="row">
+                                <div class="col-sm-3 col-md-5">
+                                    <figure><a href="#">
+                                            <div class="text-overlay">
+                                                <div class="info"><span>Read More</span></div>
+                                            </div>
+                                            <img src="style/images/art/tb1.jpg" alt="" /></a></figure>
+                                </div>
+                                <!-- /column -->
+                                <div class="col-sm-9 col-md-7">
+                                    <h4 class="post-title"><a href="#">Curabitur Blandit Tempus</a></h4>
+                                    <div class="meta"><span class="date"><a href="#" class="link-effect">30 March 2015</a></span><span class="category"><a href="#" class="link-effect">Journal</a></span><span class="comments"><a href="#" class="link-effect"><i class="icon-chat-1"></i> 8</a></span></div>
+                                    <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Vivamus sagittis lacus vel augue laoreet rutrum faucibus.</p>
+                                    <a href="#" class="more link-effect">Read More »</a> </div>
+                                <!-- /column -->
+                            </div>
+                            <!-- /.row -->
+                        </div>
+                        <!-- /.post-content -->
+                    </div>
+                    <!-- /column -->
+                    <div class="col-sm-6 timeline-item right">
+                        <div class="arrow"></div>
+                        <div class="post-content">
+                            <div class="row">
+                                <div class="col-sm-3 col-md-5">
+                                    <figure><a href="#">
+                                            <div class="text-overlay">
+                                                <div class="info"><span>Read More</span></div>
+                                            </div>
+                                            <img src="style/images/art/tb2.jpg" alt="" /></a></figure>
+                                </div>
+                                <!-- /column -->
+                                <div class="col-sm-9 col-md-7">
+                                    <h4 class="post-title"><a href="#">Mollis Euismod Fringilla</a></h4>
+                                    <div class="meta"><span class="date"><a href="#" class="link-effect">22 March 2015</a></span><span class="category"><a href="#" class="link-effect">Journal</a></span><span class="comments"><a href="#" class="link-effect"><i class="icon-chat-1"></i> 8</a></span></div>
+                                    <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Vivamus sagittis lacus vel augue laoreet rutrum faucibus.</p>
+                                    <a href="#" class="more link-effect">Read More »</a> </div>
+                                <!-- /column -->
+                            </div>
+                            <!-- /.row -->
+                        </div>
+                        <!-- /.post-content -->
+                    </div>
+                    <!-- /column -->
+                </div>
+                <!-- /.row -->
+                <div class="date-title"> <span>February 2015</span> </div>
+                <div class="row">
+                    <div class="col-sm-6 timeline-item">
+                        <div class="arrow"></div>
+                        <div class="post-content">
+                            <div class="row">
+                                <div class="col-sm-3 col-md-5">
+                                    <figure><a href="#">
+                                            <div class="text-overlay">
+                                                <div class="info"><span>Read More</span></div>
+                                            </div>
+                                            <img src="style/images/art/tb5.jpg" alt="" /></a></figure>
+                                </div>
+                                <!-- /column -->
+                                <div class="col-sm-9 col-md-7">
+                                    <h4 class="post-title"><a href="#">Dapibus Quam Ligula</a></h4>
+                                    <div class="meta"><span class="date"><a href="#" class="link-effect">11 Februay 2015</a></span><span class="category"><a href="#" class="link-effect">Journal</a></span><span class="comments"><a href="#" class="link-effect"><i class="icon-chat-1"></i> 8</a></span></div>
+                                    <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Vivamus sagittis lacus vel augue laoreet rutrum faucibus.</p>
+                                    <a href="#" class="more link-effect">Read More »</a> </div>
+                                <!-- /column -->
+                            </div>
+                            <!-- /.row -->
+                        </div>
+                        <!-- /.post-content -->
+                    </div>
+                    <!-- /column -->
+                    <div class="col-sm-6 timeline-item right">
+                        <div class="arrow"></div>
+                        <div class="post-content">
+                            <div class="row">
+                                <div class="col-sm-3 col-md-5">
+                                    <figure><a href="#">
+                                            <div class="text-overlay">
+                                                <div class="info"><span>Read More</span></div>
+                                            </div>
+                                            <img src="style/images/art/tb6.jpg" alt="" /></a></figure>
+                                </div>
+                                <!-- /column -->
+                                <div class="col-sm-9 col-md-7">
+                                    <h4 class="post-title"><a href="#">Fusce Malesuada Cursus</a></h4>
+                                    <div class="meta"><span class="date"><a href="#" class="link-effect">3 February 2015</a></span><span class="category"><a href="#" class="link-effect">Journal</a></span><span class="comments"><a href="#" class="link-effect"><i class="icon-chat-1"></i> 8</a></span></div>
+                                    <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Vivamus sagittis lacus vel augue laoreet rutrum faucibus.</p>
+                                    <a href="#" class="more link-effect">Read More »</a> </div>
+                                <!-- /column -->
+                            </div>
+                            <!-- /.row -->
+                        </div>
+                        <!-- /.post-content -->
+                    </div>
+                    <!-- /column -->
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- /.timeline -->
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.light-wrapper -->
+
+    <div class="white-wrapper">
+        <div class="col-image">
+            <div class="bg-wrapper col-md-6">
+                <div class="bg-holder" style="background-image: url(style/images/art/about.jpg);"></div>
+            </div>
+            <!--/.bg-wrapper -->
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-5 col-md-offset-7 inner-col">
+                        <div class="section-title">
+                            <h3>About the Company</h3>
+                        </div>
+                        <p class="lead">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.</p>
+                        <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec ullamcorper nulla non metus auctor fringilla. Etiam porta sem malesuada magna mollis euismod.</p>
+                        <ul class="progress-list">
+                            <li>
+                                <p>Strategy <em>90%</em></p>
+                                <div class="progress plain">
+                                    <div class="bar" style="width: 90%;"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <p>Project Management <em>80%</em></p>
+                                <div class="progress plain">
+                                    <div class="bar" style="width: 80%;"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <p>Programming <em>85%</em></p>
+                                <div class="progress plain">
+                                    <div class="bar" style="width: 85%;"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <p>Analytics & Reporting <em>75%</em></p>
+                                <div class="progress plain">
+                                    <div class="bar" style="width: 50%;"></div>
+                                </div>
+                            </li>
+                        </ul>
+                        <!-- /.progress-list -->
+                    </div>
+                    <!--/column -->
+                </div>
+                <!--/.row -->
+            </div>
+            <!--/.container -->
+        </div>
+        <!--/.col-image -->
+
+    </div>
+    <!-- /.white-wrapper -->
+
+    <div class="light-wrapper">
+        <div class="container inner">
+            <div class="section-title text-center">
+                <h3>Process Model</h3>
+                <p class="lead">our process on creating awesome projects</p>
+            </div>
+            <div class="thin3">
+                <div class="row circle-wrapper">
+                    <div class="col-sm-6 col-md-3">
+                        <div class="circle blue-bg">
+                            <div class="text">1. Envisioning</div>
+                        </div>
+                    </div>
+                    <!-- /column -->
+                    <div class="col-sm-6 col-md-3">
+                        <div class="circle red-bg">
+                            <div class="text">2. Planning</div>
+                        </div>
+                    </div>
+                    <!-- /column -->
+                    <div class="col-sm-6 col-md-3">
+                        <div class="circle green-bg">
+                            <div class="text">3. Development</div>
+                        </div>
+                    </div>
+                    <!-- /column -->
+                    <div class="col-sm-6 col-md-3">
+                        <div class="circle yellow-bg">
+                            <div class="text">4. Stabilization</div>
+                        </div>
+                    </div>
+                    <!-- /column -->
+                </div>
+                <!--/.row -->
+                <div class="divide30"></div>
+                <p class="text-center">Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Curabitur blandit tempus porttitor. Maecenas faucibus mollis interdum. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+            </div>
+            <!--/.thin -->
+        </div>
+        <!--/.container -->
+    </div>
+    <!-- /.light-wrapper -->
+
+    <div class="light-wrapper">
+        <div class="container inner">
+            <div class="section-title text-center">
+                <h3>Meet Our Team</h3>
             </div>
             <div class="row grid-view">
                 <div class="col-sm-3 text-center">
@@ -179,158 +595,6 @@
     </div>
     <!-- /.light-wrapper -->
 
-    <div class="parallax parallax2 inverse-wrapper customers">
-        <div class="container inner text-center">
-            <div class="testimonials owl-carousel thin">
-                <div class="item">
-                    <blockquote>
-                        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur. Nullam dolor nibh ultricies vehicula elit vulputate tristique egestas.<small class="meta">Nikolas Brooten <span>Sales Manager</span></small></p>
-                    </blockquote>
-                </div>
-                <!-- /.item -->
-                <div class="item">
-                    <blockquote>
-                        <p>Cras justo odio, dapibus facilisis in, egestas eget quam. Maecenas faucibus mollis interdum. Etiam porta sem malesuada magna mollis euismod.<small class="meta">Coriss Ambady <span>Marketing Specialist</span></small></p>
-                    </blockquote>
-                </div>
-                <!-- /.item -->
-                <div class="item">
-                    <blockquote>
-                        <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis id vestibulum. Donec sed odio dui. Sed posuere consectetur est at lobortis.<small class="meta">Barclay Widerski <span>Strategy Director</span></small></p>
-                    </blockquote>
-                </div>
-                <!-- /.item -->
-                <div class="item">
-                    <blockquote>
-                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Maecenas faucibus mollis interdum. Vivamus sagittis lacus vel augue laoreet.<small class="meta">Elsie Spear <span>Computer Engineer</span></small></p>
-                    </blockquote>
-                </div>
-                <!-- /.item -->
-            </div>
-            <!-- /.testimonials -->
-        </div>
-        <!-- /.container -->
-    </div>
-    <!-- /.parallax -->
-
-    <div class="light-wrapper">
-        <div class="container inner">
-            <div class="row">
-                <div class="col-sm-4">
-                    <h3>Contact Us</h3>
-                    <p>Cras mattis consectetur purus sit amet fermentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2499.4483800426133!2d3.2241689!3d51.2108153!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c350cfcf934d7d%3A0xa4d8f385ffa7d70b!2sChoco-Story!5e0!3m2!1sen!2str!4v1534408440419" width="100%" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
-                    <div class="divide20"></div>
-                    <div class="contact-info">
-                        <i class="icon-location"></i> Moonshine St. 14/05 Light City <br />
-                        <i class="icon-phone"></i>+00 (123) 456 78 90 <br />
-                        <i class="icon-mail"></i> <a href="first.last@email.com">first.last@email.com</a>
-                    </div>
-                    <!-- /.contact-info -->
-                </div>
-                <!-- /column -->
-
-                <div class="col-sm-4">
-                    <h3>Why Choose Us?</h3>
-                    <div class="divide5"></div>
-                    <div class="tabs tabs-top left tab-container">
-                        <ul class="etabs">
-                            <li class="tab"><a href="#tab-one">This is</a></li>
-                            <li class="tab"><a href="#tab-two">Tabbed</a></li>
-                            <li class="tab"><a href="#tab-three">Content</a></li>
-                        </ul>
-                        <!-- /.etabs -->
-                        <div class="panel-container">
-                            <div class="tab-block" id="tab-one">
-                                <p>Aenean lacinia bibendum nulla sed consectetur. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Vestibulum id ligula porta felis euismod semper. Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-                                <p>Donec sed odio dui. Donec sed odio dui. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Maecenas faucibus mollis interdum.</p>
-                                <ul class="circled">
-                                    <li>Mauris lacinia dui non metus dignissim.</li>
-                                    <li>Etiam elit tellus, condimentum tempor lobortis.</li>
-                                    <li>Aliquam pharetra vestibulum arcu, eget iaculis. </li>
-                                </ul>
-                            </div>
-                            <!-- /.tab-block -->
-                            <div class="tab-block" id="tab-two">
-                                <p>Nullam quis risus eget urna mollis ornare vel eu leo. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id ligula porta felis euismod semper. Cras mattis consectetur purus sit amet fermentum. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Maecenas faucibus mollis interdum. </p>
-                            </div>
-                            <!-- /.tab-block -->
-                            <div class="tab-block" id="tab-three">
-                                <p>Nullam id dolor id nibh ultricies vehicula ut id elit. Donec sed odio dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae elit libero, a pharetra augue. Aenean lacinia bibendum nulla sed consectetur. </p>
-                                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec ullamcorper nulla non metus auctor fringilla. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. </p>
-                            </div>
-                            <!-- /.tab-block -->
-                        </div>
-                        <!-- /.panel-container -->
-                    </div>
-                    <!-- /.tabs -->
-                </div>
-                <!-- /column -->
-                <div class="col-sm-4">
-                    <h3>Our Skills</h3>
-                    <p>Duis non lectus sit amet est imperdiet cursus elementum vitae eros. Etiam adipiscingmorbi vitae magna tellus, ac mattis urna phasellus rhoncus.</p>
-                    <div class="divide10"></div>
-                    <ul class="progress-list">
-                        <li>
-                            <p>CSS/HTML <em>90%</em></p>
-                            <div class="progress plain">
-                                <div class="bar" style="width: 90%;"></div>
-                            </div>
-                        </li>
-                        <li>
-                            <p>jQuery <em>80%</em></p>
-                            <div class="progress plain">
-                                <div class="bar" style="width: 80%;"></div>
-                            </div>
-                        </li>
-                        <li>
-                            <p>Wordpress <em>85%</em></p>
-                            <div class="progress plain">
-                                <div class="bar" style="width: 85%;"></div>
-                            </div>
-                        </li>
-                        <li>
-                            <p>SEO <em>50%</em></p>
-                            <div class="progress plain">
-                                <div class="bar" style="width: 50%;"></div>
-                            </div>
-                        </li>
-                    </ul>
-                    <!-- /.progress-list -->
-                </div>
-                <!-- /column -->
-            </div>
-            <!-- /.row -->
-        </div>
-        <!-- /.container -->
-    </div>
-    <!-- /.light-wrapper -->
-
-    <div class="light-wrapper">
-        <div class="container inner">
-            <div class="section-title text-center">
-                <h3>Our Clients</h3>
-                <p class="lead">companies we worked with</p>
-            </div>
-            <div class="carousel-wrapper">
-                <div class="carousel clients">
-                    <div class="item"> <img src="style/images/art/c1.png" alt="" /> </div>
-                    <div class="item"> <img src="style/images/art/c2.png" alt="" /> </div>
-                    <div class="item"> <img src="style/images/art/c3.png" alt="" /> </div>
-                    <div class="item"> <img src="style/images/art/c4.png" alt="" /> </div>
-                    <div class="item"> <img src="style/images/art/c5.png" alt="" /> </div>
-                    <div class="item"> <img src="style/images/art/c6.png" alt="" /> </div>
-                    <div class="item"> <img src="style/images/art/c7.png" alt="" /> </div>
-                    <div class="item"> <img src="style/images/art/c8.png" alt="" /> </div>
-                </div>
-                <!--/.carousel -->
-            </div>
-            <!--/.carousel-wrapper -->
-        </div>
-        <!--/.container -->
-    </div>
-    <!-- /.light-wrapper -->
-
     <footer class="inverse-wrapper">
         <div class="container inner">
             <div class="row">
@@ -346,7 +610,6 @@
                         <li><a href="#"><i class="icon-s-forrst"></i></a></li>
                     </ul>
                 </div>
-                <!-- /column -->
                 <div class="col-sm-4">
                     <h3 class="section-title widget-title">Subscribe</h3>
                     <p> Cum sociis natoque penatibus et magnis dis parturient.</p>
@@ -367,14 +630,11 @@
                     </div>
                     <!-- /.newsletter-wrapper -->
                 </div>
-                <!-- /column -->
                 <div class="col-sm-4">
                     <h3 class="section-title widget-title">Tags</h3>
                     <div class="tagcloud"> <a href="#" style="font-size: 9pt;">blogroll</a> <a href="#" style="font-size: 19pt;">daily</a> <a href="#" style="font-size: 9pt;">dialog</a> <a href="#" style="font-size: 9pt;">gallery</a> <a href="#" style="font-size: 10pt;">journal</a> <a href="#" style="font-size: 9pt;">link</a> <a href="#" style="font-size: 12pt;">motion</a> <a href="#" style="font-size: 9pt;">music</a> <a href="#" style="font-size: 20pt;">photo</a> <a href="#" style="font-size: 13pt;">professional</a> <a href="#" style="font-size: 16pt;">quotation</a> <a href="#" style="font-size: 9pt;">show</a> <a href="#" style="font-size: 15pt;">sound</a> </div>
                 </div>
-                <!-- /column -->
             </div>
-            <!-- /.row -->
             <hr />
             <div class="row">
                 <div class="col-sm-3">
@@ -448,13 +708,12 @@
     <!-- /footer -->
     <div id="share-bar"></div>
 </div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-<script src=" {{ asset("style/js/jquery.min.js") }}"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-<script src=" {{ asset("style/js/plugins.js") }}"></script>
-<script src=" {{ asset("style/js/jquery.themepunch.tools.min.js") }}"></script>
-<script src=" {{ asset("style/js/scripts.js") }}"></script>
+<!--/.body-wrapper -->
+<script src="{{asset('style/js/jquery.min.js')}}"></script>
+<script src="{{asset('style/js/bootstrap.min.js')}}"></script>
+<script src="{{asset('style/js/plugins.js')}}"></script>
+<script src="{{asset('style/js/jquery.themepunch.tools.min.js')}}"></script>
+<script src="{{asset('style/js/scripts.js')}}"></script>
 </body>
 </html>
 
