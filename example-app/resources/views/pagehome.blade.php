@@ -273,8 +273,8 @@
     <div class="outer-wrap inverse-wrapper">
         <div id="video-wrap" class="video-wrap">
             <video preload="metadata" playsinline autoplay muted loop id="video-office">
-                <source src="style/video/office.mp4" type="video/mp4">
-                <source src="style/video/office.webm" type="video/webm">
+                <source src="style/video/video.mp4" type="video/mp4">
+                <source src="style/video/video.webm" type="video/webm">
             </video>
             <div class="content-overlay container">
                 <div class="headline text-center">
@@ -292,8 +292,7 @@
     <div class="light-wrapper">
         <div class="container inner">
             <div class="section-title text-center">
-                <h3>Timeline Blog</h3>
-                <p class="lead">display your journal entries in a timeline fashion</p>
+                <h3>Новости</h3>
             </div>
             <div class="timeline">
                 <div class="row">
@@ -383,49 +382,54 @@
 
     </div>
     <!-- /.light-wrapper -->
-
     <div class="white-wrapper">
         <div class="col-image">
             <div class="bg-wrapper col-md-6">
-                <div class="bg-holder" style="background-image: url(style/images/art/about.jpg);"></div>
+                <div class="bg-holder" style="background-image: url({{asset('style/images/art/pp1.jpg')}});"></div>
             </div>
             <!--/.bg-wrapper -->
             <div class="container">
                 <div class="row">
                     <div class="col-md-5 col-md-offset-7 inner-col">
-                        <div class="section-title">
-                            <h3>About the Company</h3>
+                        <div class="divide20"></div>
+                        <h3>О КОМПАНИИ</h3>
+                        <p>Мы постоянно расширяемся</p>
+                        <p>Чешская Республика, Польша и Венгрия - наши давние и стабильные партнеры. Другие наши клиенты находятся в Италии, Германии, Австрии, Нидерландах, Словении, Румынии, Литве, Франции, Хорватии, России и Украине</p>
+                        <div class="text-center" width="450px" height="450px">
+                            <canvas id="doughnutChart" ></canvas>
                         </div>
-                        <p class="lead">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.</p>
-                        <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec ullamcorper nulla non metus auctor fringilla. Etiam porta sem malesuada magna mollis euismod.</p>
-                        <ul class="progress-list">
-                            <li>
-                                <p>Strategy <em>90%</em></p>
-                                <div class="progress plain">
-                                    <div class="bar" style="width: 90%;"></div>
-                                </div>
-                            </li>
-                            <li>
-                                <p>Project Management <em>80%</em></p>
-                                <div class="progress plain">
-                                    <div class="bar" style="width: 80%;"></div>
-                                </div>
-                            </li>
-                            <li>
-                                <p>Programming <em>85%</em></p>
-                                <div class="progress plain">
-                                    <div class="bar" style="width: 85%;"></div>
-                                </div>
-                            </li>
-                            <li>
-                                <p>Analytics & Reporting <em>75%</em></p>
-                                <div class="progress plain">
-                                    <div class="bar" style="width: 50%;"></div>
-                                </div>
-                            </li>
-                        </ul>
-                        <!-- /.progress-list -->
                     </div>
+                    <!-- /column -->
+
+                    <!-- /.progress-list -->
+                    <script>
+                        /*-----------------------------------------------------------------------------------*/
+                        /*	CHARTS
+                        /*-----------------------------------------------------------------------------------*/
+
+
+
+                        var doughnutData = [{
+                            value: 90,
+                            color: "rgba(106,186,222,0.85)",
+                            highlight: "rgba(106,186,222,1)",
+                            label: "Словакия"
+                        }, {
+                            value: 10,
+                            color: "rgba(241,189,105,0.85)",
+                            highlight: "rgba(241,189,105,1)",
+                            label: "Другие страны"
+                        }];
+                        window.onload = function() {
+                            var ctx4 = document.getElementById("doughnutChart").getContext("2d");
+                            window.myDoughnut = new Chart(ctx4).Doughnut(doughnutData, {
+                                responsive: true,
+                                scaleFontFamily: "'Lato', sans-serif",
+                                tooltipFontFamily: "'Lato', sans-serif",
+                                tooltipTitleFontFamily: "'Lato', sans-serif"
+                            });
+                        };
+                    </script>
                     <!--/column -->
                 </div>
                 <!--/.row -->
@@ -435,7 +439,6 @@
         <!--/.col-image -->
 
     </div>
-    <!-- /.white-wrapper -->
 
     <div class="light-wrapper">
         <div class="container inner">
@@ -479,6 +482,7 @@
         <!--/.container -->
     </div>
     <!-- /.light-wrapper -->
+
 
     <div class="light-wrapper">
         <div class="container inner">
@@ -652,7 +656,6 @@
 
     </footer>
     <!-- /footer -->
-    <div id="share-bar"></div>
 </div>
 <!--/.body-wrapper -->
 <script src="{{asset('style/js/jquery.min.js')}}"></script>
