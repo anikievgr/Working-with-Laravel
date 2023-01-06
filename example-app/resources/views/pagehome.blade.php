@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="shortcut icon" href="style/images/favicon.png">
-    <title>Hygge</title>
+    <link rel = "shortcut icon" href = "style/images/favicon.ico" sizes="any" type = "image/x-icon">
+    <title>Branko - О нас</title>
     <!-- Bootstrap core CSS -->
     <link href="{{asset('style/css/bootstrap.min.css')}}" rel="stylesheet">
     <link href="{{asset('style/css/plugins.css')}}" rel="stylesheet">
@@ -42,13 +42,13 @@
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
                     <li class="current">
-                        <a href="https://brankorus.ru">О нас</a>
+                        <a href="/">О нас</a>
                     </li>
                     <li class="">
-                        <a href="https://brankorus.ru/pages/incubation">Инкубирование</a>
+                        <a href="/incubirovanie">Инкубирование</a>
                     </li>
                     <li class="">
-                        <a href="https://brankorus.ru/contact">Контакты</a>
+                        <a href="/contact">Контакты</a>
                     </li>
                 </ul>
             </div>
@@ -323,57 +323,7 @@
                     <!-- /column -->
                 </div>
                 <!-- /.row -->
-                <div class="date-title"> <span>February 2015</span> </div>
-                <div class="row">
-                    <div class="col-sm-6 timeline-item">
-                        <div class="arrow"></div>
-                        <div class="post-content">
-                            <div class="row">
-                                <div class="col-sm-3 col-md-5">
-                                    <figure><a href="#">
-                                            <div class="text-overlay">
-                                                <div class="info"><span>Read More</span></div>
-                                            </div>
-                                            <img src="style/images/art/tb5.jpg" alt="" /></a></figure>
-                                </div>
-                                <!-- /column -->
-                                <div class="col-sm-9 col-md-7">
-                                    <h4 class="post-title"><a href="#">Dapibus Quam Ligula</a></h4>
-                                    <div class="meta"><span class="date"><a href="#" class="link-effect">11 Februay 2015</a></span><span class="category"><a href="#" class="link-effect">Journal</a></span><span class="comments"><a href="#" class="link-effect"><i class="icon-chat-1"></i> 8</a></span></div>
-                                    <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Vivamus sagittis lacus vel augue laoreet rutrum faucibus.</p>
-                                    <a href="#" class="more link-effect">Read More »</a> </div>
-                                <!-- /column -->
-                            </div>
-                            <!-- /.row -->
-                        </div>
-                        <!-- /.post-content -->
-                    </div>
-                    <!-- /column -->
-                    <div class="col-sm-6 timeline-item right">
-                        <div class="arrow"></div>
-                        <div class="post-content">
-                            <div class="row">
-                                <div class="col-sm-3 col-md-5">
-                                    <figure><a href="#">
-                                            <div class="text-overlay">
-                                                <div class="info"><span>Read More</span></div>
-                                            </div>
-                                            <img src="style/images/art/tb6.jpg" alt="" /></a></figure>
-                                </div>
-                                <!-- /column -->
-                                <div class="col-sm-9 col-md-7">
-                                    <h4 class="post-title"><a href="#">Fusce Malesuada Cursus</a></h4>
-                                    <div class="meta"><span class="date"><a href="#" class="link-effect">3 February 2015</a></span><span class="category"><a href="#" class="link-effect">Journal</a></span><span class="comments"><a href="#" class="link-effect"><i class="icon-chat-1"></i> 8</a></span></div>
-                                    <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Vivamus sagittis lacus vel augue laoreet rutrum faucibus.</p>
-                                    <a href="#" class="more link-effect">Read More »</a> </div>
-                                <!-- /column -->
-                            </div>
-                            <!-- /.row -->
-                        </div>
-                        <!-- /.post-content -->
-                    </div>
-                    <!-- /column -->
-                </div>
+
                 <!-- /.row -->
             </div>
             <!-- /.timeline -->
@@ -506,7 +456,7 @@
                         <p>ООО «Бранко Рус»</p>
                         <div class="contact-info"> <i class="icon-location"></i> 422060, респ. Татарстан, пгт. Богатые Сабы,ул. Заводская, д. 19 <br />
                             <i class="icon-phone"></i>+7 927 039 71 17 <br />
-                            <i class="icon-mail"></i> <a href="sales@brankorus.ru"> sales@brankorus.ru</a> </div>
+                            <i class="icon-mail"></i> <a href="mailto:sales@brankorus.ru">sales@brankorus.ru</a></a> </div>
                     </div>
                 </div>
                 <!-- /column -->
@@ -520,9 +470,9 @@
             <p class="copyright pull-left">© ООО «Бранко Рус», 2021. Coded by <a href="http://it-pskov.ru/">IT Nova</a>.</p>
             <ul class="footer-menu pull-right">
                 <li><a href="/">О нас</a></li>
-                <li><a href="#">Инкубирование</a></li>
-                <li><a href="#">Контакты</a></li>
-                <li><a href="#">Войти</a></li>
+                <li><a href="/incubirovanie">Инкубирование</a></li>
+                <li><a href="/contact">Контакты</a></li>
+                <li><a href="/admin">Войти</a></li>
             </ul>
         </div>
         <!-- .container -->

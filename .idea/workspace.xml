@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="879d122c-77a1-411a-83d6-62069af1b2c1" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example-app/public/style/images/favicon.png" beforeDir="false" afterPath="$PROJECT_DIR$/example-app/public/style/images/favicon.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/example-app/resources/views/pageHome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/example-app/resources/views/pageHome.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -162,6 +163,13 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\programming\Web\Working-with-Laravel\example-app\public\style\images" />
+      <recent name="D:\programming\Web\Working-with-Laravel\example-app\public\style\images\icons" />
+      <recent name="D:\programming\Web\Working-with-Laravel\example-app\public" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -177,7 +185,7 @@
       <workItem from="1672918796827" duration="126000" />
       <workItem from="1672932521028" duration="882000" />
       <workItem from="1672988907625" duration="10837000" />
-      <workItem from="1673001080419" duration="6098000" />
+      <workItem from="1673001080419" duration="9892000" />
     </task>
     <servers />
   </component>
