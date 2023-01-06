@@ -6,43 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="879d122c-77a1-411a-83d6-62069af1b2c1" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example-app/public/style/images/art/hygge.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example-app/public/style/images/art/p1-full.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example-app/public/style/images/art/p1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example-app/public/style/images/art/p10-full.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example-app/public/style/images/art/p10.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example-app/public/style/images/art/p11-full.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example-app/public/style/images/art/p11.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example-app/public/style/images/art/p12-full.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example-app/public/style/images/art/p12.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example-app/public/style/images/art/p13-full.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example-app/public/style/images/art/p13.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example-app/public/style/images/art/p14-full.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example-app/public/style/images/art/p14.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example-app/public/style/images/art/p15-full.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example-app/public/style/images/art/p15.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example-app/public/style/images/art/p16.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example-app/public/style/images/art/p2-full.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example-app/public/style/images/art/p2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example-app/public/style/images/art/p3-full.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example-app/public/style/images/art/p3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example-app/public/style/images/art/p4-full.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example-app/public/style/images/art/p4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example-app/public/style/images/art/p5-full.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example-app/public/style/images/art/p5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example-app/public/style/images/art/p6-full.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example-app/public/style/images/art/p6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example-app/public/style/images/art/p7-full.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example-app/public/style/images/art/p7.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example-app/public/style/images/art/p8-full.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example-app/public/style/images/art/p8.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example-app/public/style/images/art/p9-full.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example-app/public/style/images/art/p9.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example-app/public/style/images/art/pa1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example-app/public/style/images/art/pa2-1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example-app/public/style/images/art/pa2-2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example-app/public/style/images/art/pa2-3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example-app/resources/views/pagehome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/example-app/resources/views/pagehome.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -212,7 +175,7 @@
       <workItem from="1672903958715" duration="2687000" />
       <workItem from="1672918796827" duration="126000" />
       <workItem from="1672932521028" duration="882000" />
-      <workItem from="1672988907625" duration="9346000" />
+      <workItem from="1672988907625" duration="10422000" />
     </task>
     <servers />
   </component>
