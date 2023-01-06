@@ -5,8 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="879d122c-77a1-411a-83d6-62069af1b2c1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/example-app/public/style/css/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example-app/public/style/images/art/slider-bg1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example-app/public/style/images/art/slider-bg2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example-app/public/style/images/art/slider-bg3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example-app/public/style/images/art/slider2-bg1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example-app/public/style/images/art/slider2-bg2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example-app/public/style/images/art/slider2-bg3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example-app/public/style/images/art/slider3-bg1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example-app/public/style/images/art/slider3-bg2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example-app/public/style/images/art/slider3-bg3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example-app/public/style/images/logo-dark.png" beforeDir="false" afterPath="$PROJECT_DIR$/example-app/public/style/images/logo-dark.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example-app/public/style/images/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/example-app/public/style/images/logo.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/example-app/resources/views/pagehome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/example-app/resources/views/pagehome.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -149,20 +159,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -174,7 +184,10 @@
       <workItem from="1672824882606" duration="1666000" />
       <workItem from="1672827080210" duration="699000" />
       <workItem from="1672828074815" duration="147000" />
-      <workItem from="1672903958715" duration="2385000" />
+      <workItem from="1672903958715" duration="2687000" />
+      <workItem from="1672918796827" duration="126000" />
+      <workItem from="1672932521028" duration="882000" />
+      <workItem from="1672988907625" duration="4915000" />
     </task>
     <servers />
   </component>

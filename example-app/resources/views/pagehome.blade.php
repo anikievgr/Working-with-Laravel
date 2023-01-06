@@ -12,7 +12,7 @@
     <link href="{{asset('style/css/bootstrap.min.css')}}" rel="stylesheet">
     <link href="{{asset('style/css/plugins.css')}}" rel="stylesheet">
     <link href="{{asset('style.css')}}" rel="stylesheet">
-    <link href="{{asset('style/css/color/green.css')}}" rel="stylesheet">
+    <link href="{{asset('style/css/color/blue.css')}}" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
     <link href="{{asset('style/type/icons.css')}}" rel="stylesheet">
@@ -29,127 +29,84 @@
     <nav class="navbar navbar-default default">
         <div class="container">
             <div class="navbar-header">
-                <div class="basic-wrapper"> <a class="btn responsive-menu" data-toggle="collapse" data-target=".navbar-collapse"><i></i></a>
-                    <div class="navbar-brand"> <a href="index.html"><img src="#" srcset="style/images/logo.png 1x, style/images/logo@2x.png 2x" class="logo-light" alt="" /><img src="#" srcset="style/images/logo-dark.png 1x, style/images/logo-dark@2x.png 2x" class="logo-dark" alt="" /></a>
+                <div class="basic-wrapper">
+                    <a class="btn responsive-menu" data-toggle="collapse" data-target=".navbar-collapse"><i></i></a>
+                    <div class="navbar-brand">
+                        <a href="https://brankorus.ru" style="position: absolute; top: -18px">
+                            <img src="style/images/logo.png" height="50"  class="logo-light" alt="BRANKO">
+                            <img src="style/images/logo-dark.png" height="50" class="logo-dark" alt="BRANKO">
+                        </a>
                     </div>
-                    <!-- /.navbar-brand -->
                 </div>
-                <!-- /.basic-wrapper -->
             </div>
-            <!-- /.navbar-header -->
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
-                    <li class="dropdown"><a href="#" class="dropdown-toggle js-activated" data-toggle="dropdown">Home <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="index.html">Home Layout 1</a></li>
-                            <li><a href="index2.html">Home Layout 2</a></li>
-                            <li><a href="index3.html">Home Layout 3</a></li>
-                            <li><a href="index4.html">Home Layout 4</a></li>
-                            <li><a href="index5.html">Home Layout 5</a></li>
-                            <li><a href="index-all.html">Home Layout All</a></li>
-                            <li><a href="animation.html">Scroll Animation</a></li>
-                            <li><a href="onepage.html">Onepage Layout</a></li>
-                        </ul>
+                    <li class="current">
+                        <a href="https://brankorus.ru">О нас</a>
                     </li>
-                    <li class="current dropdown"><a href="#" class="dropdown-toggle js-activated" data-toggle="dropdown">Sliders <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="slider.html">Fullscreen Slider</a></li>
-                            <li><a href="slider2.html">Fullwidth Slider</a></li>
-                            <li><a href="slider3.html">Boxed Slider</a></li>
-                        </ul>
+                    <li class="">
+                        <a href="https://brankorus.ru/pages/incubation">Инкубирование</a>
                     </li>
-                    <li class="dropdown"><a href="#" class="dropdown-toggle js-activated" data-toggle="dropdown">Headers <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="header.html">Transparent</a></li>
-                            <li><a href="header2.html">Solid</a></li>
-                            <li><a href="header3.html">Detailed</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown"><a href="#" class="dropdown-toggle js-activated" data-toggle="dropdown">Portfolio <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="portfolio.html">Portfolio</a></li>
-                            <li><a href="portfolio2.html">Portfolio 2</a></li>
-                            <li><a href="portfolio3.html">Portfolio 3</a></li>
-                            <li><a href="portfolio-post.html">Portfolio Post </a></li>
-                            <li><a href="portfolio-post2.html">Portfolio Post 2</a></li>
-                            <li><a href="portfolio-post3.html">Portfolio Post 3</a></li>
-                            <li><a href="portfolio-post4.html">Portfolio Post 4</a></li>
-                            <li><a href="portfolio-post5.html">Portfolio Post 5</a></li>
-                            <li><a href="portfolio-post6.html">Portfolio Post 6</a></li>
-                            <li><a href="portfolio-post7.html">Portfolio Post 7</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown"><a href="#" class="dropdown-toggle js-activated" data-toggle="dropdown">Blog <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="blog.html">Blog 1</a></li>
-                            <li><a href="blog2.html">Blog 2</a></li>
-                            <li><a href="blog3.html">Blog 3</a></li>
-                            <li><a href="blog4.html">Blog 4</a></li>
-                            <li><a href="blog5.html">Blog 5</a></li>
-                            <li><a href="blog-post.html">Blog Post</a></li>
-                            <li><a href="blog-post2.html">Blog Post 2</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown"><a href="#" class="dropdown-toggle js-activated" data-toggle="dropdown">Pages <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="about.html">About 1</a></li>
-                            <li><a href="about2.html">About 2</a></li>
-                            <li><a href="services.html">Services 1</a></li>
-                            <li><a href="services2.html">Services 2</a></li>
-                            <li><a href="faq.html">FAQ</a></li>
-                            <li><a href="contact.html">Contact</a></li>
-                            <li><a href="contact2.html">Contact 2</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown"><a href="#" class="dropdown-toggle js-activated" data-toggle="dropdown">Features <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="elements.html">Elements</a></li>
-                            <li><a href="charts.html">Charts</a></li>
-                            <li><a href="pricing.html">Pricing Tables</a></li>
-                            <li><a href="headings.html">Headings</a></li>
-                            <li><a href="disqus.html">Disqus</a></li>
-                            <li><a href="icon-lulu.html">Lulu Icons</a></li>
-                            <li><a href="icon-budicon.html">Budicon Icons</a></li>
-                            <li><a href="icon-fontello.html">Fontello Icons</a></li>
-                        </ul>
+                    <li class="">
+                        <a href="https://brankorus.ru/contact">Контакты</a>
                     </li>
                 </ul>
-                <!-- /.navbar-nav -->
             </div>
-            <!-- /.navbar-collapse -->
         </div>
         <!-- /.container -->
     </nav>
     <!-- /.navbar -->
 
-    <div class="tp-fullwidth-container revolution">
-        <div class="tp-fullwidth">
+    <div class="tp-fullscreen-container revolution">
+        <div class="tp-fullscreen">
             <ul>
-
-                <li data-transition="fade"> <img src="style/images/art/slider2-bg3.jpg"  alt="" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat" />
-                    <div class="tp-caption large sfr" data-x="30" data-y="233" data-speed="900" data-start="800" data-easing="Sine.easeOut">Free updates & <br />
-                        premium support</div>
-                    <div class="tp-caption medium sfr" data-x="30" data-y="373" data-speed="900" data-start="1500" data-easing="Sine.easeOut">You will have access to all updates and free support</div>
-                    <div class="tp-caption sfr" data-x="30" data-y="440" data-speed="900" data-start="2200" data-easing="Sine.easeOut"  data-endspeed="100"><a href="#" class="btn btn-large">Purchase Now</a></div>
+                <li data-transition="fade"> <img src="style/images/art/slider-bg1.jpg"  alt="" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat" />
+                    <div class="tp-caption large sfr" data-x="30" data-y="263" data-speed="900" data-start="800" data-easing="Sine.easeOut"> Разведение индейки<br />
+                        </div>
+                    <div class="tp-caption medium sfr" data-x="30" data-y="403" data-speed="900" data-start="1500" data-easing="Sine.easeOut">Более 45 лет занимаемся выращиванием индейки</div>
+                    <div class="tp-caption sfr" data-x="30" data-y="470" data-speed="900" data-start="2200" data-easing="Sine.easeOut"  data-endspeed="100"><a href="#" class="btn btn-large">Связаться</a></div>
                 </li>
-                <li data-transition="fade"> <img src="style/images/art/slider2-bg3.jpg"  alt="" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat" />
-                    <div class="tp-caption large sfr" data-x="30" data-y="233" data-speed="900" data-start="800" data-easing="Sine.easeOut">Free updates & <br />
-                        premium support</div>
-                    <div class="tp-caption medium sfr" data-x="30" data-y="373" data-speed="900" data-start="1500" data-easing="Sine.easeOut">You will have access to all updates and free support</div>
-                    <div class="tp-caption sfr" data-x="30" data-y="440" data-speed="900" data-start="2200" data-easing="Sine.easeOut"  data-endspeed="100"><a href="#" class="btn btn-large">Purchase Now</a></div>
+                <li data-transition="fade"> <img src="style/images/art/slider-bg2.jpg"  alt="" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat" />
+                    <div class="tp-caption large sfr" data-x="30" data-y="263" data-speed="900" data-start="800" data-easing="Sine.easeOut">
+                        Специализация BIG 6
+                    </div>
+                    <div class="tp-caption medium sfr" data-x="30" data-y="403" data-speed="900" data-start="1500" data-easing="Sine.easeOut">
+                        Занимаем почти 90% словацкого рынка
+                    </div>
+                    <div class="tp-caption sfr" data-x="30" data-y="470" data-speed="900" data-start="2200" data-easing="Sine.easeOut"  data-endspeed="100"><a href="#" class="btn btn-large">Purchase Now</a></div>
                 </li>
-                <li data-transition="fade"> <img src="style/images/art/slider2-bg3.jpg"  alt="" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat" />
-                    <div class="tp-caption large sfr" data-x="30" data-y="233" data-speed="900" data-start="800" data-easing="Sine.easeOut">Free updates & <br />
-                        premium support</div>
-                    <div class="tp-caption medium sfr" data-x="30" data-y="373" data-speed="900" data-start="1500" data-easing="Sine.easeOut">You will have access to all updates and free support</div>
-                    <div class="tp-caption sfr" data-x="30" data-y="440" data-speed="900" data-start="2200" data-easing="Sine.easeOut"  data-endspeed="100"><a href="#" class="btn btn-large">Purchase Now</a></div>
+                <li data-transition="fade"> <img src="style/images/art/slider-bg3.jpg"  alt="" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat" />
+                    <div class="tp-caption large sfr" data-x="30" data-y="263" data-speed="900" data-start="800" data-easing="Sine.easeOut">
+                        Индейки Aviagen
+                    </div>
+                    <div class="tp-caption medium sfr" data-x="30" data-y="403" data-speed="900" data-start="1500" data-easing="Sine.easeOut">
+                        Исходный материал поставляется из Великобритании
+                        <div>
+                    <div class="tp-caption sfr" data-x="30" data-y="470" data-speed="900" data-start="2200" data-easing="Sine.easeOut"  data-endspeed="100"><a href="#" class="btn btn-large">Purchase Now</a></div>
+                </li>
+                <li data-transition="fade"> <img src="style/images/art/slider-bg4.jpg"  alt="" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat" />
+                    <div class="tp-caption large sfr" data-x="30" data-y="263" data-speed="900" data-start="800" data-easing="Sine.easeOut">
+                        Сертификация ISO 9001 : 2000
+                    </div>
+                    <div class="tp-caption medium sfr" data-x="30" data-y="403" data-speed="900" data-start="1500" data-easing="Sine.easeOut">
+                        Имеем международный сертификат качества по ISO 9001: 2000
+                    </div>
+                    <div class="tp-caption sfr" data-x="30" data-y="470" data-speed="900" data-start="2200" data-easing="Sine.easeOut"  data-endspeed="100"><a href="#" class="btn btn-large">Purchase Now</a></div>
+                </li>
+                <li data-transition="fade"> <img src="style/images/art/slider-bg5.jpg"  alt="" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat" />
+                    <div class="tp-caption large sfr" data-x="30" data-y="263" data-speed="900" data-start="800" data-easing="Sine.easeOut">
+                        Наша продукция
+                    </div>
+                    <div class="tp-caption medium sfr" data-x="30" data-y="403" data-speed="900" data-start="1500" data-easing="Sine.easeOut">
+                        Производим около 8,5 миллионов инкубационных яиц
+                    </div>
+                    <div class="tp-caption sfr" data-x="30" data-y="470" data-speed="900" data-start="2200" data-easing="Sine.easeOut"  data-endspeed="100"><a href="#" class="btn btn-large">Purchase Now</a></div>
                 </li>
             </ul>
             <div class="tp-bannertimer tp-bottom"></div>
         </div>
-        <!-- /.tp-fullwidth-container -->
-    </div>
-    <!-- /.revolution -->
+        <!-- /.tp-fullscreen-container -->
+    </div><!-- /.revolution -->
     <div class="container inner">
         <div class="headline text-center">
             <h2>Первоклассные индюшки и индюшачьи яйца!</h2>
@@ -326,7 +283,6 @@
                 <p class="lead">display your journal entries in a timeline fashion</p>
             </div>
             <div class="timeline">
-                <div class="date-title"> <span>March 2015</span> </div>
                 <div class="row">
                     <div class="col-sm-6 timeline-item">
                         <div class="arrow"></div>
@@ -335,7 +291,7 @@
                                 <div class="col-sm-3 col-md-5">
                                     <figure><a href="#">
                                             <div class="text-overlay">
-                                                <div class="info"><span>Read More</span></div>
+                                                <div class="info"><span>ОСНОВАНИЕ КОМПАНИИ</span></div>
                                             </div>
                                             <img src="style/images/art/tb1.jpg" alt="" /></a></figure>
                                 </div>
@@ -352,29 +308,6 @@
                         <!-- /.post-content -->
                     </div>
                     <!-- /column -->
-                    <div class="col-sm-6 timeline-item right">
-                        <div class="arrow"></div>
-                        <div class="post-content">
-                            <div class="row">
-                                <div class="col-sm-3 col-md-5">
-                                    <figure><a href="#">
-                                            <div class="text-overlay">
-                                                <div class="info"><span>Read More</span></div>
-                                            </div>
-                                            <img src="style/images/art/tb2.jpg" alt="" /></a></figure>
-                                </div>
-                                <!-- /column -->
-                                <div class="col-sm-9 col-md-7">
-                                    <h4 class="post-title"><a href="#">Mollis Euismod Fringilla</a></h4>
-                                    <div class="meta"><span class="date"><a href="#" class="link-effect">22 March 2015</a></span><span class="category"><a href="#" class="link-effect">Journal</a></span><span class="comments"><a href="#" class="link-effect"><i class="icon-chat-1"></i> 8</a></span></div>
-                                    <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Vivamus sagittis lacus vel augue laoreet rutrum faucibus.</p>
-                                    <a href="#" class="more link-effect">Read More »</a> </div>
-                                <!-- /column -->
-                            </div>
-                            <!-- /.row -->
-                        </div>
-                        <!-- /.post-content -->
-                    </div>
                     <!-- /column -->
                 </div>
                 <!-- /.row -->
@@ -638,7 +571,7 @@
             <hr />
             <div class="row">
                 <div class="col-sm-3">
-                    <div class="widget"> <img src="style/images/logo.png" data-at2x="style/images/logo@2x.png" alt="" />
+                    <div class="widget"> <img src="style/images/logo.svg" data-at2x="style/images/logo@2x.png" alt="" />
                         <div class="divide20"></div>
                         <p>Aenean lacinia bibendum nulla sed leo posuere erat a ante venenatis dapibus posuere velit aliquet. Donec ullamcorper metus auctor fringi. Nullam quis risus. </p>
                     </div>
