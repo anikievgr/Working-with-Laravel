@@ -43,10 +43,10 @@
                     <li class="">
                         <a href="/">О нас</a>
                     </li>
-                    <li class="">
+                    <li class="current">
                         <a href="/incubirovanie">Инкубирование</a>
                     </li>
-                    <li class="current">
+                    <li class="">
                         <a href="/contact">Контакты</a>
                     </li>
                 </ul>
