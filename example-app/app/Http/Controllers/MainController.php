@@ -10,12 +10,12 @@ class MainController extends Controller
         return view('pageHome');
     }
     public function contacti(){
-        return "контакты";
+        return view('contact');
     }
     public function incubirovanie(){
-        return "инкубирование";
+        return view('incubirovanie');
     }
     public function adminPanel(){
-         return "админ панел";
+        return view('login');
     }
 }
