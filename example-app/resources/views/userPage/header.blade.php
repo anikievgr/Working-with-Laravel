@@ -8,7 +8,10 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel = "shortcut icon" href = "style/images/favicon-1.svg" sizes="any" >
-    <title>Branko - О нас</title>
+   
+         <title> @section('title')Branko - О нас   @show</title>
+ 
+   
     <!-- Bootstrap core CSS -->
     <link href="{{asset('style/css/bootstrap.min.css')}}" rel="stylesheet">
     <link href="{{asset('style/css/plugins.css')}}" rel="stylesheet">

@@ -1,4 +1,7 @@
 @extends('../../userPage/app')
+@section('title')
+    Branko -  Инкубирование
+@endsection
 @section('activpage')
                         <li class="">
                         <a href="/">О нас</a>
