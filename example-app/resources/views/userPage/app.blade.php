@@ -1,12 +1,14 @@
+
 <!doctype html>
 <html lang="en">
 <head>
+    @section('head')
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel = "shortcut icon" href = "style/images/favicon-1.svg" sizes="any" >
-    <title>Branko - Инкубирование</title>
+    <title>Branko - О нас</title>
     <!-- Bootstrap core CSS -->
     <link href="{{asset('style/css/bootstrap.min.css')}}" rel="stylesheet">
     <link href="{{asset('style/css/plugins.css')}}" rel="stylesheet">
@@ -21,11 +23,15 @@
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+    @show
+   
 </head>
 <body>
 <div id="preloader"><div id="status"><div class="spinner"></div></div></div>
 <div class="body-wrapper">
-    <nav class="navbar navbar-default default">
+    @section('navBar-tag')
+     <nav class="navbar navbar-default default">
+    @show
         <div class="container">
             <div class="navbar-header">
                 <div class="basic-wrapper">
@@ -40,35 +46,26 @@
             </div>
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
-                    <li class="">
+                    @section('activpage')
+                        <li class="current">
                         <a href="/">О нас</a>
                     </li>
-                    <li class="current">
+                    <li class="">
                         <a href="/incubirovanie">Инкубирование</a>
                     </li>
                     <li class="">
                         <a href="/contact">Контакты</a>
                     </li>
+                    @show
                 </ul>
             </div>
         </div>
         <!-- /.container -->
     </nav>
-    <div class="post-parallax parallax inverse-wrapper parallax3" style="background-image: url({{asset('style/images/art/slider-bg1.jpg')}}">
-        <div class="container inner text-center">
-            <h2>Инкубирование</h2>
+    <!-- /.navbar -->
+@yield('content')
 
-        </div>
-    </div>
-    <div class="light-wrapper">
-        <div class="container inner">
-            <div class="thin2">
-                <h4 style="text-align: center;">ИНКУБИРОВАНИЕ</h4>
-                <p>&nbsp;</p>
-            </div>
-        </div>
-    </div>
-    <footer class="inverse-wrapper">
+<footer class="inverse-wrapper">
         <div class="container inner">
 
             <div class="row ">
@@ -113,11 +110,14 @@
     </footer>
     <!-- /footer -->
 </div>
-<!--/.body-wrapper -->
-<script src="{{asset('style/js/jquery.min.js')}}"></script>
+@section('scripts')
+    <script src="{{asset('style/js/jquery.min.js')}}"></script>
 <script src="{{asset('style/js/bootstrap.min.js')}}"></script>
 <script src="{{asset('style/js/plugins.js')}}"></script>
 <script src="{{asset('style/js/jquery.themepunch.tools.min.js')}}"></script>
 <script src="{{asset('style/js/scripts.js')}}"></script>
+@show
+<!--/.body-wrapper -->
+
 </body>
 </html>
