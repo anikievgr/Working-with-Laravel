@@ -7,17 +7,15 @@ use Illuminate\Http\Request;
 class MainController extends Controller
 {
     public function pageHome(){
-        return view('userPage/pageHome');
+        return view('userPage/page/pageHome');
  
     }
     public function contacti(){
-        return view('userPage/contact');
+        return view('userPage/page/contact');
     }
     public function incubirovanie(){
-        return view('userPage/incubirovanie');
+        return view('userPage/page/incubirovanie');
     }
-    public function adminPanel(){
-        return view('adminpanel/app');
-    }
+
     
 }

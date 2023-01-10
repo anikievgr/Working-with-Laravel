@@ -1,4 +1,4 @@
-@extends('../userPage/app')
+@extends('../../userPage/app')
 @section('activpage')
                         <li class="">
                         <a href="/">О нас</a>

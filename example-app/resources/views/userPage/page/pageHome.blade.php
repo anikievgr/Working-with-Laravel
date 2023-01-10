@@ -11,7 +11,7 @@
                     </li>
      @endsection
 @section('content')
-    
+
 
 
     <div class="tp-fullscreen-container revolution">
