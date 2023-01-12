@@ -44,11 +44,11 @@
     <!-- /footer -->
 </div>
 @section('scripts')
-    <script src="{{asset('style/js/jquery.min.js')}}"></script>
+    <script src="{{asset('style/userPage/js/jquery.min.js')}}"></script>
 <script src="{{asset('style/js/bootstrap.min.js')}}"></script>
-<script src="{{asset('style/js/plugins.js')}}"></script>
-<script src="{{asset('style/js/jquery.themepunch.tools.min.js')}}"></script>
-<script src="{{asset('style/js/scripts.js')}}"></script>
+<script src="{{asset('style/userPage/js/plugins.js')}}"></script>
+<script src="{{asset('style/userPage/js/jquery.themepunch.tools.min.js')}}"></script>
+<script src="{{asset('style/userPage/js/scripts.js')}}"></script>
 @show
 <!--/.body-wrapper -->
 

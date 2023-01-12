@@ -15,11 +15,11 @@
     <!-- Bootstrap core CSS -->
     <link href="{{asset('style/css/bootstrap.min.css')}}" rel="stylesheet">
     <link href="{{asset('style/css/plugins.css')}}" rel="stylesheet">
-    <link href="{{asset('style.css')}}" rel="stylesheet">
-    <link href="{{asset('style/css/color/blue.css')}}" rel="stylesheet">
+    <link href="{{asset('style/userPage/css/style.css')}}" rel="stylesheet">
+    <link href="{{asset('style/userPage/css/color/blue.css')}}" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
-    <link href="{{asset('style/type/icons.css')}}" rel="stylesheet">
+    <link href="{{asset('style/userPage/type/icons.css')}}" rel="stylesheet">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -50,13 +50,13 @@
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
                     @section('activpage')
-                        <li class="current">
+                        <li class="">
                         <a href="/">О нас</a>
                     </li>
-                    <li class="">
+                    <li class="/">
                         <a href="/incubirovanie">Инкубирование</a>
                     </li>
-                    <li class="">
+                    <li class="/">
                         <a href="/contact">Контакты</a>
                     </li>
                     @show

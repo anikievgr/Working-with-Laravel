@@ -1,15 +1,15 @@
 @extends('../../userPage/app')
 @section('title')
     Branko -  Инкубирование
-@endsection
+ @endsection
 @section('activpage')
-                        <li class="">
+                        <li class="/">
                         <a href="/">О нас</a>
                     </li>
                     <li class="current">
                         <a href="/incubirovanie">Инкубирование</a>
                     </li>
-                    <li class="">
+                    <li class="/">
                         <a href="/contact">Контакты</a>
                     </li>
      @endsection
@@ -24,7 +24,7 @@
         <div class="container inner">
             <div class="thin2">
                 <h4 style="text-align: center;">ИНКУБИРОВАНИЕ</h4>
-                <p>&nbsp;</p>
+                <p></p>
             </div>
         </div>
     </div>

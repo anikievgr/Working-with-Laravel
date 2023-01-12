@@ -1,7 +1,7 @@
 @extends('../userPage/app')
 @section('title')
     Branko -  Контакты
-@endsection
+ @endsection
 @section('activpage')
                         <li class="">
                         <a href="/">О нас</a>

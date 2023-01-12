@@ -5,9 +5,43 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="879d122c-77a1-411a-83d6-62069af1b2c1" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example-app/resources/views/userPage/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/example-app/resources/views/userPage/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example-app/resources/views/userPage/contact.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/example-app/resources/views/userPage/contact.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example-app/app/Http/Controllers/MainController.php" beforeDir="false" afterPath="$PROJECT_DIR$/example-app/app/Http/Controllers/MainController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example-app/public/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example-app/public/style/css/color/blue.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example-app/public/style/css/main.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example-app/public/style/js/jquery.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example-app/public/style/js/jquery.themepunch.tools.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example-app/public/style/js/plugins.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example-app/public/style/js/scripts.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example-app/public/style/type/budicons/budicon.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example-app/public/style/type/budicons/budicon.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example-app/public/style/type/budicons/budicon.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example-app/public/style/type/budicons/budicon.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example-app/public/style/type/elemis/dia.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example-app/public/style/type/elemis/dia.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example-app/public/style/type/elemis/dia.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example-app/public/style/type/elemis/dia.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example-app/public/style/type/fontello/fontello-circle.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example-app/public/style/type/fontello/fontello-circle.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example-app/public/style/type/fontello/fontello-circle.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example-app/public/style/type/fontello/fontello-circle.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example-app/public/style/type/fontello/fontello-social.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example-app/public/style/type/fontello/fontello-social.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example-app/public/style/type/fontello/fontello-social.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example-app/public/style/type/fontello/fontello-social.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example-app/public/style/type/fontello/fontello.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example-app/public/style/type/fontello/fontello.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example-app/public/style/type/fontello/fontello.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example-app/public/style/type/fontello/fontello.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example-app/public/style/type/icons.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example-app/public/style/video/video.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example-app/public/style/video/video.webm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example-app/resources/views/userPage/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/example-app/resources/views/userPage/footer.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example-app/resources/views/userPage/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/example-app/resources/views/userPage/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example-app/resources/views/userPage/page/contact.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/example-app/resources/views/userPage/page/contact.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example-app/resources/views/userPage/page/incubirovanie.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/example-app/resources/views/userPage/page/incubirovanie.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example-app/resources/views/userPage/page/pageHome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/example-app/resources/views/userPage/page/pageHome.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example-app/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/example-app/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -195,6 +229,7 @@
       <workItem from="1673357313516" duration="1000" />
       <workItem from="1673357758741" duration="133000" />
       <workItem from="1673358879285" duration="3000" />
+      <workItem from="1673549736357" duration="172000" />
     </task>
     <servers />
   </component>
