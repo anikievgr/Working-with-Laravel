@@ -5,17 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link href="{{asset('style/pageAdmin/assets/css/loader.css" rel="stylesheet')}}" type="text/css" />
-    <script src="{{asset('style/pageAdmin/assets/js/loader.js')}}"></script>
-
-    <!-- BEGIN GLOBAL MANDATORY STYLES -->
- <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">//
-    <link href="{{asset('style/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css" />//
-    <link href="{{asset('style/css/plugins.css')}}" rel="stylesheet" type="text/css" />//
-    <link href="{{asset('style/pageAdmin/assets/css/authentication/form-2.css')}}" rel="stylesheet" type="text/css" />//
-    <!-- END GLOBAL MANDATORY STYLES -->    
-    <link rel="stylesheet" type="text/css" href="{{asset('style/pageAdmin/assets/css/forms/theme-checkbox-radio.css')}}">//
-    <link rel="stylesheet" type="text/css" href="{{asset('style/pageAdmin/assets/css/forms/switches.css')}}">//
+     <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+    <link href="{{asset('style/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css" />
+    <link href="{{asset('style/css/plugins.css')}}" rel="stylesheet" type="text/css" />
+    <link href="{{asset('style/pageAdmin/assets/css/authentication/form-2.css')}}" rel="stylesheet" type="text/css" />
+    <!-- END GLOBAL MANDATORY STYLES -->
+    <link rel="stylesheet" type="text/css" href="{{asset('style/pageAdmin/assets/css/forms/theme-checkbox-radio.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('style/pageAdmin/assets/css/forms/switches.css')}}">
 </head>
 <body class="form">
     
@@ -43,7 +39,7 @@
                                         <label for="password">PASSWORD</label>
                                         <a href="auth_pass_recovery_boxed.html" class="forgot-pass-link">Forgot Password?</a>
                                     </div>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-lock"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" style="margin-top: 20px" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-lock"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
                                     <input id="password" name="password" type="password" class="form-control" placeholder="Password">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" id="toggle-password" class="feather feather-eye"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
                                 </div>
@@ -79,13 +75,14 @@
         </div>
     </div>
 
-
-        <!-- BEGIN GLOBAL MANDATORY SCRIPTS -->
+    
+    <!-- BEGIN GLOBAL MANDATORY SCRIPTS -->
     <script src="{{asset('style/pageAdmin/assets/js/libs/jquery-3.1.1.min.js')}}"></script>
-    <script src="{{asset('style//js/popper.min.js')}}"></script>
-    <script src="{{asset('style//js/bootstrap.min.js')}}"></script>
+    <script src="{{asset('style/js/js/popper.min.js')}}"></script>
+    <script src="{{asset('style/js/bootstrap.min.js')}}"></script>
     
     <!-- END GLOBAL MANDATORY SCRIPTS -->
     <script src="{{asset('style/pageAdmin/assets/js/authentication/form-2.js')}}"></script>
+
 </body>
 </html>
