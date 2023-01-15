@@ -19,3 +19,4 @@ Route::get('/contact','MainController@contacti');
 Route::get('/logTo','MainController@loginToTheAdminPanel');
 Route::get('/adminPanel','MainController@adminPanel');
 Route::get('/sales','MainController@adminSales');
+Route::get('/chat','MainController@adminChat');
