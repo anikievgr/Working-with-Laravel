@@ -5,7 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="879d122c-77a1-411a-83d6-62069af1b2c1" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example-app/app/Http/Controllers/MainController.php" beforeDir="false" afterPath="$PROJECT_DIR$/example-app/app/Http/Controllers/MainController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example-app/resources/views/adminPanel/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/example-app/resources/views/adminPanel/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example-app/resources/views/adminPanel/page/adminPanel.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/example-app/resources/views/adminPanel/page/adminPanel.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/example-app/resources/views/adminPanel/page/loginTo.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/example-app/resources/views/adminPanel/page/loginTo.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example-app/resources/views/userPage/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/example-app/resources/views/userPage/footer.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example-app/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/example-app/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -195,6 +201,8 @@
       <workItem from="1673358879285" duration="3000" />
       <workItem from="1673549736357" duration="172000" />
       <workItem from="1673778561367" duration="2000" />
+      <workItem from="1673783945688" duration="4000" />
+      <workItem from="1673795440266" duration="9000" />
     </task>
     <servers />
   </component>

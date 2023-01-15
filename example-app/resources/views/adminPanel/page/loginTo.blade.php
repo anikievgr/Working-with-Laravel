@@ -22,7 +22,7 @@
                         <div class="form-content">
                             <h1>Войти</h1>
                             <p>Войдите в свой аккаунт, чтобы продолжить.</p>
-                            <form method="post" action="adminPanel" class="text-left">
+                            <form method="get" action="adminPanel" class="text-left">
                                 <input type="hidden" name="_token" value="yY3NgVkh8qKFcNPYkiswJnUsHA3zKZhKD1Xwhr9E">                                <input type="hidden" name="remember" value="on">
                                 <div class="form">
                                     <div id="username-field" class="field-wrapper input">

@@ -25,4 +25,9 @@ class MainController extends Controller
     {
         return view('adminPanel/page/adminPanel');
     }
+    
+        public function adminSales()
+    {
+        return view('adminPanel/page/sales');
+    }
 }
