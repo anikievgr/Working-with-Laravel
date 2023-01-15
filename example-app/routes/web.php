@@ -17,3 +17,4 @@ Route::get('/','MainController@pageHome');
 Route::get('/incubirovanie','MainController@incubirovanie');
 Route::get('/contact','MainController@contacti');
 Route::get('/admin','MainController@loginToTheAdminPanel');
+Route::get('/admin','MainController@adminPanel');

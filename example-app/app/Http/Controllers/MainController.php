@@ -16,9 +16,13 @@ class MainController extends Controller
     public function incubirovanie(){
         return view('userPage/page/incubirovanie');
     }
+    //администраторская панель
     public function loginToTheAdminPanel()
     {
         return view('adminPanel/page/loginTo');
     }
-    
+    public function adminPanel()
+    {
+        return view('adminPanel/page/adminPanel');
+    }
 }
