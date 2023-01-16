@@ -3,9 +3,12 @@
      active
     @endsection
 @section('headerAddLink')
+    <link href="{{asset('style/pageAdmin/plugins/apex/apexcharts.css')}}" rel="stylesheet" type="text/css">
+
          <link href="{{asset('style/pageAdmin/assets/css/dashboard/dash_1.css')}}" rel="stylesheet" type="text/css" />
     @show
 @section('scriptAdd')
+ <script src="{{asset('style/pageAdmin/plugins/apex/apexcharts.min.js')}}"></script>
             <script src="{{asset('style/pageAdmin/assets/js/dashboard/dash_1.js')}}"></script>
    @endsection
 @section('content')

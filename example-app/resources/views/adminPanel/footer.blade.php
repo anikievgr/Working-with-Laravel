@@ -17,7 +17,7 @@
     <!-- END GLOBAL MANDATORY SCRIPTS -->
 
     <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
-    <script src="{{asset('style/pageAdmin/plugins/apex/apexcharts.min.js')}}"></script>
+   
     @section('scriptAdd')
         
     @show

@@ -7,10 +7,11 @@
     <list default="true" id="879d122c-77a1-411a-83d6-62069af1b2c1" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/example-app/app/Http/Controllers/MainController.php" beforeDir="false" afterPath="$PROJECT_DIR$/example-app/app/Http/Controllers/MainController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example-app/resources/views/adminPanel/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/example-app/resources/views/adminPanel/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example-app/resources/views/adminPanel/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/example-app/resources/views/adminPanel/footer.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example-app/resources/views/adminPanel/navBar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/example-app/resources/views/adminPanel/navBar.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/example-app/resources/views/adminPanel/page/adminPanel.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/example-app/resources/views/adminPanel/page/adminPanel.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example-app/resources/views/adminPanel/page/loginTo.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/example-app/resources/views/adminPanel/page/loginTo.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example-app/resources/views/userPage/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/example-app/resources/views/userPage/footer.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example-app/resources/views/adminPanel/page/chat.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/example-app/resources/views/adminPanel/page/chat.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example-app/resources/views/adminPanel/page/sales.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/example-app/resources/views/adminPanel/page/sales.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/example-app/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/example-app/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -203,6 +204,11 @@
       <workItem from="1673778561367" duration="2000" />
       <workItem from="1673783945688" duration="4000" />
       <workItem from="1673795440266" duration="9000" />
+      <workItem from="1673861920806" duration="8000" />
+      <workItem from="1673862003136" duration="37000" />
+      <workItem from="1673892764975" duration="31000" />
+      <workItem from="1673893971564" duration="2000" />
+      <workItem from="1673894360490" duration="15000" />
     </task>
     <servers />
   </component>

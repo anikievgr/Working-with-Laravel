@@ -16,7 +16,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/','MainController@pageHome');
 Route::get('/incubirovanie','MainController@incubirovanie');
 Route::get('/contact','MainController@contacti');
+
 Route::get('/logTo','MainController@loginToTheAdminPanel');
 Route::get('/adminPanel','MainController@adminPanel');
 Route::get('/sales','MainController@adminSales');
 Route::get('/chat','MainController@adminChat');
+Route::get('/mail','MainController@adminMail');

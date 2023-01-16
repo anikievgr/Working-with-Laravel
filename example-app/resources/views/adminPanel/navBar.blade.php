@@ -7,9 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
     <title>CORK Admin Template - Analytics Dashboard</title>
     <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico"/>
-           
-    <link href="{{asset('style/pageAdmin/assets/css/loader.css')}}" rel="stylesheet" type="text/css" />
+
+         <link href="{{asset('style/pageAdmin/assets/css/loader.css')}}" rel="stylesheet" type="text/css" />
     <script src="{{asset('style/pageAdmin/assets/js/loader.js')}}"></script>
+
     <!-- BEGIN GLOBAL MANDATORY STYLES -->
 
     <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
@@ -18,7 +19,6 @@
     <!-- END GLOBAL MANDATORY STYLES -->
          
     <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM STYLES -->
-    <link href="{{asset('style/pageAdmin/plugins/apex/apexcharts.css')}}" rel="stylesheet" type="text/css">
 
     @section('headerAddLink')
     <!-- END PAGE LEVEL PLUGINS/CUSTOM STYLES -->
@@ -282,7 +282,7 @@
                         <div class="heading"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle"><circle cx="12" cy="12" r="10"></circle></svg><span>APPS</span></div>
                     </li>
 
-                    <li class="menu " >
+                       @section('Chat')  <li class='menu' > @show 
                         <a href="chat" aria-expanded="false" class="dropdown-toggle">
                             <div class= "">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-message-square"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
@@ -292,7 +292,7 @@
                     </li>
 
                     <li class="menu">
-                        <a href="apps_mailbox.html" aria-expanded="false" class="dropdown-toggle">
+                        <a href="mail/" aria-expanded="false" class="dropdown-toggle">
                             <div class="" >
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
                                 <span>Mailbox</span>
