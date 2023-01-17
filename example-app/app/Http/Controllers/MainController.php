@@ -34,8 +34,12 @@ class MainController extends Controller
     {
         return view('adminPanel/page/chat');
     }
-       public function adminMail()
+    public function adminMail()
     {
         return view('adminPanel/page/mail');
+    }
+     public function adminSlider()
+    {
+        return view('adminPanel/page/pageForm/sliderForm');
     }
 }
