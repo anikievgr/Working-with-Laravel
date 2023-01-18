@@ -40,6 +40,7 @@ class MainController extends Controller
     }
      public function adminSlider()
     {
-        return view('adminPanel/page/pageForm/sliderForm');
+        return view('adminPanel/page/pageForm/pageHome/pageHomeForm');
     }
+        
 }

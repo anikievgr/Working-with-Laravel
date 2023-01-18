@@ -13,7 +13,7 @@
             App.init();
         });
     </script>
-    <script src="{{asset('assets/js/custom.js')}}"></script>
+    <script src="{{asset('style/pageAdmin/assets/js/custom.js')}}"></script>
     <!-- END GLOBAL MANDATORY SCRIPTS -->
 
     <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
