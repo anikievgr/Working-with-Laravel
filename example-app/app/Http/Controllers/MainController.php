@@ -42,5 +42,6 @@ class MainController extends Controller
     {
         return view('adminPanel/page/pageForm/pageHome/pageHomeForm');
     }
+
         
 }
