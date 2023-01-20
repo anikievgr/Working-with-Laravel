@@ -24,4 +24,4 @@ Route::get('/chat','MainController@adminChat');
 Route::get('/mail','MainController@adminMail');
 //Form
 Route::get('/adminSlider','MainController@adminSlider');
-Route::get('/T','TestBDController@index');
+Route::get('/adminIncubirovanie', 'MainController@adminIncubirovane');

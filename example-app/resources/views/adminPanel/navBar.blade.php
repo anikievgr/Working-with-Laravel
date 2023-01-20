@@ -312,7 +312,9 @@
                             <li class = @section('sliderForm')@show>
                                 <a href="adminSlider"> Главная страница</a>
                             </li>
-                          
+                          <li class = @section('incubitovanie')@show>
+                                <a href="adminIncubirovanie"> Инкубирование</a>
+                            </li>
                         </ul>
                     </li>
                     

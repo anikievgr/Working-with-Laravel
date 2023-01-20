@@ -42,6 +42,8 @@ class MainController extends Controller
     {
         return view('adminPanel/page/pageForm/pageHome/pageHomeForm');
     }
-
-        
+         public function adminIncubirovane()
+    {
+        return view('adminPanel/page/pageForm/pageHome/incubirovanieFrom');
+    } 
 }
