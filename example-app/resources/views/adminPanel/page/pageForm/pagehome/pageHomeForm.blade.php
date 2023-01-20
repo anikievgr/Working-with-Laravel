@@ -38,18 +38,19 @@
                                     </div>
                                 </div>
                                 <div class="widget-content widget-content-area">
-                                    <form>
+                                    <form method="patch " action="form">
+                                        @csrf
                                         <div class="form-group mb-4">
                                             <label for="exampleFormControlInput2">Текст №1</label>
-                                            <input type="text" class="form-control" id="h-text1" aria-describedby="h-text1" placeholder="">
+                                            <input type="text" name="title" class="form-control" id="h-text1" aria-describedby="h-text1" placeholder="">
                                         </div>
                                         <div class="form-group mb-4">
                                             <label for="exampleFormControlInput2">Текст №2</label>
-                                            <input type="text" class="form-control" id="h-text1" aria-describedby="h-text1" placeholder="">
+                                            <input type="text" name="subtitle" class="form-control" id="h-text1" aria-describedby="h-text1" placeholder="">
                                         </div>
                                         <div class="form-group mb-4 mt-3">
                                             <label for="exampleFormControlFile1">Загрузите картинку</label>
-                                            <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                                            <input type="file" name="image"class="form-control-file" id="exampleFormControlFile1">
                                         </div>
                                         <input type="submit" name="time" class="mt-4 mb-4 btn btn-primary">
                                     </form>

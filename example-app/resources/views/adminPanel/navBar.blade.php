@@ -315,6 +315,9 @@
                           <li class = @section('incubitovanie')@show>
                                 <a href="adminIncubirovanie"> Инкубирование</a>
                             </li>
+                               <li class = @section('contact')@show>
+                                <a href="adminContact"> Контакты</a>
+                            </li>
                         </ul>
                     </li>
                     
