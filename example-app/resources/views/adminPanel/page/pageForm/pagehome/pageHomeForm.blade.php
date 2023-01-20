@@ -38,8 +38,8 @@
                                     </div>
                                 </div>
                                 <div class="widget-content widget-content-area">
-                                    <form method="patch " action="form">
-                                        @csrf
+                                    <form method="post" action="{{route('form')}} "enctype="multipart/form-data">
+                                          {{ csrf_field() }}
                                         <div class="form-group mb-4">
                                             <label for="exampleFormControlInput2">Текст №1</label>
                                             <input type="text" name="title" class="form-control" id="h-text1" aria-describedby="h-text1" placeholder="">

@@ -14,6 +14,9 @@ class FormController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request->all());
+        
+        $path = $request->file('image')->store('uploads', 'public');
+        return view('form', ['path' => $path]);
+
     }
 }
