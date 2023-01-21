@@ -14,7 +14,8 @@ class WorkWithBDController extends Controller
      */
     public function index()
     {
-              return 'index';
+        $items = Slide::all();
+        return view('form', compact('items'));
     }
 
     /**
@@ -45,6 +46,7 @@ class WorkWithBDController extends Controller
         ];
 
         Slide::create($items);
+        return redirect()->back(); 
     }
 
     /**
@@ -76,9 +78,15 @@ class WorkWithBDController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request,$id)
     {
-          return 'update';
+        $itemUpdate =   $request->all();
+        if (in_array('image', $itemUpdate)) {
+            dd('n');
+        } else {
+        dd('y');
+        }
+        dd($itemUpdate);
     }
 
     /**

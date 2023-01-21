@@ -63,13 +63,49 @@
                                 <div class="widget-header">                                
                                     <div class="row">
                                         <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                            <h4>Обнавить слайд</h4>
+                                            <h4>Обновить слайд</h4>
                                         </div>
                                     </div>
                                 </div>
+                                @if ($id == '')
+                                    
+                                    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                                    <div class="carousel-inner">
+                                        <a class="carousel-item active" href="/admin/pageHome/adminSlider/{{$fierstItems['id']}}">
+                                                <img class="rounded d-block w-100" src="{{asset('/storage/'.$fierstItems['image'])}}">
+                                                <div class="carousel-caption d-none d-md-block">
+                                                    <h5 class="text-light ">{{$fierstItems['title']}}</h5>
+                                                    <p class="text-light">{{$fierstItems['subtitle']}}</p>
+                                                </div>
+                                            </a>
+                                        @foreach ($items as $item)
+                                            <a class="carousel-item" href="/admin/pageHome/adminSlider/{{$item['id']}}">
+                                            <img class="rounded d-block w-100" src="{{asset('/storage/'.$item['image'])}}" >
+                                            <div class="carousel-caption d-none d-md-block">
+                                                    <h5 class="text-light ">{{$item['title']}}</h5>
+                                                    <p class="text-light">{{$item['subtitle']}}</p>
+                                                </div>
+                                            </a>
+                                        @endforeach
+                                        
+                                        
+                                       `
+                                    </div>
+                                    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="sr-only">Previous</span>
+                                    </a>
+                                    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="sr-only">Next</span>
+                                    </a>
+                                </div>
+                                @else 
                                 <div class="widget-content widget-content-area">
-                                    <form method="post" action="{{route('form')}} "enctype="multipart/form-data">
+                                                <img class="rounded d-block w-100" src="{{asset('/storage/'.$items['image'])}}">
+                                    <form method="post" action="{{route('bd.update',$id)}} "enctype="multipart/form-data">
                                           {{ csrf_field() }}
+                                          @method('PUT')
                                         <div class="form-group mb-4">
                                             <label for="exampleFormControlInput2">Текст №1</label>
                                             <input type="text" name="title" class="form-control" id="h-text1" aria-describedby="h-text1" placeholder="">
@@ -80,11 +116,14 @@
                                         </div>
                                         <div class="form-group mb-4 mt-3">
                                             <label for="exampleFormControlFile1">Загрузите картинку</label>
-                                            <input type="file" name="image"class="form-control-file" id="exampleFormControlFile1">
+                                            <input type="file" name="image"class="form-control-file" value="null" id="exampleFormControlFile1">
                                         </div>
-                                        <input type="submit" name="time" class="mt-4 mb-4 btn btn-primary">
+                                        <input type="submit"  class="mt-4 mb-4 btn btn-primary">
                                     </form>
                                 </div>
+                                @endif
+                                
+                                
                             </div>
                          </div>
                             

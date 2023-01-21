@@ -24,9 +24,14 @@ Route::get('/sales','MainController@adminSales');
 Route::get('/chat','MainController@adminChat');
 Route::get('/mail','MainController@adminMail');
 //Form
+Route::prefix('admin')->group(function () {
+    Route::prefix('/pageHome')->group(function () {
+           Route::get('/adminSlider', 'AdminController@Slider');
+           Route::get('/adminSlider/{id}', 'AdminController@update');
+    });
+});
 Route::get('/adminIncubirovanie', 'MainController@adminIncubirovane');
 Route::get('/adminContact', 'MainController@adminContact');
-Route::get('/adminSlider', 'AdminController@Slider');
 //формы
 Route::post('/form', 'FormController@store')->name('form');
 Route::resource('bd', 'WorkWithBDController');

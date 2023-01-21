@@ -1,14 +1,14 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\Slide;
 use Illuminate\Http\Request;
 
 class MainController extends Controller
 {
     public function pageHome(){
-        return view('userPage/page/pageHome');
- 
+        $items = Slide::all();
+        return view('userPage/page/pageHome',compact('items'));
     }
     public function contacti(){
         return view('userPage/page/contact');

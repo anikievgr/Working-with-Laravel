@@ -310,7 +310,7 @@
                         </a>
                         <ul class="collapse submenu list-unstyled" id="forms" data-parent="#accordionExample">
                             <li class = @section('sliderForm')@show>
-                                <a href="adminSlider">Слайдер</a>
+                                <a href="admin/pageHome/adminSlider">Слайдер</a>
                             </li>
                           <li class = @section('incubitovanie')@show>
                                 <a href="adminIncubirovanie"> Инкубирование</a>

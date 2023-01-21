@@ -7,9 +7,14 @@
     <title>Document</title>
 </head>
 <body>
-    @isset($path)
+    @foreach ($items as $item)
+         
+          <p>{{$item['title']}}</p>
+           <img src="{{asset('/storage/'.$item['image'])}}" alt="">
+    @endforeach
+    {{-- @isset($path)
          <p>{{$path}}</p>
         <img src="{{asset('/storage/'.$path)}}" alt="">
-    @endisset
+    @endisset --}}
 </body>
 </html>
