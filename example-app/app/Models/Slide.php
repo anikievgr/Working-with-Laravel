@@ -8,4 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Slide extends Model
 {
     use HasFactory;
+    protected $table = 'Table_slides';
+    protected $guarded = [];  
+
 }

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\WorkWithBDController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,8 +24,9 @@ Route::get('/sales','MainController@adminSales');
 Route::get('/chat','MainController@adminChat');
 Route::get('/mail','MainController@adminMail');
 //Form
-Route::get('/adminSlider','MainController@adminSlider');
 Route::get('/adminIncubirovanie', 'MainController@adminIncubirovane');
 Route::get('/adminContact', 'MainController@adminContact');
+Route::get('/adminSlider', 'AdminController@Slider');
 //формы
 Route::post('/form', 'FormController@store')->name('form');
+Route::resource('bd', 'WorkWithBDController');
