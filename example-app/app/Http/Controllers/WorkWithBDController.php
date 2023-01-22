@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Slide;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Storage;
 
 class WorkWithBDController extends Controller
 {
@@ -37,7 +39,7 @@ class WorkWithBDController extends Controller
     public function store(Request $request)
     {
       $path = $request->file('image')->store('uploads', 'public');
-        // return view('form', ['path' => $path]);
+        //return view('form', ['path' => $path]);
         //$items = $request->input('title');
         $items = [
             'title' => $request->input('title'),
@@ -81,12 +83,22 @@ class WorkWithBDController extends Controller
     public function update(Request $request,$id)
     {
         $itemUpdate =   $request->all();
-        if (in_array('image', $itemUpdate)) {
-            dd('n');
+        $items = Slide::query()->find($id);
+        //dd($itemUpdate );
+        if (array_key_exists('image', $itemUpdate)) {
+            Storage::disk('public')->delete($items['image']);
+            $path = $request->file('image')->store('uploads', 'public');
+            $itemUpdate['image'] = $path;
+            //dd($itemUpdate);
+
+            $items -> update(  $itemUpdate);
+           // dd($itemUpdate,'y');  
         } else {
-        dd('y');
+              $items -> update(  $itemUpdate);
+            //dd($itemUpdate,'n');
         }
-        dd($itemUpdate);
+                
+            return Redirect::route('adminSlider');
     }
 
     /**
