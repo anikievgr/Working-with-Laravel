@@ -49,4 +49,3 @@ Route::get('/adminIncubirovanie', 'MainController@adminIncubirovane');
 Route::get('/adminContact', 'MainController@adminContact');
 //формы
 Route::post('/form', 'FormController@store')->name('form');
-Route::resource('bd', 'AdminSliderController');
