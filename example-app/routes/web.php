@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\WorkWithBDController;
+
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -26,13 +26,27 @@ Route::get('/mail','MainController@adminMail');
 //Form
 Route::prefix('admin')->group(function () {
     Route::prefix('/pageHome')->group(function () {
-           Route::get('/adminSlider', 'AdminController@Slider')->name('adminSlider');
-           Route::get('/adminSlider/uppdate/{id}', 'AdminController@update');
-            Route::get('/adminSlider/delete/{id}', 'AdminController@delete');
+            Route::get('/openAdminSlider', 'App\Http\Controllers\AdminPanel\SliderController@slider')->name('adminSlider');
+            Route::prefix('adminSlider')->group(function () {
+            Route::get('bd/delete{id}', 'App\Http\Controllers\AdminPanel\SliderController@delete')->name('bd.delete');
+            Route::resource('bd', 'App\Http\Controllers\AdminPanel\SliderController')->except([
+                    'create', 'show', 'edit','destroy'
+            ]);
+            
+           
+        });
+        Route::get('/openAdminGalerea', 'App\Http\Controllers\AdminPanel\GalleryController@gallery');
+        Route::prefix('adminGallery')->group(function () {
+            Route::resource('/adminGalerea', 'App\Http\Controllers\AdminPanel\GalleryController')->except([
+                    'create', 'show', 'edit','destroy'
+            ]);
+        });
+        
+            
     });
 });
 Route::get('/adminIncubirovanie', 'MainController@adminIncubirovane');
 Route::get('/adminContact', 'MainController@adminContact');
 //формы
 Route::post('/form', 'FormController@store')->name('form');
-Route::resource('bd', 'WorkWithBDController');
+Route::resource('bd', 'AdminSliderController');

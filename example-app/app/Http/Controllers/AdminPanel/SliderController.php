@@ -1,32 +1,54 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\AdminPanel;
 
+use App\Http\Controllers\Controller;
 use App\Models\Slide;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Storage;
 
-class WorkWithBDController extends Controller
+class SliderController extends Controller
 {
+     public function slider(){
+    $items = Slide::all();
+    //dd($items );
+    if($items->count()  == 0){
+      $fierstItems = ['null'];
+      $items = ['null'];
+      $id = 'null';
+      //dd($id,$items, $fierstItems);
+    }else{
+      $fierstItems = $items[0];
+      //dd($fierstItems['id']);
+      $items = $items->slice(1);
+      $id = '';
+    }
+      return view('adminPanel/page/pageForm/pageHome/slider',compact('items','fierstItems','id'));
+    }
     /**
      * Display a listing of the resource.
-     *
+     *@param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $items = Slide::all();
-        return view('form', compact('items'));
+        $id = $request->input('id');
+        $items = Slide::query()->find($id);
+        $fierstItems = [];
+         //dd($items);
+        return view('adminPanel/page/pageForm/pageHome/slider',compact('items','fierstItems', 'id'));
     }
 
     /**
-     * Show the form for creating a new resource.
+     * Store a newly created resource in storage.
      *
+     * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
+        dd($request);
         return 'crest';
     }
 
@@ -59,7 +81,7 @@ class WorkWithBDController extends Controller
      */
     public function show($id)
     {
-        //
+         dd('s') ;
     }
 
     /**
@@ -80,7 +102,7 @@ class WorkWithBDController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request,$id)
+    public function update(Request $request, $id)
     {
         $itemUpdate =   $request->all();
         $items = Slide::query()->find($id);
@@ -91,14 +113,11 @@ class WorkWithBDController extends Controller
             $itemUpdate['image'] = $path;
             //dd($itemUpdate);
 
-            $items -> update(  $itemUpdate);
+           
            // dd($itemUpdate,'y');  
-        } else {
-              $items -> update(  $itemUpdate);
-            //dd($itemUpdate,'n');
         }
-                
-            return Redirect::route('adminSlider');
+         $items -> update(  $itemUpdate);
+         return Redirect::route('adminSlider');
     }
 
     /**
@@ -109,7 +128,13 @@ class WorkWithBDController extends Controller
      */
     public function destroy($id)
     {
-                return 'destroy';
-
+                dd($id) ;
+    }
+      public function delete($id)
+    {
+                $items = Slide::query()->find($id);
+                Storage::disk('public')->delete($items['image']);
+                $items->delete();
+                return redirect()->back(); 
     }
 }
