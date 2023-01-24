@@ -3,12 +3,15 @@
 namespace App\Http\Controllers\AdminPanel;
 
 use App\Http\Controllers\Controller;
+use App\Models\Category;
 use Illuminate\Http\Request;
 
 class GalleryController extends Controller
 {
     public function gallery(){
-        return view('adminPanel/page/pageForm/pagehome/galerea');
+        $catygories = Category::find(2);
+                dd($catygories->posts);
+       // return view('adminPanel/page/pageForm/pagehome/galerea');
     }
     /**
      * Display a listing of the resource.

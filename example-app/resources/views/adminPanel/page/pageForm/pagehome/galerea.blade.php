@@ -24,7 +24,7 @@
                 
                      <div id="navSection" data-spy="affix" class="nav  sidenav">
                         <div class="sidenav-content">
-                            <a href="#slider-create" class=" nav-link">Создать слайд</a>
+                            <a href="#galerey-create" class=" nav-link">Сохранить фотографию</a>
                             <a href="#slider-update" class=" nav-link">Обновить</a>
                             <a href="#slider-delete" class=" nav-link">Удалить</a>
                             
@@ -37,12 +37,12 @@
                        
                         
                  
-                                     <div id="select" class="col-lg-12 layout-spacing">
+                        <div id="galerey-create" class="col-lg-12 layout-spacing">
                             <div class="statbox widget box box-shadow">
                                 <div class="widget-header">
                                     <div class="row">
                                         <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                            <h4>Select</h4>
+                                            <h4>Галерея</h4>
                                         </div>                 
                                     </div>
                                 </div>
@@ -51,22 +51,18 @@
                                         <div class="form-row">
                                             <div class="col-md-12">
                                                 <div id="select_menu" class="form-group mb-4">
+                                                    <label for="">Выберите категорию</label>
                                                     <select class="custom-select" required>
-                                                      <option value="">Open this select menu</option>
-                                                      <option value="1">One</option>
-                                                      <option value="2">Two</option>
-                                                      <option value="3">Three</option>
+                                                      <option value="1">Обеспечение</option>
+                                                      <option value="2">Продукция</option>
                                                     </select>
-                                                    <div class="valid-feedback">Example valid custom select feedback</div>
-                                                    <div class="invalid-feedback">
-                                                        Please Select the field
-                                                    </div>
+                                                    
                                                 </div>
                                             </div>
                                         </div>
                                          <div class="widget-content widget-content-area">
                                     <div class="custom-file-container" data-upload-id="myFirstImage">
-                                        <label>Upload (Single File) <a href="javascript:void(0)" class="custom-file-container__image-clear" title="Clear Image">x</a></label>
+                                        <label>Убрать (Single File) <a href="javascript:void(0)" class="custom-file-container__image-clear" title="Clear Image">x</a></label>
                                         <label class="custom-file-container__custom-file" >
                                             <input type="file" class="custom-file-container__custom-file__custom-file-input" accept="image/*">
                                             <input type="hidden" name="MAX_FILE_SIZE" value="10485760" />
@@ -74,18 +70,9 @@
                                         </label>
                                         <div class="custom-file-container__image-preview"></div>
                                     </div>
-
-
-                                    
-
                                 </div>
-                                        <button class="btn btn-primary mt-2" type="submit">Submit form</button>
+                                        <button class="btn btn-primary mt-2" type="submit">Отправить</button>
                                     </form>
-
-                                   
-
-                                   
-
                                 </div>
                             </div>
                         </div>
