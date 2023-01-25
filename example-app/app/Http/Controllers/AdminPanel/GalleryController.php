@@ -9,12 +9,26 @@ use Illuminate\Http\Request;
 class GalleryController extends Controller
 {
     public function gallery(){
+        $gallerea = [
+           'category' => [
+                'name',
+                'image'
+           ]
+
+        ];
+        $img =[];
           $catygories = Category::all();
         foreach ($catygories as $catygories){
-            echo $catygories['title'];
+             $gallerea['category']['name'] = $catygories['title'];
             foreach($catygories->posts as $image){
-                echo $image['image'];
+                echo '</br>';
+                $img = $image['image'];
             }
+            
+            $gallerea['category']['image'] = $img;
+            echo '<pre>';
+              var_dump($gallerea);
+                          echo '</pre>';
         }
       
       
