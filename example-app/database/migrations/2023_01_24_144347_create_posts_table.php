@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->string('content');
+            $table->string('image');
             $table->integer('categoty_id')->references('id')->on('categories');
         });
     }

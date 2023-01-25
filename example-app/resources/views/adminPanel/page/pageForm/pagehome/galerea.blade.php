@@ -5,12 +5,13 @@
 @section('scriptAdd')
  <script src="{{asset('style/pageAdmin/assets/js/scrollspyNav.js')}}"></script>
 <script src="{{asset('style/pageAdmin/plugins/file-upload/file-upload-with-preview.min.js')}}"></script>
-
+<script src="{{asset('style/js/main.js')}}"></script>
     <script>
         //First upload
         var firstUpload = new FileUploadWithPreview('myFirstImage')
         //Second upload
         var secondUpload = new FileUploadWithPreview('mySecondImage')
+
     </script>
     @endsection
 @section('headerAddLink')
@@ -47,25 +48,29 @@
                                     </div>
                                 </div>
                                 <div class="widget-content widget-content-area">
-                                    <form class="select mt-4" novalidate action="javascript:void(0);">
-                                        <div class="form-row">
+                                    <form class="select mt-4" method="post" action="{{route('adminGalerea.store')}} "enctype="multipart/form-data" novalidate action="javascript:void(0);">
+                                         {{ csrf_field() }}
+                                            <div class="form-row">
                                             <div class="col-md-12">
                                                 <div id="select_menu" class="form-group mb-4">
                                                     <label for="">Выберите категорию</label>
-                                                    <select class="custom-select" required>
+                                                    <select class="custom-select " id="select" name="select" required>
+                                                      <option value="buutonAddCategory" > Создать новую</option>
                                                       <option value="1">Обеспечение</option>
-                                                      <option value="2">Продукция</option>
+                                                      <option value="2" >Продукция</option>
                                                     </select>
-                                                    
                                                 </div>
                                             </div>
                                         </div>
                                          <div class="widget-content widget-content-area">
                                     <div class="custom-file-container" data-upload-id="myFirstImage">
+                                          <div id="addCategory" class="form-group mb-4">
+                                                <label for="exampleFormControlInput2">Название категории</label>
+                                                <input type="text" name="new-categori" class="form-control" id="h-text1" aria-describedby="h-text1" placeholder="">
+                                            </div>
                                         <label>Убрать (Single File) <a href="javascript:void(0)" class="custom-file-container__image-clear" title="Clear Image">x</a></label>
                                         <label class="custom-file-container__custom-file" >
-                                            <input type="file" class="custom-file-container__custom-file__custom-file-input" accept="image/*">
-                                            <input type="hidden" name="MAX_FILE_SIZE" value="10485760" />
+                                            <input name="image" type="file" class="custom-file-container__custom-file__custom-file-input" accept="image/*">
                                             <span class="custom-file-container__custom-file__custom-file-control"></span>
                                         </label>
                                         <div class="custom-file-container__image-preview"></div>
