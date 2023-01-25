@@ -9,10 +9,19 @@ use Illuminate\Http\Request;
 class GalleryController extends Controller
 {
     public function gallery(){
-        $catygories = Category::with("posts")->get();
-        
-        dd($catygories);
-       return view('adminPanel/page/pageForm/pagehome/galerea');
+          $catygories = Category::all();
+        foreach ($catygories as $catygories){
+            echo $catygories['title'];
+            foreach($catygories->posts as $image){
+                echo $image['image'];
+            }
+        }
+      
+      
+       // dd($catygories);
+      
+       //dd($catygories['posts']);
+      // return view('adminPanel/page/pageForm/pagehome/galerea');
     }
     /**
      * Display a listing of the resource.
