@@ -1,4 +1,9 @@
 @extends('../userPage/app')
+@if($items->isEmpty())
+    @ @section('navBar-tag')
+        <nav class="navbar navbar-default default solid">
+            @endsection
+@endif
 @section('activpage')
                         <li class="current">
                         <a href="/">О нас</a>
@@ -12,8 +17,8 @@
      @endsection
 @section('content')
 
-
-    <div class="tp-fullscreen-container revolution">
+                @if(!$items->isEmpty())
+                    <div class="tp-fullscreen-container revolution">
         <div class="tp-fullscreen">
             <ul>
                   @foreach ($items as $item)
@@ -30,7 +35,7 @@
         </div>
         <!-- /.tp-fullscreen-container -->
     </div><!-- /.revolution -->
-
+                @endif
     <div class="container inner">
         <div class="headline text-center">
             <h2>Первоклассные индюшки и индюшачьи яйца!</h2>
@@ -357,6 +362,6 @@
 
 
 
-    
+
 
      @endsection

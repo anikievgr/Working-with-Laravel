@@ -1,4 +1,5 @@
 @extends('../../../adminPanel/app')
+
 @section('galerea')
       active
     @endsection
@@ -22,29 +23,29 @@
 @section('content')
     <div id="content" class="main-content">
             <div class="container">
-                
+
                      <div id="navSection" data-spy="affix" class="nav  sidenav">
                         <div class="sidenav-content">
                             <a href="#galerey-create" class=" nav-link">Сохранить фотографию</a>
                             <a href="#slider-update" class=" nav-link">Обновить</a>
                             <a href="#slider-delete" class=" nav-link">Удалить</a>
-                            
+
                         </div>
                     </div>
-                
+
                 <div class="container">
                     <div class="row layout-top-spacing">
 
-                       
-                        
-                 
+
+
+
                         <div id="galerey-create" class="col-lg-12 layout-spacing">
                             <div class="statbox widget box box-shadow">
                                 <div class="widget-header">
                                     <div class="row">
                                         <div class="col-xl-12 col-md-12 col-sm-12 col-12">
                                             <h4>Галерея</h4>
-                                        </div>                 
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="widget-content widget-content-area">
@@ -56,8 +57,10 @@
                                                     <label for="">Выберите категорию</label>
                                                     <select class="custom-select " id="select" name="select" required>
                                                       <option value="buutonAddCategory" > Создать новую</option>
-                                                      <option value="1">Обеспечение</option>
-                                                      <option value="2" >Продукция</option>
+                                                        @foreach($items as  $key => $category)
+                                                            <option value="{{$key}}">{{$category}}</option>
+                                                        @endforeach
+
                                                     </select>
                                                 </div>
                                             </div>
@@ -81,8 +84,8 @@
                                 </div>
                             </div>
                         </div>
-                                  
-                                    
+
+
                         </div>
                 </div>
             </div>
