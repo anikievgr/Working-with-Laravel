@@ -6,15 +6,41 @@ use App\Http\Controllers\Controller;
 use App\Models\Category;
 use App\Models\Post;
 use Illuminate\Http\Request;
+use PhpParser\Node\Expr\Cast\Array_;
 
 class GalleryController extends Controller
 {
     public function gallery(){
+        
+      $img =[];
+        $i = 0;
+        $gallerea = array();
+          $catygories = Category::all();
+        $items = $catygories;
+        foreach ($catygories as $key => $catygories){
+            $i = 0;
+            foreach($catygories->posts as $image){
+                $img[$i] = $image['image'];
+                 $i++;
+            }
+            $gallerea[$catygories['title']]['id'] = $catygories['id'];
+            $gallerea[$catygories['title']]['id'] = $catygories['id'];
+            $gallerea[$catygories['title']]['image'] = $img;
 
-        $items = Category::pluck('title','id');
-
-       //dd($items);
-      return view('adminPanel/page/pageForm/pagehome/galerea', compact('items'));
+        }
+    //     foreach ($gallerea as $key => $value) {
+    //         echo $value['id'];
+    //         echo '<pre>';
+    //         foreach ($value['image'] as  $imge) {
+    //             echo $imge;
+    //             echo '</br>';
+    //         }
+    //         //var_dump($value['image']);
+    //         echo '</pre>';
+            
+    //     }
+    // dd($gallerea);
+      return view('adminPanel/page/pageForm/pagehome/galerea', compact('items', 'gallerea'));
     }
     /**
      * Display a listing of the resource.
@@ -55,8 +81,7 @@ class GalleryController extends Controller
                 $data = Category::create($title);
 
                 $id = $data['id'];
-                //$id= Category::where('title', $newCategori)->pluck('id');
-            //    $id = $id[0];
+              
 
             }else{
                 $id = $request['select'];
@@ -69,14 +94,8 @@ class GalleryController extends Controller
                 'categoty_id' => $id
             ];
             Post::create($post);
-
-            dd( $post );
-
-
-
-
-
-        return view('adminPanel/page/pageForm/pagehome/galerea');
+        
+              return redirect('/admin/pageHome/openAdminGalerea'); 
 
     }
 

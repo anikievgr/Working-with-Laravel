@@ -4,6 +4,8 @@
       active
     @endsection
 @section('scriptAdd')
+    <link href="{{asset('style/css/main.css')}}" rel="stylesheet" type="text/css" />
+
  <script src="{{asset('style/pageAdmin/assets/js/scrollspyNav.js')}}"></script>
 <script src="{{asset('style/pageAdmin/plugins/file-upload/file-upload-with-preview.min.js')}}"></script>
 <script src="{{asset('style/js/main.js')}}"></script>
@@ -57,8 +59,8 @@
                                                     <label for="">Выберите категорию</label>
                                                     <select class="custom-select " id="select" name="select" required>
                                                       <option value="buutonAddCategory" > Создать новую</option>
-                                                        @foreach($items as  $key => $category)
-                                                            <option value="{{$key}}">{{$category}}</option>
+                                                        @foreach($items as  $category)
+                                                            <option value="{{$category['id']}}">{{$category['title']}}</option>
                                                         @endforeach
 
                                                     </select>
@@ -69,7 +71,7 @@
                                     <div class="custom-file-container" data-upload-id="myFirstImage">
                                           <div id="addCategory" class="form-group mb-4">
                                                 <label for="exampleFormControlInput2">Название категории</label>
-                                                <input type="text" name="new-categori" class="form-control" id="h-text1" aria-describedby="h-text1" placeholder="">
+                                                <input type="text" name="new-categori" class="form-control" id="inputNewCategory"  aria-describedby="h-text1" placeholder="">
                                             </div>
                                         <label>Убрать (Single File) <a href="javascript:void(0)" class="custom-file-container__image-clear" title="Clear Image">x</a></label>
                                         <label class="custom-file-container__custom-file" >
@@ -84,8 +86,68 @@
                                 </div>
                             </div>
                         </div>
+{{-- <img class="rounded d-block w-100" src="{{asset('/storage/'.$item['image'])}}" > --}}
+                        <div id="galerey-update" class="col-lg-12 layout-spacing">
+                            <div class="statbox widget box box-shadow">
+                                <div class="widget-header">
+                                    <div class="row">
+                                        <div class="col-xl-12 col-md-12 col-sm-12 col-12">
+                                            <h4>Обновить</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="widget-content widget-content-area">
 
+                                            
+                                <div class=" col-md-12 d-flex justify-content-center mb-5 maintabs" >
+                                    </div>
+                                    <div class="sliderMainOff m-auto " >
+                                        <div class="sliderScrollbar d-flex align-items-center">
+                                        <button type="button" class="btn btn-outline-primary btnMain" id="nextMain"><</button>
+                                        <ul class="list-group list-group-horizontal slidesList">
+                                               <li class=" mainSlids buttonMain"><button type="button" class="btn btn-outline-primary btn-rounded  filter" data-rel="all">Все</button></li>
+                                            @foreach ($gallerea as $key=> $item)
+                                                    <li class=" mainSlids buttonMain"><button type="button" class="btn btn-outline-primary  btn-rounded  filter" data-rel="{{$item['id']}}">{{$key}}</button></li>
+                                                @endforeach                                       
+                                       
+                                    </ul>
+                                      <button type="button" class="btn btn-outline-primary btnMain" id="prevMain">></button>    
+                                    </div>
+                                </div>
+                                    <!-- Grid column -->
+                                        <div class="container text-center mt-25 ">
+                                            <div class="row row-cols-3 sliderMain">
+                                                     <div class="col">
+                                                        <button type="button" class="btn btn-outline-primary   filter" data-rel="all">Все</button>
+                                                    </div>
+                                                     @foreach ($gallerea as $key=> $item)
+                                                        <div class="col">
+                                                                <button type="button" class="btn btn-outline-primary   filter" data-rel="{{$item['id']}}">{{$key}}</button>
+                                                            </div>                                                
+                                                        @endforeach  
+                                            </div>
+                                            </div>
+                                    </div>
+                                    <!-- Grid row -->
 
+                                    <!-- Grid row -->
+                                    <div class="gallery maingallerea justify-content-center" id="gallery">
+
+                                    <!-- Grid column -->
+                                    @foreach ($gallerea as $item)
+                                            @foreach ($item['image']  as $image)
+                                            <div class="mb-3 pics animation all {{$item['id']}}">
+                                                 <img class="img-fluid ml-2 mr-2 mainFOTO rounded"  src="{{asset('/storage/'.$image)}}" alt="Card image cap">
+                                                
+                                            </div>
+                                            @endforeach
+                                    @endforeach
+                                    
+                                    
+                                    <!-- Grid column -->
+
+                            </div>
+                        </div>
                         </div>
                 </div>
             </div>

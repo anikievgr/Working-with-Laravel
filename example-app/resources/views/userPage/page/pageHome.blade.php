@@ -1,6 +1,6 @@
 @extends('../userPage/app')
 @if($items->isEmpty())
-    @ @section('navBar-tag')
+     @section('navBar-tag')
         <nav class="navbar navbar-default default solid">
             @endsection
 @endif
