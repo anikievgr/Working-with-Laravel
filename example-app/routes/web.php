@@ -33,8 +33,8 @@ Route::prefix('admin')->group(function () {
             Route::resource('bd', 'App\Http\Controllers\AdminPanel\SliderController')->except([
                     'create', 'show', 'edit','destroy'
             ]);
-            
-           
+
+
         });
 
         Route::get('/openAdminGalerea', 'App\Http\Controllers\AdminPanel\GalleryController@gallery');
@@ -44,8 +44,14 @@ Route::prefix('admin')->group(function () {
                     'create', 'edit','destroy'
             ]);
         });
-        
-            
+        Route::get('/openAdminNews', 'App\Http\Controllers\AdminPanel\NewsController@news');
+        Route::get('/openAdminNews/updatePages{id}', 'App\Http\Controllers\AdminPanel\NewsController@updatePages')->name('NewsController.updatePages');
+        Route::prefix('openAdminNewsGroup')->group(function () {
+            Route::resource('openAdminNewsGroup', 'App\Http\Controllers\AdminPanel\NewsController')->except([
+                'create', 'edit'
+            ]);
+        });
+
     });
 });
 Route::get('/adminIncubirovanie', 'MainController@adminIncubirovane');

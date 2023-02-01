@@ -24,7 +24,7 @@ class SliderController extends Controller
       $items = $items->slice(1);
       $id = '';
     }
-      return view('adminPanel/page/pageForm/pageHome/slider',compact('items','fierstItems','id'));
+      return view('adminPanel/page/pageForm/pagehome/slider',compact('items','fierstItems','id'));
     }
     /**
      * Display a listing of the resource.
@@ -37,7 +37,7 @@ class SliderController extends Controller
         $items = Slide::query()->find($id);
         $fierstItems = [];
          //dd($items);
-        return view('adminPanel/page/pageForm/pageHome/slider',compact('items','fierstItems', 'id'));
+        return view('adminPanel/page/pageForm/pagehome/slider',compact('items','fierstItems', 'id'));
     }
 
     /**
@@ -70,7 +70,7 @@ class SliderController extends Controller
         ];
 
         Slide::create($items);
-        return redirect()->back(); 
+        return redirect()->back();
     }
 
     /**
@@ -113,8 +113,8 @@ class SliderController extends Controller
             $itemUpdate['image'] = $path;
             //dd($itemUpdate);
 
-           
-           // dd($itemUpdate,'y');  
+
+           // dd($itemUpdate,'y');
         }
          $items -> update(  $itemUpdate);
          return Redirect::route('adminSlider');
@@ -135,6 +135,6 @@ class SliderController extends Controller
                 $items = Slide::query()->find($id);
                 Storage::disk('public')->delete($items['image']);
                 $items->delete();
-                return redirect()->back(); 
+                return redirect()->back();
     }
 }

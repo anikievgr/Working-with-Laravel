@@ -18,7 +18,7 @@
     <link href="{{asset('style/pageAdmin/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css" />
     <link href="{{asset('style/pageAdmin/assets/css/plugins.css')}}" rel="stylesheet" type="text/css" />
     <!-- END GLOBAL MANDATORY STYLES -->
-         
+
     <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM STYLES -->
 
     @section('headerAddLink')
@@ -36,7 +36,7 @@
     <div class="header-container fixed-top">
         <header class="header navbar navbar-expand-sm">
             <a href="javascript:void(0);" class="sidebarCollapse" data-placement="bottom"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></a>
-            
+
             <ul class="navbar-item flex-row">
                 <li class="nav-item align-self-center page-heading">
                     <div class="page-header">
@@ -69,7 +69,7 @@
                         </div>
                     </div>
                 </li>
-                
+
                 <li class="nav-item dropdown message-dropdown">
                     <a href="javascript:void(0);" class="nav-link dropdown-toggle" id="messageDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-message-circle"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg><span class="badge badge-primary"></span>
@@ -109,7 +109,7 @@
                                                 <p class="msg-title">ACCOUNT UPDATE</p>
                                             </div>
                                         </div>
-                                    </div>                                    
+                                    </div>
                                 </div>
                             </a>
                             <a class="dropdown-item">
@@ -128,7 +128,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    
+
                                 </div>
                             </a>
                         </div>
@@ -242,7 +242,7 @@
 
         <!--  BEGIN SIDEBAR  -->
         <div class="sidebar-wrapper sidebar-theme">
-            
+
             <nav id="sidebar">
 
                 <ul class="navbar-nav theme-brand flex-row  text-center">
@@ -256,7 +256,7 @@
                 <div class="shadow-bottom"></div>
                 <ul class="list-unstyled menu-categories" id="accordionExample">
                     <li class="menu">
-                       
+
                           <a href="#dashboard" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                             <div class="">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clipboard"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg>
@@ -285,7 +285,7 @@
                         <div class="heading"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle"><circle cx="12" cy="12" r="10"></circle></svg><span>APPS</span></div>
                     </li>
 
-                       @section('Chat')  <li class='menu' > @show 
+                       @section('Chat')  <li class='menu' > @show
                         <a href="/chat" aria-expanded="false" class="dropdown-toggle">
                             <div class= "">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-message-square"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
@@ -297,7 +297,7 @@
                     <li class="menu menu-heading">
                         <div class="heading"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-circle"><circle cx="12" cy="12" r="10"></circle></svg><span>TABLES AND FORMS</span></div>
                     </li>
-                    <li class='menu ' > 
+                    <li class='menu ' >
 
                         <a href="#forms" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                             <div class="">
@@ -315,22 +315,25 @@
                             <li class = @section('galerea')@show>
                                 <a href="/admin/pageHome/openAdminGalerea"> Галерея</a>
                             </li>
+                            <li class = @section('news')@show>
+                                <a href="/admin/pageHome/openAdminNews"> Новости</a>
+                            </li>
                           <li class = @section('incubitovanie')@show>
                                 <a href="adminIncubirovanie"> Инкубирование</a>
                             </li>
                                <li class = @section('contact')@show>
                                 <a href="adminContact"> Контакты</a>
                             </li>
-                            
+
+
                         </ul>
                     </li>
-                    
-                   
-                    
+
+
+
                 </ul>
-                
+
             </nav>
 
         </div>
         <!--  END SIDEBAR  -->
- 

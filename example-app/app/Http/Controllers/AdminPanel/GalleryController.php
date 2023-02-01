@@ -12,9 +12,9 @@ use PhpParser\Node\Expr\Cast\Array_;
 class GalleryController extends Controller
 {
     public function gallery(){
-       
+
       $img =[];
-        
+
         $gallerea = array();
           $catygories = Category::all();
            $items = $catygories;
@@ -24,14 +24,14 @@ class GalleryController extends Controller
             $items = [];
             //dd($gallerea);
         }else{
-       
+
         foreach ($catygories as $key => $catygories){
-            
+
             foreach($catygories->posts as $key=> $image){
-            
+
                 $img[$image['id']] = $image['image'];
             }
-           
+
             $gallerea[$catygories['title']]['id'] = $catygories['id'];
             $gallerea[$catygories['title']]['id'] = $catygories['id'];
             $gallerea[$catygories['title']]['image'] = $img;
@@ -49,7 +49,7 @@ class GalleryController extends Controller
      */
     public function index()
     {
-    
+
     }
 
     /**
@@ -71,7 +71,7 @@ class GalleryController extends Controller
 
     public function store(Request $request)
     {
-        
+
  //       dd($request->all());
             if (!empty($request['new-categori'])){
                 $title = [
@@ -83,7 +83,7 @@ class GalleryController extends Controller
                 $data = Category::create($title);
 
                 $id = $data['id'];
-              
+
 
             }else{
                 $id = $request['select'];
@@ -96,11 +96,11 @@ class GalleryController extends Controller
                 'categoty_id' => $id
             ];
             Post::create($post);
-        
-              return redirect('/admin/pageHome/openAdminGalerea'); 
+
+              return redirect('/admin/pageHome/openAdminGalerea');
 
     }
-  
+
     /**
      * Display the specified resource.
      *
@@ -109,16 +109,16 @@ class GalleryController extends Controller
      */
     public function show($id)
     {
-        
+
         $items = Post::query()->find($id);
-        
+
                 Storage::disk('public')->delete($items['image']);
                 $items->delete();
-                return redirect()->back(); 
+                return redirect()->back();
     }
     public function deleteCategory($id)
     {
-     
+
         $items = Category::query()->find($id);
         $items->delete();
           foreach($items->posts as $key=> $image){
@@ -128,7 +128,7 @@ class GalleryController extends Controller
                 $imag->delete();
 
             }
-            return redirect('/admin/pageHome/openAdminGalerea'); 
+            return redirect('/admin/pageHome/openAdminGalerea');
     }
     /**
      * Show the form for editing the specified resource.
@@ -161,6 +161,6 @@ class GalleryController extends Controller
      */
     public function destroy($id)
     {
-       
+
     }
 }

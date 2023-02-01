@@ -12,7 +12,7 @@
 }
 
 li{
-     list-style-type: none; 
+     list-style-type: none;
 }
  .mainSlids{
     display: inline-block;
@@ -21,7 +21,7 @@ li{
     margin-left: 3px;
     margin-right: 3px;
     text-align: center;
-    
+
 }
 .none{
     display: none;
@@ -47,4 +47,12 @@ li{
     display: flex;
     height: auto;
     flex-wrap: wrap;
+}
+.mainNews{
+    max-height: 250px;
+
+}
+.mainCardNews{
+    cursor: pointer;
+    color: red;
 }
