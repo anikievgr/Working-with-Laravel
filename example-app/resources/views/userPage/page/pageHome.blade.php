@@ -85,6 +85,8 @@
         <!-- /.container -->
     </div>
     <!-- /.inverse-wrapper -->
+@if ($gallerea  != [])
+    
 
     <div class="light-wrapper">
         <div class="container inner">
@@ -94,12 +96,29 @@
             <div class="cbp-panel">
                 <div id="filters-container" class="cbp-filter-container text-center">
                     <div data-filter="*" class="cbp-filter-item-active cbp-filter-item"> Все </div>
-                    <div data-filter=".provision" class="cbp-filter-item"> Обеспеченье </div>
-                    <div data-filter=".products" class="cbp-filter-item"> Продукция</div>
+                     @foreach ($gallerea as $key=> $item)
+                      <div data-filter="#a{{$item['id']}}" class="cbp-filter-item"> {{$key}}</div>
+                     @endforeach
                 </div>
                 <div id="grid-container" class="cbp">
-
-                    <div class="cbp-item provision"> <a class="cbp-caption fancybox-media" data-rel="portfolio" href="style/images/art/p4.jpg">
+                        @foreach ($gallerea as $item)
+                            @foreach ($item['image']  as $key=> $image)
+                                <div class="cbp-item " id="a{{$item['id']}}" > <a class="cbp-caption fancybox-media" data-rel="portfolio" href="{{asset('/storage/'.$image)}}">
+                                        <div class="cbp-caption-defaultWrap"> <img src="{{asset('/storage/'.$image)}}" alt="" /> </div>
+                                        <div class="cbp-caption-activeWrap">
+                                            <div class="cbp-l-caption-alignCenter">
+                                                <div class="cbp-l-caption-body">
+                                                    <div class="cbp-l-caption-title">Увеличить</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--/.cbp-caption-activeWrap -->
+                                    </a>
+                                    <!--/.box -->
+                                </div>
+                            @endforeach
+                        @endforeach
+                    {{-- <div class="cbp-item provision"> <a class="cbp-caption fancybox-media" data-rel="portfolio" href="style/images/art/p4.jpg">
                             <div class="cbp-caption-defaultWrap"> <img src="style/images/art/p4.jpg" alt="" /> </div>
                             <div class="cbp-caption-activeWrap">
                                 <div class="cbp-l-caption-alignCenter">
@@ -111,78 +130,10 @@
                             <!--/.cbp-caption-activeWrap -->
                         </a>
                         <!--/.box -->
-                    </div>
-                    <!--/.cbp-item -->
-                    <div class="cbp-item provision"> <a class="cbp-caption fancybox-media" data-rel="portfolio" href="style/images/art/p5.jpg">
-                            <div class="cbp-caption-defaultWrap"> <img src="style/images/art/p5.jpg" alt="" /> </div>
-                            <div class="cbp-caption-activeWrap">
-                                <div class="cbp-l-caption-alignCenter">
-                                    <div class="cbp-l-caption-body">
-                                        <div class="cbp-l-caption-title">Увеличить</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--/.cbp-caption-activeWrap -->
-                        </a>
-                        <!--/.box -->
-                    </div>
-                    <!--/.cbp-item -->
-                    <div class="cbp-item products"> <a class="cbp-caption fancybox-media" data-rel="portfolio" href="style/images/art/p1.jpg">
-                            <div class="cbp-caption-defaultWrap"> <img src="style/images/art/p1.jpg" alt="" /> </div>
-                            <div class="cbp-caption-activeWrap">
-                                <div class="cbp-l-caption-alignCenter">
-                                    <div class="cbp-l-caption-body">
-                                        <div class="cbp-l-caption-title">Увеличить</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--/.cbp-caption-activeWrap -->
-                        </a>
-                        <!--/.box -->
-                    </div>
-                    <!--/.cbp-item -->
-                    <div class="cbp-item products"> <a class="cbp-caption fancybox-media" data-rel="portfolio" href="style/images/art/p2.jpg">
-                            <div class="cbp-caption-defaultWrap"> <img src="style/images/art/p2.jpg" alt="" /> </div>
-                            <div class="cbp-caption-activeWrap">
-                                <div class="cbp-l-caption-alignCenter">
-                                    <div class="cbp-l-caption-body">
-                                        <div class="cbp-l-caption-title">Увеличить</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--/.cbp-caption-activeWrap -->
-                        </a>
-                        <!--/.box -->
-                    </div>
-                    <!--/.cbp-item -->
-                    <div class="cbp-item products"> <a class="cbp-caption fancybox-media" data-rel="portfolio" href="style/images/art/p3.jpg">
-                            <div class="cbp-caption-defaultWrap"> <img src="style/images/art/p3.jpg" alt="" /> </div>
-                            <div class="cbp-caption-activeWrap">
-                                <div class="cbp-l-caption-alignCenter">
-                                    <div class="cbp-l-caption-body">
-                                        <div class="cbp-l-caption-title">Увеличить</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--/.cbp-caption-activeWrap -->
-                        </a>
-                        <!--/.box -->
-                    </div>
-                    <!--/.cbp-item -->
-                    <div class="cbp-item products"> <a class="cbp-caption fancybox-media" data-rel="portfolio" href="style/images/art/p6.jpg">
-                            <div class="cbp-caption-defaultWrap"> <img src="style/images/art/p6.jpg" alt="" /> </div>
-                            <div class="cbp-caption-activeWrap">
-                                <div class="cbp-l-caption-alignCenter">
-                                    <div class="cbp-l-caption-body">
-                                        <div class="cbp-l-caption-title">Увеличить</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--/.cbp-caption-activeWrap -->
-                        </a>
-                        <!--/.box -->
-                    </div>
-                    <!--/.cbp-item -->
+                    </div> --}}
+           
+
+              
                 </div>
                 <!--/.cbp -->
                 <div class="divide30"></div>
@@ -194,7 +145,7 @@
         <!-- /.container -->
     </div>
     <!-- /.light-wrapper -->
-
+@endif
 
 
     <div class="outer-wrap inverse-wrapper">

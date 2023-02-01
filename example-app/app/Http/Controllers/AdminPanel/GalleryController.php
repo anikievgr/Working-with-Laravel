@@ -6,40 +6,40 @@ use App\Http\Controllers\Controller;
 use App\Models\Category;
 use App\Models\Post;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use PhpParser\Node\Expr\Cast\Array_;
 
 class GalleryController extends Controller
 {
     public function gallery(){
-        
+       
       $img =[];
-        $i = 0;
+        
         $gallerea = array();
           $catygories = Category::all();
-        $items = $catygories;
+           $items = $catygories;
+             //dd($gallerea);
+        if ($catygories->count() == 0) {
+            $gallerea = [];
+            $items = [];
+            //dd($gallerea);
+        }else{
+       
         foreach ($catygories as $key => $catygories){
-            $i = 0;
-            foreach($catygories->posts as $image){
-                $img[$i] = $image['image'];
-                 $i++;
+            
+            foreach($catygories->posts as $key=> $image){
+            
+                $img[$image['id']] = $image['image'];
             }
+           
             $gallerea[$catygories['title']]['id'] = $catygories['id'];
             $gallerea[$catygories['title']]['id'] = $catygories['id'];
             $gallerea[$catygories['title']]['image'] = $img;
-
+            $img = [];
         }
-    //     foreach ($gallerea as $key => $value) {
-    //         echo $value['id'];
-    //         echo '<pre>';
-    //         foreach ($value['image'] as  $imge) {
-    //             echo $imge;
-    //             echo '</br>';
-    //         }
-    //         //var_dump($value['image']);
-    //         echo '</pre>';
-            
-    //     }
-    // dd($gallerea);
+
+    //dd($gallerea);
+    }
       return view('adminPanel/page/pageForm/pagehome/galerea', compact('items', 'gallerea'));
     }
     /**
@@ -49,7 +49,7 @@ class GalleryController extends Controller
      */
     public function index()
     {
-
+    
     }
 
     /**
@@ -68,8 +68,10 @@ class GalleryController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+
     public function store(Request $request)
     {
+        
  //       dd($request->all());
             if (!empty($request['new-categori'])){
                 $title = [
@@ -98,7 +100,7 @@ class GalleryController extends Controller
               return redirect('/admin/pageHome/openAdminGalerea'); 
 
     }
-
+  
     /**
      * Display the specified resource.
      *
@@ -107,9 +109,27 @@ class GalleryController extends Controller
      */
     public function show($id)
     {
-        //
+        
+        $items = Post::query()->find($id);
+        
+                Storage::disk('public')->delete($items['image']);
+                $items->delete();
+                return redirect()->back(); 
     }
+    public function deleteCategory($id)
+    {
+     
+        $items = Category::query()->find($id);
+        $items->delete();
+          foreach($items->posts as $key=> $image){
+                $img[$image['id']] = $image['image'];
+                Storage::disk('public')->delete($image['image']);
+               $imag = Post::query()->find($image['id']);
+                $imag->delete();
 
+            }
+            return redirect('/admin/pageHome/openAdminGalerea'); 
+    }
     /**
      * Show the form for editing the specified resource.
      *
@@ -118,7 +138,7 @@ class GalleryController extends Controller
      */
     public function edit($id)
     {
-        //
+        dd($id);
     }
 
     /**
@@ -141,6 +161,6 @@ class GalleryController extends Controller
      */
     public function destroy($id)
     {
-        //
+       
     }
 }

@@ -1,6 +1,6 @@
 <?php
 
-
+use App\Http\Controllers\MailController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,6 +23,7 @@ Route::get('/adminPanel','MainController@adminPanel');
 Route::get('/sales','MainController@adminSales');
 Route::get('/chat','MainController@adminChat');
 Route::get('/mail','MainController@adminMail');
+Route::resource('mail', MailController::class);
 //Form
 Route::prefix('admin')->group(function () {
     Route::prefix('/pageHome')->group(function () {
@@ -35,10 +36,12 @@ Route::prefix('admin')->group(function () {
             
            
         });
+
         Route::get('/openAdminGalerea', 'App\Http\Controllers\AdminPanel\GalleryController@gallery');
-        Route::prefix('adminGallery')->group(function () {
-            Route::resource('/adminGalerea', 'App\Http\Controllers\AdminPanel\GalleryController')->except([
-                    'create', 'show', 'edit','destroy'
+        Route::get('adminGalleryGroup/delete{id}', 'App\Http\Controllers\AdminPanel\GalleryController@deleteCategory')->name('adminGalleryGroup.deleteCategory');
+        Route::prefix('adminGalleryGroup')->group(function () {
+            Route::resource('adminGalerea', 'App\Http\Controllers\AdminPanel\GalleryController')->except([
+                    'create', 'edit','destroy'
             ]);
         });
         

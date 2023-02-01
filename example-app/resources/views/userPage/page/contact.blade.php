@@ -39,7 +39,8 @@
             </ul>
             <div class="divide50"></div>
             <div class="form-container">
-                <form action="contact/vanilla-form.php" method="post" class="vanilla vanilla-form" novalidate="novalidate">
+                <form action="{{route('mail.store')}}" method="post" class="vanilla vanilla-form" novalidate="novalidate">
+                    @csrf
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="form-field">
@@ -53,7 +54,7 @@
                         <div class="col-sm-6">
                             <div class="form-field">
                                 <label>
-                                    <input type="email" name="email" placeholder="Электронная почта" required="required">
+                                    <input type="email" name="mail" placeholder="Электронная почта" required="required">
                                     <i class="icon-mail-alt"></i></label>
                             </div>
                             <!--/.form-field -->
@@ -62,7 +63,7 @@
                         <div class="col-sm-6">
                             <div class="form-field">
                                 <label>
-                                    <input type="tel" name="tel" placeholder="Телефон">
+                                    <input type="tel" name="telephone" placeholder="Телефон">
                                     <i class="icon-phone"></i></label>
                             </div>
                             <!--/.form-field -->
@@ -71,7 +72,7 @@
                         <div class="col-sm-6">
                             <div class="form-field">
                                 <label class="custom-select">
-                                    <select name="department" required="required">
+                                    <select name="theme" required="required">
                                         <option value="">Выберите тему</option>
                                         <option value="Sales">Сотруднечиство</option>
                                         <option value="Marketing">Поддержка</option>
@@ -83,11 +84,11 @@
                         <!--/column -->
                     </div>
                     <!--/.row -->
-                    <textarea name="message" placeholder="Напишите Ваше сообщение сюда..."></textarea>
+                    <textarea name="text" placeholder="Напишите Ваше сообщение сюда..."></textarea>
 
                     <!--/.radio-set -->
                     <input type="submit" class="btn" value="Отправить" data-error="Fix errors" data-processing="Sending..." data-success="Thank you!">
-                    <footer class="notification-box"></footer>
+         
                 </form>
                 <!--/.vanilla-form -->
             </div>
