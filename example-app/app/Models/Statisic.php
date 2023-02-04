@@ -5,8 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Mail extends Model
+class Statisic extends Model
 {
     use HasFactory;
-     protected $fillable = ['name', 'text', 'theme', 'telephone', 'mail' ];
 }

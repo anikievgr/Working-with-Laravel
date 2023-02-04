@@ -2,15 +2,37 @@
 
 namespace App\Http\Controllers;
 use App\Models\Category;
+use App\Models\News;
 use App\Models\Slide;
 use Illuminate\Http\Request;
 
 class MainController extends Controller
 {
     public function pageHome(){
+        
         $items = Slide::all();
            $img =[];
-        
+           $i = 0;
+        $news = News::all();
+        if ($news->count() == 0) {
+            $news = [];
+        } else {
+            foreach ($news as $key => $lrNews) {
+            if($i == 1){
+                    $news[$key]['lr'] = 'right';
+                    $i = 0;
+
+            }else{
+               $news[$key]['lr'] = ' ';
+                 $i++;
+            }
+              
+            }
+           
+            //  $news = $news->chunk(2);
+             // dd($news);
+        }
+   
         $gallerea = array();
           $catygories = Category::all();
            $it = $catygories;
@@ -36,7 +58,7 @@ class MainController extends Controller
 
     //dd($gallerea);
     }
-        return view('userPage/page/pageHome',compact('items', 'gallerea'));
+        return view('userPage/page/pageHome',compact('items', 'gallerea','news' ));
     }
     public function contacti(){
         return view('userPage/page/contact');

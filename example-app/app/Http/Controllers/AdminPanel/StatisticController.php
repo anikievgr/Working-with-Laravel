@@ -1,13 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\AdminPanel;
 
-use App\Models\Mail;
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-use function GuzzleHttp\Promise\all;
-
-class MailController extends Controller
+class StatisticController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,13 +14,8 @@ class MailController extends Controller
      */
     public function index()
     {
-        $mail = Mail::all();
-        if ($mail->count() == 0) {
-            $mail = [];
-        }
-       
-       
-       return view('adminPanel/page/pageForm/pageMail/mail', compact('mail'));
+    return view('adminPanel/page/pageForm/pagehome/oompany');
+
     }
 
     /**
@@ -43,17 +36,7 @@ class MailController extends Controller
      */
     public function store(Request $request)
     {
-       // 
-        $item = [
-            'name' => $request['name'],
-            'mail' => $request['mail'],
-            'telephone' => $request['telephone'],
-            'theme' => $request['theme'],
-            'text' => $request['text']
-        ];
-        //dd($item);
-        Mail::create($item);
-          return redirect()->back(); 
+        //
     }
 
     /**
@@ -64,11 +47,7 @@ class MailController extends Controller
      */
     public function show($id)
     {
-       
-        if($id == 'all'){
-            Mail::truncate();
-            return redirect('mail');
-        }
+        //
     }
 
     /**

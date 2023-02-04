@@ -24,6 +24,7 @@ Route::get('/sales','MainController@adminSales');
 Route::get('/chat','MainController@adminChat');
 Route::get('/mail','MainController@adminMail');
 Route::resource('mail', MailController::class);
+Route::resource('ocompany', 'App\Http\Controllers\AdminPanel\StatisticController');
 //Form
 Route::prefix('admin')->group(function () {
     Route::prefix('/pageHome')->group(function () {

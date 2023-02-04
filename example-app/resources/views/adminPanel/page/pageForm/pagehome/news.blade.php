@@ -84,7 +84,7 @@
                                         </div>
                                         <div class="form-group mb-4 mt-3">
                                             <label for="exampleFormControlFile1">Загрузите картинку</label>
-                                            <input name="image" type="file" class="form-control-file" id="exampleFormControlFile1">
+                                            <input  name="image" type="file" class="form-control-file" id="exampleFormControlFile1">
                                         </div>
                                         <input type="submit" name="time" class="mt-4 mb-4 btn btn-primary">
                                     </form>
@@ -144,7 +144,7 @@
                                     <div class="widget-header">
                                         <div class="row">
                                             <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                                <h4>Обнавить запись</h4>
+                                                <h4>Обновить запись</h4>
                                             </div>
                                         </div>
                                     </div>
