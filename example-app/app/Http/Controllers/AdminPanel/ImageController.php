@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Http\Controllers\AdminPanel;
+namespace App\Http\Controllers\Adminpanel;
 
 use App\Http\Controllers\Controller;
-use App\Models\Company;
-use App\Models\Statisic;
+use App\Models\Image;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
-class StatisticController extends Controller
+class ImageController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,15 +16,8 @@ class StatisticController extends Controller
      */
     public function index()
     {
-        $procent = Statisic::all();
-        $ocompany = Company::all();
-       // dd($ocompany[0]['image']);
-        if ($procent->count() == 0) {
-            $procent = [];
-        }
-        
-        return view('adminPanel/page/pageForm/pagehome/oompany', compact('procent', 'ocompany'));
-
+                $image = Image::all();
+        return view('adminPanel/page/pageForm/pagehome/gImage', compact('image'));
     }
 
     /**
@@ -45,14 +38,7 @@ class StatisticController extends Controller
      */
     public function store(Request $request)
     {
-        $item = Statisic::find(1);
-        $item->update($request->all());
-        $item = Statisic::find(2);
-        $db = 100 - $request['procent'];
-        $db = ['procent' => $db];
-         $item->update($db);
-         return redirect()->back();
-        
+        //
     }
 
     /**
@@ -63,7 +49,14 @@ class StatisticController extends Controller
      */
     public function show($id)
     {
-        
+        $text = Image::find(1);
+        $db = [
+            'title' => '',
+            'text' => '',
+            'image' => ''
+        ];
+        $text->update($db);
+        return redirect()->back();
     }
 
     /**
@@ -86,7 +79,28 @@ class StatisticController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+            $itme = $request->all();
+        $image= Image::find($id);
+        if (array_key_exists('image', $itme)){
+            
+            Storage::disk('public')->delete($image['image']);
+            $path = $request->file('image')->store('uploads', 'public');
+
+            $bd = [
+                'title' =>  $request['title'],
+                'text' =>  $request['text'],
+                'image' =>  $path,
+            ];
+            //dd($bd);
+        }else{
+        $bd = [
+            'title' =>  $request['title'],
+            'text' =>  $request['text'],
+       
+        ];
+    }
+        $image -> update(  $bd);
+          return redirect()->back();
     }
 
     /**

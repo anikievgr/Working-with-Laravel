@@ -3,11 +3,10 @@
 namespace App\Http\Controllers\AdminPanel;
 
 use App\Http\Controllers\Controller;
-use App\Models\Company;
-use App\Models\Statisic;
+use App\Models\Video;
 use Illuminate\Http\Request;
 
-class StatisticController extends Controller
+class VideoController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,15 +15,8 @@ class StatisticController extends Controller
      */
     public function index()
     {
-        $procent = Statisic::all();
-        $ocompany = Company::all();
-       // dd($ocompany[0]['image']);
-        if ($procent->count() == 0) {
-            $procent = [];
-        }
-        
-        return view('adminPanel/page/pageForm/pagehome/oompany', compact('procent', 'ocompany'));
-
+        $video = Video::all();
+        return view('adminPanel/page/pageForm/pagehome/video', compact('video'));
     }
 
     /**
@@ -45,13 +37,6 @@ class StatisticController extends Controller
      */
     public function store(Request $request)
     {
-        $item = Statisic::find(1);
-        $item->update($request->all());
-        $item = Statisic::find(2);
-        $db = 100 - $request['procent'];
-        $db = ['procent' => $db];
-         $item->update($db);
-         return redirect()->back();
         
     }
 
@@ -63,7 +48,13 @@ class StatisticController extends Controller
      */
     public function show($id)
     {
-        
+       $text = Video::find(1);
+        $db = [
+            'title' => '',
+            'text' => ''
+        ];
+        $text->update($db);
+        return redirect()->back();
     }
 
     /**
@@ -86,7 +77,10 @@ class StatisticController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $item = Video::find($id);
+   
+        $item->update($request->all());
+            return redirect()->back();
     }
 
     /**

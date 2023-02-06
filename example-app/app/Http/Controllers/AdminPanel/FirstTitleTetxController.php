@@ -3,11 +3,11 @@
 namespace App\Http\Controllers\AdminPanel;
 
 use App\Http\Controllers\Controller;
-use App\Models\Company;
-use App\Models\Statisic;
+use App\Models\TextPageHome;
+use App\Models\TitlePageHome;
 use Illuminate\Http\Request;
 
-class StatisticController extends Controller
+class FirstTitleTetxController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,15 +16,9 @@ class StatisticController extends Controller
      */
     public function index()
     {
-        $procent = Statisic::all();
-        $ocompany = Company::all();
-       // dd($ocompany[0]['image']);
-        if ($procent->count() == 0) {
-            $procent = [];
-        }
-        
-        return view('adminPanel/page/pageForm/pagehome/oompany', compact('procent', 'ocompany'));
-
+        $text = TitlePageHome::all();
+        $textT = TextPageHome::all();
+          return view('adminPanel/page/pageForm/pagehome/text', compact('text', 'textT'));
     }
 
     /**
@@ -45,14 +39,7 @@ class StatisticController extends Controller
      */
     public function store(Request $request)
     {
-        $item = Statisic::find(1);
-        $item->update($request->all());
-        $item = Statisic::find(2);
-        $db = 100 - $request['procent'];
-        $db = ['procent' => $db];
-         $item->update($db);
-         return redirect()->back();
-        
+        //
     }
 
     /**
@@ -63,7 +50,13 @@ class StatisticController extends Controller
      */
     public function show($id)
     {
-        
+        $text = TitlePageHome::find(1);
+        $bd = [
+            'title' => '',
+            'text' => ''
+        ];
+        $text->update($bd);
+        return redirect()->back();
     }
 
     /**
@@ -86,7 +79,10 @@ class StatisticController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+             $text = TitlePageHome::find(1);
+            
+        $text->update($request->all());
+        return redirect()->back();
     }
 
     /**

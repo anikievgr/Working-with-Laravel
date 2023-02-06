@@ -36,47 +36,49 @@
         <!-- /.tp-fullscreen-container -->
     </div><!-- /.revolution -->
                 @endif
+      @if ($titleText != [] & $textBox != [])
+          
+              
     <div class="container inner">
         <div class="headline text-center">
-            <h2>Первоклассные индюшки и индюшачьи яйца!</h2>
+            <h2>{{$titleText[0]['title']}}</h2>
             <p class="lead animated-text letters type">
-                <span>Мы занимаемся распространением</span>
+                <span>{{$titleText[0]['text']}}</span>
                 <span class="animated-text-wrapper">
-  <b class="is-hidden" style="opacity: 1;"><i class="out">с</i><i class="out">у</i><i class="out">т</i><i class="out">о</i><i class="out">ч</i><i class="out">н</i><i class="out">ы</i><i class="out">х</i><i class="out"> </i><i class="out">и</i><i class="out">н</i><i class="out">д</i><i class="out">ю</i><i class="out">ш</i><i class="out">а</i><i class="out">т</i></b>
- <b style="opacity: 1;" class="is-hidden"><i class="out">и</i><i class="out">н</i><i class="out">к</i><i class="out">у</i><i class="out">б</i><i class="out">а</i><i class="out">ц</i><i class="out">и</i><i class="out">о</i><i class="out">н</i><i class="out">н</i><i class="out">ы</i><i class="out">х</i><i class="out"> </i><i class="out">я</i><i class="out">и</i><i class="out">ц</i></b>
-  </span>
+                    <b class="is-hidden" style="opacity: 1;"><i class="out">с</i><i class="out">у</i><i class="out">т</i><i class="out">о</i><i class="out">ч</i><i class="out">н</i><i class="out">ы</i><i class="out">х</i><i class="out"> </i><i class="out">и</i><i class="out">н</i><i class="out">д</i><i class="out">ю</i><i class="out">ш</i><i class="out">а</i><i class="out">т</i></b>
+                    <b style="opacity: 1;" class="is-hidden"><i class="out">и</i><i class="out">н</i><i class="out">к</i><i class="out">у</i><i class="out">б</i><i class="out">а</i><i class="out">ц</i><i class="out">и</i><i class="out">о</i><i class="out">н</i><i class="out">н</i><i class="out">ы</i><i class="out">х</i><i class="out"> </i><i class="out">я</i><i class="out">и</i><i class="out">ц</i></b>
+                    </span>
             </p>
         </div>
         <div class="divide30"></div>
         <div class="row services">
+            
+          @foreach ($textBox as $item)
+                
+           
             <div class="col-sm-6">
                 <div class="service">
-                    <h4 style="text-align: center;">СУТОЧНЫЕ ИНДЮШАТА</h4>
-                    <p style="text-align: center;">Разведение индеек аналогично разведению другой домашней птицы. Однако суточные индюшата более требовательны к температуре окружающей среды (после вылупления температура окружающей среды должна быть 36 °C) и к общему уходу. Они особенно чувствительны к переохлаждению и повышенной влажности.</p>
+                    <h4 style="text-align: center;">{{$item['title']}}</h4>
+                    <p style="text-align: center;">{{$item['text']}}</p>
                 </div>
             </div>
-            <div class="col-sm-6">
-                <div class="service">
-                    <h4 style="text-align: center;">ИНКУБАЦИОННЫЕ ЯЙЦА ИНДЕЙКИ</h4>
-                    <p style="text-align: center;">Яйца индейки похожи по составу на куриные яйца, а также имеют схожий вкус. Яйца обычно кремово-коричневого цвета с темно-коричневыми пятнами весом около 70-90 г.</p>
-                </div>
-            </div>
+            @endforeach
         </div>
     </div>
-
+@endif  
     <!-- /.light-wrapper -->
-
+@if($gImage != [])
     <div class="inverse-wrapper inner bp0">
         <div class="container">
             <div class="thin text-center">
                 <div class="headline text-center">
-                    <h2>ЛУЧШЕ ОДИН РАЗ УВИДЕТЬ, ЧЕМ СТО РАЗ УСЛЫШАТЬ</h2>
-                    <p class="lead">Приходите к нам на экскурсию</p>
+                    <h2>{{$gImage[0]['title']}}</h2>
+                    <p class="lead">{{$gImage[0]['text']}}</p>
                 </div>
                 <!-- /.headline -->
                 <div class="divide30"></div>
                 <figure>
-                    <img style="width: auto;" src="style/images/art/branko.png" alt="" />
+                    <img style="width: auto;" src="{{asset('/storage/'.$gImage[0]['image'])}}" alt="" />
                 </figure>
             </div>
             <!-- /.thin -->
@@ -85,6 +87,7 @@
         <!-- /.container -->
     </div>
     <!-- /.inverse-wrapper -->
+    @endif
 @if ($gallerea  != [])
 
 
@@ -118,19 +121,7 @@
                                 </div>
                             @endforeach
                         @endforeach
-                    {{-- <div class="cbp-item provision"> <a class="cbp-caption fancybox-media" data-rel="portfolio" href="style/images/art/p4.jpg">
-                            <div class="cbp-caption-defaultWrap"> <img src="style/images/art/p4.jpg" alt="" /> </div>
-                            <div class="cbp-caption-activeWrap">
-                                <div class="cbp-l-caption-alignCenter">
-                                    <div class="cbp-l-caption-body">
-                                        <div class="cbp-l-caption-title">Увеличить</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--/.cbp-caption-activeWrap -->
-                        </a>
-                        <!--/.box -->
-                    </div> --}}
+                   
 
 
 
@@ -147,7 +138,9 @@
     <!-- /.light-wrapper -->
 @endif
 
-
+    @if ($video != [])
+        
+   
     <div class="outer-wrap inverse-wrapper">
         <div id="video-wrap" class="video-wrap">
             <video preload="metadata" playsinline autoplay muted loop id="video-office">
@@ -156,9 +149,8 @@
             </video>
             <div class="content-overlay container">
                 <div class="headline text-center">
-                    <h2>ШИРОКОГРУДАЯ БРОНЗОВАЯ ИНДЕЙКА
-                        </h2>
-                    <p class="lead"> Индейки острова Пихты </p>
+                    <h2>{{$video[0]['title']}}</h2>
+                    <p class="lead">{{$video[0]['text']}}</p>
                 </div>
             </div>
             <!-- /.container -->
@@ -166,6 +158,7 @@
         <!-- /.video-wrap -->
     </div>
     <!-- /.inverse-wrapper -->
+     @endif
 @if($news != [])
                     <div class="light-wrapper">
                         <div class="container inner">
@@ -215,64 +208,70 @@
                     </div>
     @endif
                     <!-- /.light-wrapper -->
-    <div class="white-wrapper">
-        <div class="col-image">
-            <div class="bg-wrapper col-md-6">
-                <div class="bg-holder" style="background-image: url({{asset('style/images/art/pp1.jpg')}});"></div>
-            </div>
-            <!--/.bg-wrapper -->
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-5 col-md-offset-7 inner-col">
-                        <div class="divide20"></div>
-                        <h3>О КОМПАНИИ</h3>
-                        <p>Мы постоянно расширяемся</p>
-                        <p>Чешская Республика, Польша и Венгрия - наши давние и стабильные партнеры. Другие наши клиенты находятся в Италии, Германии, Австрии, Нидерландах, Словении, Румынии, Литве, Франции, Хорватии, России и Украине</p>
-                        <div class="text-center" width="450px" height="450px">
-                            <canvas id="doughnutChart" ></canvas>
+      @if($ocompany['title'] != 0)  
+                <div class="white-wrapper">
+                    <div class="col-image">
+                        <div class="bg-wrapper col-md-6">
+                            <div class="bg-holder" style="background-image: url({{asset('/storage/'.$ocompany['image'])}});"></div>
                         </div>
+                        <!--/.bg-wrapper -->
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-5 col-md-offset-7 inner-col">
+                                    <div class="divide20"></div>
+                                    <h3>О КОМПАНИИ</h3>
+                                    <p>{{$ocompany['title']}}</p>
+                                    <p>{{$ocompany['titleLtext']}}</p>
+                                    <div class="text-center" width="450px" height="450px">
+                                        <canvas id="doughnutChart" ></canvas>
+                                    </div>
+                                </div>
+                                <!-- /column -->
+
+                                <!-- /.progress-list -->
+                                <script>
+                                    /*-----------------------------------------------------------------------------------*/
+                                    /*	CHARTS
+                                    /*-----------------------------------------------------------------------------------*/
+
+
+
+                                    var doughnutData = [{
+                                        value: {{$procent[0]['procent']}},
+                                        color: "rgba(106,186,222,0.85)",
+                                        highlight: "rgba(106,186,222,1)",
+                                        label: "Словакия"
+                                    }, {
+                                        value: {{$procent[1]['procent']}},
+                                        color: "rgba(241,189,105,0.85)",
+                                        highlight: "rgba(241,189,105,1)",
+                                        label: "Другие страны"
+                                    }];
+                                    window.onload = function() {
+                                        var ctx4 = document.getElementById("doughnutChart").getContext("2d");
+                                        window.myDoughnut = new Chart(ctx4).Doughnut(doughnutData, {
+                                            responsive: true,
+                                            scaleFontFamily: "'Lato', sans-serif",
+                                            tooltipFontFamily: "'Lato', sans-serif",
+                                            tooltipTitleFontFamily: "'Lato', sans-serif"
+                                        });
+                                    };
+                                </script>
+                                
+                                <!--/column -->
+                            </div>
+                            <!--/.row -->
+                        </div>
+                        <!--/.container -->
                     </div>
-                    <!-- /column -->
+                    <!--/.col-image -->
 
-                    <!-- /.progress-list -->
-                    <script>
-                        /*-----------------------------------------------------------------------------------*/
-                        /*	CHARTS
-                        /*-----------------------------------------------------------------------------------*/
-
-
-
-                        var doughnutData = [{
-                            value: 90,
-                            color: "rgba(106,186,222,0.85)",
-                            highlight: "rgba(106,186,222,1)",
-                            label: "Словакия"
-                        }, {
-                            value: 10,
-                            color: "rgba(241,189,105,0.85)",
-                            highlight: "rgba(241,189,105,1)",
-                            label: "Другие страны"
-                        }];
-                        window.onload = function() {
-                            var ctx4 = document.getElementById("doughnutChart").getContext("2d");
-                            window.myDoughnut = new Chart(ctx4).Doughnut(doughnutData, {
-                                responsive: true,
-                                scaleFontFamily: "'Lato', sans-serif",
-                                tooltipFontFamily: "'Lato', sans-serif",
-                                tooltipTitleFontFamily: "'Lato', sans-serif"
-                            });
-                        };
-                    </script>
-                    <!--/column -->
                 </div>
-                <!--/.row -->
-            </div>
-            <!--/.container -->
-        </div>
-        <!--/.col-image -->
+        @endif
 
-    </div>
-
+        @if ($processSort != []) 
+            
+       
     <div class="light-wrapper">
         <div class="container inner">
             <div class="section-title text-center">
@@ -281,30 +280,13 @@
             </div>
             <div class="thin3">
                 <div class="row circle-wrapper">
-                    <div class="col-sm-6 col-md-3">
+                    @foreach($processSort as $key => $process)
+                    <div class="col-sm-6 col-md-3 " >
                         <div class="circle blue-bg">
-                            <div class="text">1. Материал</div>
+                            <div class="text">{{$key}}. {{$process['nameprocess']}}</div>
                         </div>
                     </div>
-                    <!-- /column -->
-                    <div class="col-sm-6 col-md-3">
-                        <div class="circle red-bg">
-                            <div class="text">2. Контроль</div>
-                        </div>
-                    </div>
-                    <!-- /column -->
-                    <div class="col-sm-6 col-md-3">
-                        <div class="circle green-bg">
-                            <div class="text">3. Забота</div>
-                        </div>
-                    </div>
-                    <!-- /column -->
-                    <div class="col-sm-6 col-md-3">
-                        <div class="circle yellow-bg">
-                            <div class="text">4. Развитие</div>
-                        </div>
-                    </div>
-                    <!-- /column -->
+                    @endforeach 
                 </div>
                 <!--/.row -->
                 <div class="divide30"></div>
@@ -315,7 +297,7 @@
         <!--/.container -->
     </div>
     <!-- /.light-wrapper -->
-
+ @endif
 
 
 

@@ -25,6 +25,12 @@ Route::get('/chat','MainController@adminChat');
 Route::get('/mail','MainController@adminMail');
 Route::resource('mail', MailController::class);
 Route::resource('ocompany', 'App\Http\Controllers\AdminPanel\StatisticController');
+Route::resource('company', 'App\Http\Controllers\AdminPanel\CompanyController');
+Route::resource('process', 'App\Http\Controllers\AdminPanel\ProcessController');
+Route::resource('title', 'App\Http\Controllers\AdminPanel\FirstTitleTetxController');
+Route::resource('text', 'App\Http\Controllers\AdminPanel\TetxController');
+Route::resource('video', 'App\Http\Controllers\AdminPanel\VideoController');
+Route::resource('image', 'App\Http\Controllers\AdminPanel\ImageController');
 //Form
 Route::prefix('admin')->group(function () {
     Route::prefix('/pageHome')->group(function () {

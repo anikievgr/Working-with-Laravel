@@ -4,10 +4,10 @@ namespace App\Http\Controllers\AdminPanel;
 
 use App\Http\Controllers\Controller;
 use App\Models\Company;
-use App\Models\Statisic;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
-class StatisticController extends Controller
+class CompanyController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,15 +16,7 @@ class StatisticController extends Controller
      */
     public function index()
     {
-        $procent = Statisic::all();
-        $ocompany = Company::all();
-       // dd($ocompany[0]['image']);
-        if ($procent->count() == 0) {
-            $procent = [];
-        }
-        
-        return view('adminPanel/page/pageForm/pagehome/oompany', compact('procent', 'ocompany'));
-
+       
     }
 
     /**
@@ -45,14 +37,28 @@ class StatisticController extends Controller
      */
     public function store(Request $request)
     {
-        $item = Statisic::find(1);
-        $item->update($request->all());
-        $item = Statisic::find(2);
-        $db = 100 - $request['procent'];
-        $db = ['procent' => $db];
-         $item->update($db);
-         return redirect()->back();
-        
+         $companyText= Company::find('1');
+        if (array_key_exists('image', $request->all())){
+          
+            Storage::disk('public')->delete($companyText['image']);
+            $path = $request->file('image')->store('uploads', 'public');
+
+            $bd = [
+                'title' =>  $request['title'],
+                'text' =>  $request['text'],
+                'image' =>  $path,
+            ];
+            //dd($bd);
+        } else {
+        //dd('0');
+            $bd = [
+                'title' => $request['title'],
+                'titleLtext' => $request['text'],
+
+            ];
+        }
+        $companyText->update($bd);
+         return redirect('ocompany');
     }
 
     /**
@@ -63,7 +69,7 @@ class StatisticController extends Controller
      */
     public function show($id)
     {
-        
+        //
     }
 
     /**

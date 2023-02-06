@@ -2,14 +2,63 @@
 
 namespace App\Http\Controllers;
 use App\Models\Category;
+use App\Models\Company;
+use App\Models\Image;
 use App\Models\News;
+use App\Models\Process;
 use App\Models\Slide;
+use App\Models\Statisic;
+use App\Models\TextPageHome;
+use App\Models\TitlePageHome;
+use App\Models\Video;
 use Illuminate\Http\Request;
 
 class MainController extends Controller
 {
     public function pageHome(){
         
+        $gImage = Image::all();
+          if ($gImage[0]['title'] == '') {
+            $gImage = [];
+        }
+      
+        $video = Video::all();
+          if ($video[0]['title'] == '') {
+            $video = [];
+        }
+         $textBox = TextPageHome::all();
+        if ($textBox->count() == 0) {
+            $textBox = [];
+        }
+        $titleText = TitlePageHome::all();
+        if ($titleText[0]['title'] == '') {
+            $titleText = [];
+        }
+        $procent = Statisic::all();
+        $process = Process::all();
+        $processSort = [];
+        if ($process->count() == 0) {
+            $processSort = [];
+        } else {
+            foreach ($process as $sort) {
+                $processSort[$sort['nomerprocess']] = [
+
+                    'nameprocess' => $sort['nameprocess'],
+                    'color' => $sort['color']
+
+                ];
+            }
+            ksort($processSort);
+        }
+        //dd($processSort);
+        $ocompany = Company::find(1);
+        
+        if($ocompany['title'] == ''){
+            $ocompany['title'] = 0;
+        }
+        if ($procent->count() == 0) {
+            $procent = [];
+        }
         $items = Slide::all();
            $img =[];
            $i = 0;
@@ -58,7 +107,7 @@ class MainController extends Controller
 
     //dd($gallerea);
     }
-        return view('userPage/page/pageHome',compact('items', 'gallerea','news' ));
+        return view('userPage/page/pageHome',compact('video', 'items', 'gallerea','news', 'procent', 'ocompany', 'processSort', 'titleText', 'textBox', 'gImage' ));
     }
     public function contacti(){
         return view('userPage/page/contact');
