@@ -3,11 +3,13 @@
 namespace App\Http\Controllers;
 use App\Models\Category;
 use App\Models\Company;
+use App\Models\HeaderIncubirovane;
 use App\Models\Image;
 use App\Models\News;
 use App\Models\Process;
 use App\Models\Slide;
 use App\Models\Statisic;
+use App\Models\textIncubirovane;
 use App\Models\TextPageHome;
 use App\Models\TitlePageHome;
 use App\Models\Video;
@@ -113,7 +115,12 @@ class MainController extends Controller
         return view('userPage/page/contact');
     }
     public function incubirovanie(){
-        return view('userPage/page/incubirovanie');
+        $title = HeaderIncubirovane::all();
+           $text = textIncubirovane::all();
+          if ($title[0]['image'] == '') {
+            $title = [];
+        }
+        return view('userPage/page/incubirovanie', compact('title', 'text'));
     }
     //администраторская панель
     public function loginToTheAdminPanel()

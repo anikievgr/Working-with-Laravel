@@ -31,6 +31,8 @@ Route::resource('title', 'App\Http\Controllers\AdminPanel\FirstTitleTetxControll
 Route::resource('text', 'App\Http\Controllers\AdminPanel\TetxController');
 Route::resource('video', 'App\Http\Controllers\AdminPanel\VideoController');
 Route::resource('image', 'App\Http\Controllers\AdminPanel\ImageController');
+Route::resource('adminIncubirovane', 'App\Http\Controllers\AdminPanel\IncubirovaneController');
+Route::resource('adminIncubirovanetext', 'App\Http\Controllers\AdminPanel\IncubirovaneTextController');
 //Form
 Route::prefix('admin')->group(function () {
     Route::prefix('/pageHome')->group(function () {
