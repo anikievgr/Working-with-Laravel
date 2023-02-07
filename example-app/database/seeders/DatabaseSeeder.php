@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use App\Models\Post;
+use App\Models\Slide;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -15,14 +16,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-       //$post = Post::factory(5)->create();
-       //printf("<pre>%s</pre>", print_r($post, true));
+      Slide::factory(5)->create();
 
-        // \App\Models\User::factory(10)->create();
-
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
     }
 }

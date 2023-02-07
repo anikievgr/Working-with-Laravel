@@ -56,7 +56,7 @@ class NewsController extends Controller
         //dd($request->file('image'));
         if (empty($request['image'])) {
             $path = 'null';
-         
+
         }
         else{
              $path = $request->file('image')->store('uploads', 'public');
@@ -66,7 +66,7 @@ class NewsController extends Controller
             'text'=> $request['text'],
             'image'=> $path
         ];
-     // dd($db);
+       dd($db);
         News::create($db);
         return redirect()->back();
     }
@@ -109,7 +109,7 @@ class NewsController extends Controller
         $itme = $request->all();
         $new= News::find($id);
         if (array_key_exists('image', $itme)){
-            
+
             Storage::disk('public')->delete($new['image']);
             $path = $request->file('image')->store('uploads', 'public');
 
@@ -123,7 +123,7 @@ class NewsController extends Controller
         $bd = [
             'title' =>  $request['title'],
             'text' =>  $request['text'],
-       
+
         ];
     }
         $new -> update(  $bd);
