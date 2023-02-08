@@ -31,10 +31,10 @@
                                     </div>
                              @else
                         <div class="row">
-                             
+
                             <div class="col-xl-12  col-md-12">
-                       
-                        
+
+
                                 <div class="mail-box-container">
                                     <div class="mail-overlay"></div>
 
@@ -51,11 +51,11 @@
                                                         <li class="nav-item">
                                                             <a class="nav-link list-actions active" id="mailInbox"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-inbox"><polyline points="22 12 16 12 14 15 10 15 8 12 2 12"></polyline><path d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"></path></svg> <span class="nav-names">Inbox</span> <span class="mail-badge badge"></span></a>
                                                         </li>
-                                                        
-                                                        
+
+
                                                     </ul>
 
-                                               
+
 
                                                 </div>
                                             </div>
@@ -64,42 +64,42 @@
 
                                     <div id="mailbox-inbox" class="accordion mailbox-inbox">
 
-                                        
+
 
                                         <div class="action-center">
 
                                             <div class="">
-                                              
+
                                                 <div class="dropdown d-inline-block more-actions">
-                                                    
-                                        
+
+
                                                 <div class="n-chk" style="display: none">
                                                     <label class="new-control new-checkbox checkbox-primary">
                                                       <input type="checkbox" class="new-control-input" id="inboxAll">
                                                       <span class="new-control-indicator"></span><span>Выбрать все</span>
                                                     </label>
                                                 </div>
-                                           
-                                                        
-                                                  
+
+
+
                                                     <a class="dropdown-item action-delete" href=""data-toggle="modal" data-target="#dAll">
                                                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-toggle="tooltip" data-placement="top" data-original-title="Delete" class="feather feather-trash-2"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg>Удалить все
                                                         </a>
                                                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="more-actions-btns-dropdown">
-                                               
-                                                        
+
+
                                                     </div>
                                                 </div>
 
                                             </div>
                                         </div>
-                                
+
                                         <div class="message-box">
-                                            
+
                                             <div class="message-box-scroll" id="ct">
                                                 @foreach ($mail as $item)
-                                                    
-                                               
+
+
                                                 <div  class="mail-item mailInbox">
                                                     <div class="animated animatedFadeInUp fadeInUp" id="mailHeadingEleven">
                                                         <div class="mb-0">
@@ -107,8 +107,8 @@
                                                                 <div class="mail-item-inner">
 
                                                                     <div class="d-flex">
-                                                                      
-                                                                    
+
+
                                                                         <div class="f-body">
                                                                             <div class="meta-mail-time">
                                                                                 <p class="user-email" data-mailTo="{{$item['mail']}}">{{$item['name']}}</p>
@@ -117,6 +117,7 @@
                                                                                 <p class="meta-time align-self-center">{{$item['theme']}}</p>
                                                                                 <p class="mail-content-excerpt" data-mailDescription='{"ops":[{"{{$item['text']}}\n"}]}'><span class="mail-title" data-mailTitle=""></span> {{$item['text']}}</p>
                                                                                 <p class="meta-time align-self-center">{{date('d M', strtotime($item['created_at'] ))}}</p>
+
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -126,7 +127,7 @@
                                                     </div>
                                                 </div>
                                                 @endforeach
-                                                
+
                                             </div>
                                         </div>
 
@@ -136,23 +137,24 @@
                                                 <h2 class="mail-title" data-selectedMailTitle=""></h2>
                                             </div>
 
-                                            
 
-                                          
+
+
 
                                            @foreach ($mail as $item)
-                                               
-                                       
+
+
 
                                             <div id="q{{$item['id']}}" class="collapse" aria-labelledby="mailHeadingEleven" data-parent="#mailbox-inbox">
                                                 <div class="mail-content-container mailInbox" data-mailfrom="info@mail.com" data-mailto="kirsten.beck@mail.com" data-mailcc="">
 
                                                     <div class="d-flex justify-content-between mb-5">
                                                         <div class="d-flex user-info">
-                                                           
+
                                                             <div class="f-body">
                                                                 <div class="meta-title-tag">
                                                                     <h4 class="mail-usr-name" data-mailtitle="Verification Link">{{$item['name']}}</h4>
+
                                                                 </div>
                                                                 <div class="meta-mail-time">
                                                                     <p class="user-email" data-mailto="{{$item['mail']}}">{{$item['mail']}}</p>
@@ -161,23 +163,32 @@
                                                                 <p class="meta-time align-self-center">Тема - {{$item['theme']}}</p>
                                                             </div>
                                                         </div>
-                                                      
+
                                                     </div>
 
 
                                                     <p>{{$item['text']}}</p>
 
-                                                    
-                                                    <p>{{$item['name']}}</p>
 
+                                                        <p  >{{$item['name']}}</p>
+                                                    @if($item['theme'] == 'Сотрудничество')
+                                                    <div class="position-absolute ">
+                                                        <a href="{{route('mailAdd.show', $item['id'] )}}">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-person-add" viewBox="0 0 16 16">
+                                                                <path d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Zm.5-5v1h1a.5.5 0 0 1 0 1h-1v1a.5.5 0 0 1-1 0v-1h-1a.5.5 0 0 1 0-1h1v-1a.5.5 0 0 1 1 0Zm-2-6a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"/>
+                                                                <path d="M8.256 14a4.474 4.474 0 0 1-.229-1.004H3c.001-.246.154-.986.832-1.664C4.484 10.68 5.711 10 8 10c.26 0 .507.009.74.025.226-.341.496-.65.804-.918C9.077 9.038 8.564 9 8 9c-5 0-6 3-6 4s1 1 1 1h5.256Z"/>
+                                                            </svg>
+                                                        </a>
+                                                    </div>
+                                                    @endif
                                                 </div>
                                             </div>
                                             @endforeach
-                                           
+
                                         </div>
 
                                     </div>
-                                    
+
                                 </div>
 
                                 <!-- Modal -->
@@ -267,7 +278,7 @@
                 </div>
 
                 </div>
-     
+
                                         <div id="dAll" class="modal fade bd-example-modal-sm " tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
                                             <div class="modal-dialog modal-sm">
                                                 <div class="modal-content p-1">
@@ -279,5 +290,5 @@
                                             </div>
                                         </div>
         </div>
-        
+
  @endsection

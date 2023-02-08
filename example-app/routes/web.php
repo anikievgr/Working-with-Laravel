@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\MailController;
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -33,14 +33,15 @@ Route::resource('video', 'App\Http\Controllers\AdminPanel\VideoController');
 Route::resource('image', 'App\Http\Controllers\AdminPanel\ImageController');
 Route::resource('adminIncubirovane', 'App\Http\Controllers\AdminPanel\IncubirovaneController');
 Route::resource('adminIncubirovanetext', 'App\Http\Controllers\AdminPanel\IncubirovaneTextController');
+Route::resource('mailAdd', \App\Http\Controllers\AddUserController::class);
 //Form
 Route::prefix('admin')->group(function () {
     Route::prefix('/pageHome')->group(function () {
-            Route::get('/openAdminSlider', 'App\Http\Controllers\AdminPanel\SliderController@slider')->name('adminSlider');
-            Route::prefix('adminSlider')->group(function () {
+        Route::get('/openAdminSlider', 'App\Http\Controllers\AdminPanel\SliderController@slider')->name('adminSlider');
+        Route::prefix('adminSlider')->group(function () {
             Route::get('bd/delete{id}', 'App\Http\Controllers\AdminPanel\SliderController@delete')->name('bd.delete');
             Route::resource('bd', 'App\Http\Controllers\AdminPanel\SliderController')->except([
-                    'create', 'show', 'edit','destroy'
+                'create', 'show', 'edit','destroy'
             ]);
 
 
@@ -50,7 +51,7 @@ Route::prefix('admin')->group(function () {
         Route::get('adminGalleryGroup/delete{id}', 'App\Http\Controllers\AdminPanel\GalleryController@deleteCategory')->name('adminGalleryGroup.deleteCategory');
         Route::prefix('adminGalleryGroup')->group(function () {
             Route::resource('adminGalerea', 'App\Http\Controllers\AdminPanel\GalleryController')->except([
-                    'create', 'edit','destroy'
+                'create', 'edit','destroy'
             ]);
         });
         Route::get('/openAdminNews', 'App\Http\Controllers\AdminPanel\NewsController@news');
@@ -67,3 +68,14 @@ Route::get('/adminIncubirovanie', 'MainController@adminIncubirovane');
 Route::get('/adminContact', 'MainController@adminContact');
 //формы
 Route::post('/form', 'FormController@store')->name('form');
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+});
+
+require __DIR__.'/auth.php';

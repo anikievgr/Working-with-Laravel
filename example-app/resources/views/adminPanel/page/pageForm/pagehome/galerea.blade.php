@@ -52,7 +52,7 @@
                                 <div class="widget-content widget-content-area">
                                     <form class="select mt-4" method="post" action="{{route('adminGalerea.store')}} "enctype="multipart/form-data" novalidate action="javascript:void(0);">
                                          {{ csrf_field() }}
-                                            <div class="form-row">
+                                        <div class="form-row">
                                             <div class="col-md-12">
                                                 <div id="select_menu" class="form-group mb-4">
                                                     <label for="">Создать категорию</label>
@@ -81,7 +81,7 @@
                                 </div>
                             </div>
                         </div>
-                                
+
                     @else
                                  <div id="galerey-create" class="col-lg-12 layout-spacing">
                             <div class="statbox widget box box-shadow">
@@ -128,9 +128,9 @@
                                 </div>
                             </div>
                         </div>
-                   
-                        
-               
+
+
+
                         <div id="galerey-delete" class="col-lg-12 layout-spacing">
                             <div class="statbox widget box box-shadow">
                                 <div class="widget-header">
@@ -141,7 +141,7 @@
                                     </div>
                                 </div>
                                 <div class="widget-content widget-content-area">
-                                            
+
                                 <div class=" col-md-12 d-flex justify-content-center mb-5 maintabs" >
                                     </div>
                                     <div class="sliderMainOff m-auto " >
@@ -151,10 +151,10 @@
                                                <li class=" mainSlids buttonMain"><button type="button" class="btn btn-outline-primary btn-rounded  filter" data-rel="all">Все</button></li>
                                             @foreach ($gallerea as $key=> $item)
                                                     <li class=" mainSlids buttonMain"><button type="button" class="btn btn-outline-primary  btn-rounded  filter" data-rel="{{$item['id']}}">{{$key}}</button></li>
-                                                @endforeach                                       
-                                       
+                                                @endforeach
+
                                     </ul>
-                                      <button type="button" class="btn btn-outline-primary btnMain" id="prevMain">></button>    
+                                      <button type="button" class="btn btn-outline-primary btnMain" id="prevMain">></button>
                                     </div>
                                 </div>
                                     <!-- Grid column -->
@@ -166,8 +166,8 @@
                                                      @foreach ($gallerea as $key=> $item)
                                                         <div class="col">
                                                                 <button type="button" class="btn btn-outline-primary   filter" data-rel="{{$item['id']}}">{{$key}}</button>
-                                                            </div>                                                
-                                                        @endforeach  
+                                                            </div>
+                                                        @endforeach
                                             </div>
                                         </div>
                                     <!-- Grid row -->
@@ -195,11 +195,11 @@
                                                     @endforeach
 
                                             @endforeach
-                                   
+
                                              <!-- Grid column -->
 
                                     </div>
-                                  
+
                             </div>
                             </div>
                         </div>
@@ -214,14 +214,14 @@
                                     </div>
                                 </div>
                                 <div class="widget-content widget-content-area">
-                                            
+
                                 <div class=" col-md-12 d-flex justify-content-center mb-5 maintabs" >
-                                    
-                                    
+
+
                                     <!-- Grid column -->
                                         <div class="container text-center mt-25 ">
                                             <div class="row row-cols-3 sliderMain">
-                                                     
+
                                                      @foreach ($gallerea as $key=> $item)
                                                         <div class="col">
                                                                 <button type="button" class="btn btn-outline-primary "  data-toggle="modal" data-target="#f{{$key}}">{{$key}}</button>
@@ -235,8 +235,8 @@
                                                                         </div>
                                                                     </div>
                                                         </div>
-                                                            </div>                                                
-                                                        @endforeach  
+                                                            </div>
+                                                        @endforeach
                                             </div>
                                             </div>
                                     <!-- Grid row -->
@@ -248,8 +248,8 @@
                         </div>
 
                             @endif
-                       
-                        
+
+
                     </div>
   </div>
 @endsection

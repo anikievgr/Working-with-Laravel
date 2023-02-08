@@ -1,5 +1,5 @@
 @extends('../../../adminPanel/app')
-@section('video')
+@section('process')
       active
     @endsection
 @section('scriptAdd')
@@ -17,8 +17,8 @@
 @section('headerAddLink')
     <link href="{{asset('style/css/main.css')}}" rel="stylesheet" type="text/css" />
     <link href="{{asset('style/pageAdmin/assets/css/scrollspyNav.css')}}" rel="stylesheet" type="text/css" />
-    
-    
+
+
     <!-- END PAGE LEVEL PLUGINS/CUSTOM STYLES -->
     @endsection
 @section('content')
@@ -33,17 +33,17 @@
 
                     <div id="navSection" data-spy="affix" class="nav  sidenav">
                         <div class="sidenav-content">
-                            
+
                             <a href="#tabsSimple" class="active nav-link">Simple</a>
-                            
+
                         </div>
                     </div>
-                    
+
                     <div class="row layout-top-spacing">
-<div id="slider-create" class="col-lg-12 layout-spacing" >
+                        <div id="slider-create" class="col-lg-12 layout-spacing" >
                                         <div class="col-lg-12 col-12 layout-spacing">
                                             <div class="statbox widget box box-shadow"  style="width: 500px">
-                                               
+
                                                 <div class="widget-header">
                                                     <div class="row">
                                                         <div class="col-xl-12 col-md-12 col-sm-12 col-12">
@@ -51,9 +51,9 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                               
+
                                                 <div class="widget-content widget-content-area">
-                                                    <form method="post" action="{{route('video.update', 1)}} "enctype="multipart/form-data" >    
+                                                    <form method="post" action="{{route('video.update', 1)}} "enctype="multipart/form-data" >
                                                         {{ csrf_field() }}
                                                           @method('PUT')
                                                         <div class="form-group mb-4">
@@ -64,7 +64,7 @@
                                                             <label for="exampleFormControlInput2">Подзоголовок</label>
                                                             <input type="text" name="text" class="form-control" id="h-text1" aria-describedby="h-text1" value="{{$video[0]['text']}}">
                                                         </div>
-                                                       
+
                                                           <div class="d-flex justify-content-between">
                                                     <input type="submit"  class="btn btn-primary">
                                                      <a href="" data-toggle="modal" data-target="#f">
@@ -85,11 +85,11 @@
                                             </div>
                                         </div>
                                     </div>
-                      
-                    
+
+
                     </div>
                 </div>
-                
+
                 </div>
                 <!--  END CONTENT AREA  -->
 

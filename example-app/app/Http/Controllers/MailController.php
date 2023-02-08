@@ -20,8 +20,8 @@ class MailController extends Controller
         if ($mail->count() == 0) {
             $mail = [];
         }
-       
-       
+
+
        return view('adminPanel/page/pageForm/pageMail/mail', compact('mail'));
     }
 
@@ -43,7 +43,13 @@ class MailController extends Controller
      */
     public function store(Request $request)
     {
-       // 
+       //
+        if ($request['theme'] == 'Sales'){
+            $request['theme'] = 'Сотрудничество';
+        }else{
+            $request['theme'] = 'Поддежка';
+        }
+
         $item = [
             'name' => $request['name'],
             'mail' => $request['mail'],
@@ -53,7 +59,7 @@ class MailController extends Controller
         ];
         //dd($item);
         Mail::create($item);
-          return redirect()->back(); 
+          return redirect()->back();
     }
 
     /**
@@ -64,7 +70,7 @@ class MailController extends Controller
      */
     public function show($id)
     {
-       
+
         if($id == 'all'){
             Mail::truncate();
             return redirect('mail');
