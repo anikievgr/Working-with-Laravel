@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class textIncubirovane extends Model
+class TextIncubirovane extends Model
 {
     protected $fillable = ['title', 'text' ];
     use HasFactory;

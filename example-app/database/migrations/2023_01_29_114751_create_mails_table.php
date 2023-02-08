@@ -17,10 +17,10 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
             $table->string('name');
-            $table->string('mail', 20);
-            $table->char('telephone', 20);
+            $table->string('mail');
+            $table->string('telephone' );
             $table->string('theme');
-            $table->text('text');
+            $table->longText('text');
         });
     }
 

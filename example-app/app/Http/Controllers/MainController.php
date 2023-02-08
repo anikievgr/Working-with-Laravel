@@ -9,7 +9,7 @@ use App\Models\News;
 use App\Models\Process;
 use App\Models\Slide;
 use App\Models\Statisic;
-use App\Models\textIncubirovane;
+use App\Models\TextIncubirovane;
 use App\Models\TextPageHome;
 use App\Models\TitlePageHome;
 use App\Models\Video;
@@ -18,12 +18,12 @@ use Illuminate\Http\Request;
 class MainController extends Controller
 {
     public function pageHome(){
-        
+
         $gImage = Image::all();
           if ($gImage[0]['title'] == '') {
             $gImage = [];
         }
-      
+
         $video = Video::all();
           if ($video[0]['title'] == '') {
             $video = [];
@@ -54,7 +54,7 @@ class MainController extends Controller
         }
         //dd($processSort);
         $ocompany = Company::find(1);
-        
+
         if($ocompany['title'] == ''){
             $ocompany['title'] = 0;
         }
@@ -77,13 +77,13 @@ class MainController extends Controller
                $news[$key]['lr'] = ' ';
                  $i++;
             }
-              
+
             }
-           
+
             //  $news = $news->chunk(2);
              // dd($news);
         }
-   
+
         $gallerea = array();
           $catygories = Category::all();
            $it = $catygories;
@@ -93,14 +93,14 @@ class MainController extends Controller
             $it = [];
             //dd($gallerea);
         }else{
-       
+
         foreach ($catygories as $key => $catygories){
-            
+
             foreach($catygories->posts as $key=> $image){
-            
+
                 $img[$image['id']] = $image['image'];
             }
-           
+
             $gallerea[$catygories['title']]['id'] = $catygories['id'];
             $gallerea[$catygories['title']]['id'] = $catygories['id'];
             $gallerea[$catygories['title']]['image'] = $img;
@@ -116,7 +116,7 @@ class MainController extends Controller
     }
     public function incubirovanie(){
         $title = HeaderIncubirovane::all();
-           $text = textIncubirovane::all();
+           $text = TextIncubirovane::all();
           if ($title[0]['image'] == '') {
             $title = [];
         }
@@ -131,7 +131,7 @@ class MainController extends Controller
     {
         return view('adminPanel/page/adminPanel');
     }
-    
+
     public function adminSales()
     {
         return view('adminPanel/page/sales');
@@ -151,9 +151,9 @@ class MainController extends Controller
          public function adminIncubirovane()
     {
         return view('adminPanel/page/pageForm/pageHome/incubirovanieFrom');
-    } 
+    }
            public function adminContact()
     {
         return view('adminPanel/page/pageForm/pageHome/ContactFrom');
-    } 
+    }
 }

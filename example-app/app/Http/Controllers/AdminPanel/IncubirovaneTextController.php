@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Adminpanel;
 
 use App\Http\Controllers\Controller;
-use App\Models\textIncubirovane;
+use App\Models\TextIncubirovane;
 use Illuminate\Http\Request;
 
 class IncubirovaneTextController extends Controller
@@ -37,10 +37,10 @@ class IncubirovaneTextController extends Controller
     public function store(Request $request)
     {
         $itme = $request->all();
-        
-        $text= textIncubirovane::all();
 
-        textIncubirovane::create($request->all());
+        $text= TextIncubirovane::all();
+
+        TextIncubirovane::create($request->all());
 
            return redirect()->back();
     }
@@ -54,7 +54,7 @@ class IncubirovaneTextController extends Controller
     public function show($id)
     {
          $text = textIncubirovane::find($id);
-      
+
         $text->delete();
         return redirect()->back();
     }
@@ -80,13 +80,13 @@ class IncubirovaneTextController extends Controller
     public function update(Request $request, $id)
     {
         $itme = $request->all();
-        
+
         $text= textIncubirovane::find($id);
-        
-    
+
+
         $text->update($request->all());
            return redirect()->back();
-    
+
     }
 
     /**

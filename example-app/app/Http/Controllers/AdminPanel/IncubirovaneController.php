@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Adminpanel;
 
 use App\Http\Controllers\Controller;
 use App\Models\HeaderIncubirovane;
-use App\Models\textIncubirovane;
+use App\Models\TextIncubirovane;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
@@ -18,7 +18,7 @@ class IncubirovaneController extends Controller
     public function index()
     {
         $title = HeaderIncubirovane::all();
-        $text = textIncubirovane::all();
+        $text = TextIncubirovane::all();
         return view('adminPanel/page/pageForm/pagehome/incubirovanieFrom', compact('title', 'text'));
 
     }
@@ -83,7 +83,7 @@ class IncubirovaneController extends Controller
     public function update(Request $request, $id)
     {
         $itme = $request->all();
-        
+
         $header= HeaderIncubirovane::find($id);
         if (array_key_exists('image', $itme)){
             Storage::disk('public')->delete($header['image']);
@@ -97,8 +97,8 @@ class IncubirovaneController extends Controller
         }else{
         $bd = [
             'title' =>  $request['title'],
-            
-       
+
+
         ];
     }
         $header->update($bd);
