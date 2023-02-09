@@ -22,7 +22,7 @@ class TextIncubirovaneFactory extends Factory
     {
         return [
             'title' => $this->faker->text(10),
-            'text' => $this->faker->text(500),
+            'text' => $this->faker->text(200),
         ];
     }
 }

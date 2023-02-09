@@ -16,6 +16,7 @@ use App\Models\Statisic;
 use App\Models\TextIncubirovane;
 use App\Models\TextPageHome;
 use App\Models\TitlePageHome;
+use App\Models\User;
 use App\Models\Video;
 use Illuminate\Database\Seeder;
 
@@ -42,5 +43,7 @@ class DatabaseSeeder extends Seeder
         Company::factory(1)->create();
         Category::factory(4)->create();
         Post::factory(7)->create();
+        User::factory(1)->create();
+
     }
 }

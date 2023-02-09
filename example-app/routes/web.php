@@ -68,6 +68,7 @@ Route::get('/adminIncubirovanie', 'MainController@adminIncubirovane');
 Route::get('/adminContact', 'MainController@adminContact');
 //формы
 Route::post('/form', 'FormController@store')->name('form');
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
