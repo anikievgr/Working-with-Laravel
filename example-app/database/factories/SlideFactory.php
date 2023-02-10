@@ -16,12 +16,15 @@ class SlideFactory extends Factory
      * @return array<string, mixed>
      */
     protected $model = Slide::class;
+
     public function definition()
     {
+        $faker = \Faker\Factory::create();
+        $faker->addProvider(new \Smknstd\FakerPicsumImages\FakerPicsumImagesProvider($faker));
         return [
             'title' => $this->faker->text(10),
             'subtitle' => $this->faker->text(30),
-            'image' => 'uploads/'.$this->faker->image('public/storage/uploads',1920,714, 'cats', false),
+            'image' => 'uploads/'.$faker->image('public/storage/uploads',1920,714,  false),
         ];
     }
 }

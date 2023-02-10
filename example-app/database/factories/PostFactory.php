@@ -27,7 +27,7 @@ class PostFactory extends Factory
         return [
 
             'categoty_id' => Category::get()->random()->id,
-            'image' => $faker->image('public/storage/uploads',640,480,false  ),
+            'image' => 'uploads/'. $faker->image('public/storage/uploads',640,480,false  ),
         ];
 
     }

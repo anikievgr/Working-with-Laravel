@@ -19,10 +19,12 @@ class CompanyFactory extends Factory
     protected $model = Company::class;
     public function definition()
     {
+        $faker = \Faker\Factory::create();
+        $faker->addProvider(new \Smknstd\FakerPicsumImages\FakerPicsumImagesProvider($faker));
         return [
             'title' => $this->faker->text(10),
             'titleLtext' => $this->faker->text(20),
-            'image' => 'uploads/'.$this->faker->image('public/storage/uploads',500,500,  false,false),
+            'image' => 'uploads/'.$faker->image('public/storage/uploads',500,500,  false),
         ];
     }
 }

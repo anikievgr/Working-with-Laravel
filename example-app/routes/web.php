@@ -19,7 +19,7 @@ Route::get('/incubirovanie','MainController@incubirovanie');
 Route::get('/contact','MainController@contacti');
 //admin panel
 Route::get('/logTo','MainController@loginToTheAdminPanel');
-Route::get('/adminPanel','MainController@adminPanel');
+
 Route::get('/sales','MainController@adminSales');
 Route::get('/chat','MainController@adminChat');
 Route::get('/mail','MainController@adminMail');
@@ -34,7 +34,11 @@ Route::resource('image', 'App\Http\Controllers\AdminPanel\ImageController');
 Route::resource('adminIncubirovane', 'App\Http\Controllers\AdminPanel\IncubirovaneController');
 Route::resource('adminIncubirovanetext', 'App\Http\Controllers\AdminPanel\IncubirovaneTextController');
 Route::resource('mailAdd', \App\Http\Controllers\AddUserController::class);
+
 //Form
+Route::middleware('auth')->group(function () {
+    Route::resource('shop', \App\Http\Controllers\ShopController::class);
+    Route::get('/adminPanel','MainController@adminPanel');
 Route::prefix('admin')->group(function () {
     Route::prefix('/pageHome')->group(function () {
         Route::get('/openAdminSlider', 'App\Http\Controllers\AdminPanel\SliderController@slider')->name('adminSlider');
@@ -63,6 +67,7 @@ Route::prefix('admin')->group(function () {
         });
 
     });
+});
 });
 Route::get('/adminIncubirovanie', 'MainController@adminIncubirovane');
 Route::get('/adminContact', 'MainController@adminContact');

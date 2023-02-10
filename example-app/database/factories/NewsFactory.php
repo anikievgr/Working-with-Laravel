@@ -18,10 +18,12 @@ class NewsFactory extends Factory
     protected $model = News::class;
     public function definition()
     {
+        $faker = \Faker\Factory::create();
+        $faker->addProvider(new \Smknstd\FakerPicsumImages\FakerPicsumImagesProvider($faker));
         return [
             'title' => $this->faker->text(10),
             'text' => $this->faker->text(30),
-            'image' => 'uploads/'.$this->faker->image('public/storage/uploads',500,500,  false,false),
+            'image' => 'uploads/'.$faker->image('public/storage/uploads',500,500,  false),
 
 
         ];
