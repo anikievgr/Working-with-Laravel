@@ -23,7 +23,7 @@ class MailFactory extends Factory
             'mail' => $this->faker->email,
             'name' => $this->faker->name,
             'telephone' => $this->faker->phoneNumber,
-            'theme' => $this->faker->text(10),
+            'theme' => 'Сотрудничество',
             'text' => $this->faker->text(300),
         ];
     }

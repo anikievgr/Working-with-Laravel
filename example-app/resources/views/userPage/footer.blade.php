@@ -35,7 +35,7 @@
                 <li><a href="/">О нас</a></li>
                 <li><a href="/incubirovanie">Инкубирование</a></li>
                 <li><a href="/contact">Контакты</a></li>
-                <li><a href="/logTo">Войти</a></li>
+                <li><a href="/login">Войти</a></li>
             </ul>
         </div>
         <!-- .container -->

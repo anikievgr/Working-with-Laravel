@@ -14,7 +14,7 @@
     <link rel="stylesheet" type="text/css" href="{{asset('style/pageAdmin/assets/css/forms/switches.css')}}">
 </head>
 <body class="form">
-    
+
 <div class="form-container outer">
             <div class="form-form">
                 <div class="form-form-wrap">
@@ -60,12 +60,12 @@
             </div>
         </div>
 
-    
+
     <!-- BEGIN GLOBAL MANDATORY SCRIPTS -->
     <script src="{{asset('style/pageAdmin/assets/js/libs/jquery-3.1.1.min.js')}}"></script>
     <script src="{{asset('style/js/popper.min.js')}}"></script>
     <script src="{{asset('style/pageAdmin/bootstrap/js/bootstrap.min.js')}}"></script>
-    
+
     <!-- END GLOBAL MANDATORY SCRIPTS -->
     <script src="{{asset('style/pageAdmin/assets/js/authentication/form-2.js')}}"></script>
 

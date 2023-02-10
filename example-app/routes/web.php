@@ -19,7 +19,7 @@ Route::get('/incubirovanie','MainController@incubirovanie');
 Route::get('/contact','MainController@contacti');
 //admin panel
 Route::get('/logTo','MainController@loginToTheAdminPanel');
-Route::get('/adminPanel','MainController@adminPanel');
+
 Route::get('/sales','MainController@adminSales');
 Route::get('/chat','MainController@adminChat');
 Route::get('/mail','MainController@adminMail');
@@ -34,34 +34,39 @@ Route::resource('image', 'App\Http\Controllers\AdminPanel\ImageController');
 Route::resource('adminIncubirovane', 'App\Http\Controllers\AdminPanel\IncubirovaneController');
 Route::resource('adminIncubirovanetext', 'App\Http\Controllers\AdminPanel\IncubirovaneTextController');
 Route::resource('mailAdd', \App\Http\Controllers\AddUserController::class);
+Route::resource('tableuser', \App\Http\Controllers\AdminPanel\UsersController::class);
+Route::resource('shop', \App\Http\Controllers\ShopController::class);
 //Form
-Route::prefix('admin')->group(function () {
-    Route::prefix('/pageHome')->group(function () {
-        Route::get('/openAdminSlider', 'App\Http\Controllers\AdminPanel\SliderController@slider')->name('adminSlider');
-        Route::prefix('adminSlider')->group(function () {
-            Route::get('bd/delete{id}', 'App\Http\Controllers\AdminPanel\SliderController@delete')->name('bd.delete');
-            Route::resource('bd', 'App\Http\Controllers\AdminPanel\SliderController')->except([
-                'create', 'show', 'edit','destroy'
-            ]);
+Route::middleware('auth')->group(function () {
+    Route::get('/adminPanel', 'MainController@adminPanel');
+    Route::prefix('admin')->group(function () {
+        Route::prefix('/pageHome')->group(function () {
+            Route::get('/openAdminSlider', 'App\Http\Controllers\AdminPanel\SliderController@slider')->name('adminSlider');
+            Route::prefix('adminSlider')->group(function () {
+                Route::get('bd/delete{id}', 'App\Http\Controllers\AdminPanel\SliderController@delete')->name('bd.delete');
+                Route::resource('bd', 'App\Http\Controllers\AdminPanel\SliderController')->except([
+                    'create', 'show', 'edit', 'destroy'
+                ]);
 
+
+            });
+
+            Route::get('/openAdminGalerea', 'App\Http\Controllers\AdminPanel\GalleryController@gallery');
+            Route::get('adminGalleryGroup/delete{id}', 'App\Http\Controllers\AdminPanel\GalleryController@deleteCategory')->name('adminGalleryGroup.deleteCategory');
+            Route::prefix('adminGalleryGroup')->group(function () {
+                Route::resource('adminGalerea', 'App\Http\Controllers\AdminPanel\GalleryController')->except([
+                    'create', 'edit', 'destroy'
+                ]);
+            });
+            Route::get('/openAdminNews', 'App\Http\Controllers\AdminPanel\NewsController@news');
+            Route::get('/openAdminNews/updatePages{id}', 'App\Http\Controllers\AdminPanel\NewsController@updatePages')->name('NewsController.updatePages');
+            Route::prefix('openAdminNewsGroup')->group(function () {
+                Route::resource('openAdminNewsGroup', 'App\Http\Controllers\AdminPanel\NewsController')->except([
+                    'create', 'edit'
+                ]);
+            });
 
         });
-
-        Route::get('/openAdminGalerea', 'App\Http\Controllers\AdminPanel\GalleryController@gallery');
-        Route::get('adminGalleryGroup/delete{id}', 'App\Http\Controllers\AdminPanel\GalleryController@deleteCategory')->name('adminGalleryGroup.deleteCategory');
-        Route::prefix('adminGalleryGroup')->group(function () {
-            Route::resource('adminGalerea', 'App\Http\Controllers\AdminPanel\GalleryController')->except([
-                'create', 'edit','destroy'
-            ]);
-        });
-        Route::get('/openAdminNews', 'App\Http\Controllers\AdminPanel\NewsController@news');
-        Route::get('/openAdminNews/updatePages{id}', 'App\Http\Controllers\AdminPanel\NewsController@updatePages')->name('NewsController.updatePages');
-        Route::prefix('openAdminNewsGroup')->group(function () {
-            Route::resource('openAdminNewsGroup', 'App\Http\Controllers\AdminPanel\NewsController')->except([
-                'create', 'edit'
-            ]);
-        });
-
     });
 });
 Route::get('/adminIncubirovanie', 'MainController@adminIncubirovane');
